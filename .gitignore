@@ -3,4 +3,4 @@ dataset/articles_entities/*.entities
 .DS_Store
 .idea
 venv
-
+__pycache__/

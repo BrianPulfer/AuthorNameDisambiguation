@@ -6,3 +6,4 @@ nltk
 country-list
 python-Levenshtein
 sklearn
+tensorflow
