@@ -100,13 +100,13 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
         x_test.append(article_pair.scores())
 
     # Normalizing data
-    x_train_norm = normalize_set(x_train)
-    x_test_norm = normalize_set(x_test)
+    x_train_norm = normalize_set(x_train).astype('float64')
+    x_test_norm = normalize_set(x_test).astype('float64')
 
     # Training the classifier and checking accuracy
     classifier = KNN(5)
     classifier.fit(x_train_norm, y_train)
-    knn_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)    # 67%
+    knn_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
 
     print("5NN - Classifier accuracy: " + str(int(knn_accuracy*100))+"%")
 
