@@ -1,5 +1,5 @@
-dataset/articles/*.xml
-dataset/articles_entities/*.entities
+# dataset/articles/*.xml
+# dataset/articles_entities/*.entities
 .DS_Store
 .idea
 venv
