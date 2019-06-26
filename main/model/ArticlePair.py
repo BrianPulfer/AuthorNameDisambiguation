@@ -6,7 +6,10 @@ from main.model.Article import Article
 
 
 class ArticlePair:
+    """Represents a pair of articles. Offers method to retrieve similarity between two articles."""
+
     def __init__(self, article1: Article, article2: Article, label: int = None):
+        """Initialization by giving the pair of articles"""
         self.article1 = article1
         self.article2 = article2
         self.label = label

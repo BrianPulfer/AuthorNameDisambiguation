@@ -10,6 +10,8 @@ PATH_TO_ARTICLES_ENTITIES = definitions.ROOT_DIR + '/dataset/articles_entities/'
 
 
 def load_article(pmid):
+    """Given the PMID, creates and returns an article full of all its retrievable informations."""
+
     file = open(PATH_TO_ARTICLES+str(pmid)+'.xml', 'r')
     article_content = file.read()
     file.close()

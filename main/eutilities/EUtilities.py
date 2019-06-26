@@ -107,6 +107,7 @@ def fetch_articles(database_name, query, rettype="abstract", retmode="text"):
 
 
 def search_by_pmid(PMID):
+    """Returns the HTTP response to a search request of an article by the PMID."""
     url = BASE_ADDRESS+"esearch.fcgi?db=pubmed&term="+str(PMID)+"&"+PMC_ADDITIONAL_INFOS
     return requests.get(url)
 

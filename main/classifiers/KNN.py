@@ -2,7 +2,10 @@ from sklearn import neighbors
 
 
 class KNN:
+    """A wrapper class for the K Nearest Neighbour sklearn implementation"""
+
     def __init__(self, k):
+        """Creates the classifier giving the number of neighbours to be considered"""
         self.k = k
         self.classifier = neighbors.KNeighborsClassifier(k)
 

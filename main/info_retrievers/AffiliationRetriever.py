@@ -3,6 +3,7 @@ from main.model.Affiliation import Affiliation
 
 
 class ORG_TYPES(enum.Enum):
+    """Enum of the organization types"""
     Univers = 1
     Institu = 2
     College = 3
@@ -16,6 +17,7 @@ class ORG_TYPES(enum.Enum):
 
 
 def find_affiliation(article_content):
+    """Constructs an Affiliation object by finding its raw infos, org_type and res_type."""
     return Affiliation(find_affiliation_infos(article_content), find_org_type(article_content),
                        find_res_type(article_content))
 

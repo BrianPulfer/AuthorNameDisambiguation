@@ -11,6 +11,7 @@ from main.model.Author import Author
 from main.model.ArticlePair import ArticlePair
 
 from main.classifiers.KNN import KNN
+from main.classifiers.RandomForest import RandomForest
 from main.classifiers.Sequential import Sequential
 
 
@@ -103,20 +104,23 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     x_train_norm = normalize_set(x_train).astype('float64')
     x_test_norm = normalize_set(x_test).astype('float64')
 
-    # Training the classifier and checking accuracy
+    # KNN - CLASSIFIER
     classifier = KNN(5)
     classifier.fit(x_train_norm, y_train)
     knn_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
-
     print("5NN - Classifier accuracy: " + str(int(knn_accuracy*100))+"%")
 
-    # Training the classifier and checking accuracy
+    # RANDOM FOREST - CLASSIFIER
+    classifier = RandomForest(50)
+    classifier.fit(x_train_norm, y_train)
+    rf_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
+    print("Random Forest - Classifier accuracy: "+str(int(rf_accuracy*100))+"%")
+
+    # FEED FORWARD NEURAL NETWORK - CLASSIFIER
     classifier = Sequential(len(x_train_norm[0]), 2)
     classifier.fit(x_train_norm, y_train, epochs=1)
-    seq_results = classifier.predict(x_train_norm)
-    seq_accuracy = compute_accuracy(seq_results, y_test)
-
-    print("TensorFlow - Classifier accuracy: "+str(int(seq_accuracy*100))+"%")
+    seq_accuracy = compute_accuracy(classifier.predict(x_train_norm), y_test)
+    print("TensorFlow - Sequential classifier accuracy: "+str(int(seq_accuracy*100))+"%")
 
 
 if __name__ == '__main__':

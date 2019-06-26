@@ -4,6 +4,9 @@ from main.model.Affiliation import Affiliation
 
 
 class Article:
+    """Class that represents an article.
+    Ideally contains all the data needed to be compared to another article."""
+
     def __init__(self, PMID: int = None, authors: list = list(), e_mail: str = None, date: datetime = None,
                  affiliation: Affiliation = None, country: str = None, city: str = None, key_words: list = list(),
                  entities: list = None, raw_text: str = None):
@@ -18,6 +21,7 @@ class Article:
         self.entities = entities
         self.raw_text = raw_text
 
+    # Getters and Setters
     def get_PMID(self):
         return self.PMID
 
