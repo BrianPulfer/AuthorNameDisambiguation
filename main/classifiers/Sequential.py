@@ -24,8 +24,8 @@ class Sequential:
         #   loss: the loss function of the neural network that has to be minimized
         #   metrics: used to monitor training
         self._model.compile(#optimizer=tf.train.GradientDescentOptimizer(learning_rate=1),
-                            optimizer=tf.train.AdamOptimizer(0.001),
-                            loss=tf.losses.mean_squared_error,
+                            optimizer=tf.compat.v1.train.AdamOptimizer(0.001),
+                            loss=tf.compat.v1.losses.mean_squared_error,
                             metrics=['accuracy'])
 
     def fit(self, x_train, y_train, epochs=1):
