@@ -24,7 +24,7 @@ class Sequential:
                             metrics=['accuracy'])
 
     def fit(self, x_train, y_train, epochs=1):
-        self._model.fit(x_train, y_train, epochs=epochs, steps_per_epoch=10_000)
+        self._model.fit(x_train, y_train, epochs=epochs, steps_per_epoch=epochs)
 
     def predict(self, x_test):
         confidences = self._model.predict(x_test)

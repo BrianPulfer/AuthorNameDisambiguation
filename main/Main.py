@@ -112,7 +112,7 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
     # Training the classifier and checking accuracy
     classifier = Sequential(len(x_train_norm[0]), 2)
-    classifier.fit(x_train_norm, y_train)
+    classifier.fit(x_train_norm, y_train, epochs=1)
     seq_results = classifier.predict(x_train_norm)
     seq_accuracy = compute_accuracy(seq_results, y_test)
 
