@@ -7,3 +7,4 @@ country-list
 python-Levenshtein
 sklearn
 tensorflow
+py4j
