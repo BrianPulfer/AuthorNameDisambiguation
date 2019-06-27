@@ -28,9 +28,9 @@ class Sequential:
                             loss=tf.compat.v1.losses.mean_squared_error,
                             metrics=['accuracy'])
 
-    def fit(self, x_train, y_train, epochs=1):
+    def fit(self, x_train, y_train, epochs=1, steps_per_epoch=1):
         """Trains the neural network"""
-        self._model.fit(x_train, y_train, epochs=epochs, steps_per_epoch=epochs)
+        self._model.fit(x_train, y_train, epochs=epochs, steps_per_epoch=steps_per_epoch)
 
     def predict(self, x_test):
         """Returns prediction for the given testing set"""

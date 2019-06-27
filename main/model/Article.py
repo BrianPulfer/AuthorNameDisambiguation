@@ -7,11 +7,13 @@ class Article:
     """Class that represents an article.
     Ideally contains all the data needed to be compared to another article."""
 
-    def __init__(self, PMID: int = None, authors: list = list(), e_mail: str = None, date: datetime = None,
-                 affiliation: Affiliation = None, country: str = None, city: str = None, key_words: list = list(),
-                 entities: list = None, raw_text: str = None):
+    def __init__(self, PMID: int = None, main_author_initials: str = None, language: str = None, authors: list = list(),
+                 e_mail: str = None, date: datetime = None, affiliation: Affiliation = None, country: str = None,
+                 city: str = None, key_words: list = list(), entities: list = None, raw_text: str = None):
         self.PMID = PMID
+        self.main_author_initials = main_author_initials
         self.authors = authors
+        self.language = language
         self.e_mail = e_mail
         self.date = date
         self.affiliation = affiliation
@@ -27,6 +29,18 @@ class Article:
 
     def set_PMID(self, pmid):
         self.PMID = pmid
+
+    def get_main_author_initials(self):
+        return self.main_author_initials
+
+    def set_main_author_initials(self, main_author_initials):
+        self.main_author_initials = main_author_initials
+
+    def get_language(self):
+        return self.language
+
+    def set_language(self, language):
+        self.language = language
 
     def get_authors(self):
         return self.authors

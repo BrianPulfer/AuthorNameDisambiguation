@@ -17,7 +17,8 @@ class ArticlePair:
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_authors_score(), self.get_email_score(), self.get_date_score(), self.get_keywords_score(),
-                self.get_county_score(), self.get_city_score(), self.get_affiliation_score(), self.get_entities_score()]
+                self.get_county_score(), self.get_city_score(), self.get_affiliation_score(), self.get_entities_score(),
+                self.get_initials_score()]
 
     def get_email_score(self):
         """Returns the Levenshtein distance between the articles e-mail addresses"""
@@ -30,7 +31,7 @@ class ArticlePair:
             mail2 = ""
 
         if mail1 == "" and mail2 == "":
-            return random.randint(3, 12)
+            return 9
 
         return Levenshtein.distance(mail1.lower(), mail2.lower())
 
@@ -138,7 +139,7 @@ class ArticlePair:
             infos2 = ""
 
         if infos1 == "" and infos2 == "":
-            return random.randint(20, 50)
+            return 120
 
         return Levenshtein.distance(infos1.lower(), infos2.lower())
 
@@ -151,6 +152,37 @@ class ArticlePair:
         entities_set = set(all_entities)
 
         return len(all_entities) - len(entities_set)
+
+    def get_language_score(self):
+        """Returns 1 if the articles share the same language, 0 otherwise"""
+
+        # NOTE: This score isn't used because to date (07.2019) all the article pairs in the training set always share
+        # the same language.
+
+        language1 = self.article1.get_language()
+        language2 = self.article2.get_language()
+
+        if language1 is not None and language2 is not None:
+            language1 = self.article1.get_language().lower().strip()
+            language2 = self.article1.get_language().lower().strip()
+
+            if language1 == language2:
+                return 1
+            return 0
+        return 0
+
+    def get_initials_score(self):
+        """Returns 1 if the articles share the same main author's initials, 0 otherwise"""
+        initials1 = self.article1.get_main_author_initials()
+        initials2 = self.article2.get_main_author_initials()
+
+        if isinstance(initials1, str) and isinstance(initials2, str):
+            initials1 = self.article1.get_main_author_initials().lower().strip()
+            initials2 = self.article1.get_main_author_initials().lower().strip()
+
+            if initials1 == initials2:
+                return 1
+        return 0
 
     # Getters
     def get_article_1(self):

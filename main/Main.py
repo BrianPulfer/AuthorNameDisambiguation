@@ -4,10 +4,6 @@ from decimal import Decimal
 
 
 from main.loader import ArticleLoader
-
-from main.info_retrievers import AmbiguityScoreRetriever
-
-from main.model.Author import Author
 from main.model.ArticlePair import ArticlePair
 
 from main.classifiers.KNN import KNN
@@ -82,7 +78,10 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
         pmid_right = int(training_set[i][4])
 
         article1 = ArticleLoader.load_article(pmid_left)
+        article1.set_main_author_initials(training_set[i][2])
+
         article2 = ArticleLoader.load_article(pmid_right)
+        article2.set_main_author_initials(training_set[i][6])
 
         article_pair = ArticlePair(article1, article2)
 
@@ -94,7 +93,10 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
         pmid_right = int(testing_set[i][4])
 
         article1 = ArticleLoader.load_article(pmid_left)
+        article1.set_main_author_initials(testing_set[i][2])
+
         article2 = ArticleLoader.load_article(pmid_right)
+        article2.set_main_author_initials(testing_set[i][6])
 
         article_pair = ArticlePair(article1, article2)
 
@@ -118,7 +120,7 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
     # FEED FORWARD NEURAL NETWORK - CLASSIFIER
     classifier = Sequential(len(x_train_norm[0]), 2)
-    classifier.fit(x_train_norm, y_train, epochs=1)
+    classifier.fit(x_train_norm, y_train, epochs=6, steps_per_epoch=1)
     seq_accuracy = compute_accuracy(classifier.predict(x_train_norm), y_test)
     print("TensorFlow - Sequential classifier accuracy: "+str(int(seq_accuracy*100))+"%")
 

@@ -3,7 +3,7 @@ import definitions
 from main.model.Article import Article
 
 from main.info_retrievers import AffiliationRetriever, AuthorsRetriever, DateRetriever, EMailRetriever,\
-    KeyWordsRetriever, LocationRetriever, EntitiesRetriever
+    KeyWordsRetriever, LocationRetriever, EntitiesRetriever, LanguageRetriever
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'
 PATH_TO_ARTICLES_ENTITIES = definitions.ROOT_DIR + '/dataset/articles_entities/'
@@ -17,6 +17,7 @@ def load_article(pmid):
     file.close()
 
     affiliation = AffiliationRetriever.find_affiliation(article_content)
+    language = LanguageRetriever.find_language(article_content)
     authors = AuthorsRetriever.find_authors(article_content)
     date = DateRetriever.find_date(article_content)
     mail = EMailRetriever.find_email(article_content)
@@ -25,4 +26,5 @@ def load_article(pmid):
     city = LocationRetriever.find_city(article_content)
     entities = EntitiesRetriever.find_entities(pmid, dir_path=PATH_TO_ARTICLES_ENTITIES)
 
-    return Article(pmid, authors, mail, date, affiliation, country, city, keywords, entities)
+    return Article(PMID=pmid, authors=authors, language=language, e_mail=mail, date=date, affiliation=affiliation,
+                   country=country, city=city, key_words=keywords, entities=entities)
