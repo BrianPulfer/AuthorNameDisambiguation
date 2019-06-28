@@ -11,13 +11,13 @@ public class APIWrapper {
 
     }
 
-    public List<String> getJDs(int pmid){
+    public List<String> getJDs(String articleContent){
         /**Given a PubMed ID, returns the article's Journal Descriptors*/
         // TODO
         return null;
     }
 
-    public List<String> getSTs(int pmid){
+    public List<String> getSTs(String articleContent){
         /**Given a PubMed ID, returns the article's Semantic Types */
         // TODO
         return null;

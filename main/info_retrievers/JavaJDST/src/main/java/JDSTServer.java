@@ -10,6 +10,5 @@ public class JDSTServer {
         GatewayServer server = new GatewayServer(new APIWrapper());
         System.out.println("Gateway server started");
         server.start();
-        System.out.println("Gateway server finished");
     }
 }
