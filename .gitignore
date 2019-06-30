@@ -2,6 +2,7 @@
 .idea
 venv
 __pycache__/
+*.class
 **.idea/**
 
 # dataset/articles/*.xml
