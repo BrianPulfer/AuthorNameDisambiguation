@@ -12,7 +12,7 @@ def get_ambiguity_score(namespace_lastname: str, namespace_initial: str,  datase
     :param ds_fn_col:          The dataset column where firstnames are contained
     :return:                   A value between 0 and 1, where 0 is not ambiguous and 1 is most ambiguous
     """
-    ds = np.array(copy.copy(dataset))
+    ds = np.array(dataset)
 
     total_rows = len(ds)
     matching_rows = 0
