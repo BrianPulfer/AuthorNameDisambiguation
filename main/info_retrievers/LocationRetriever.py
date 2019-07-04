@@ -39,4 +39,6 @@ def find_city(article_content):
 def get_affiliation_infos(article_content):
     """Returns the affiliation infos given the xml as a string.
     An empty string is returned if the xml does not contain the 'Affiliation' tag."""
+    if article_content.Affiliation is None:
+        return None
     return article_content.Affiliation.string

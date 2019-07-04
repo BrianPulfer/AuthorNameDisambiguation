@@ -19,16 +19,16 @@ def load_article(pmid):
     file.close()
 
     # Converting raw string into an object
-    article_content = BeautifulSoup(article_content, 'html.parser')
+    soup = BeautifulSoup(article_content, 'xml')
 
-    affiliation = AffiliationRetriever.find_affiliation(article_content)
-    language = LanguageRetriever.find_language(article_content)
-    authors = AuthorsRetriever.find_authors(article_content)
-    date = DateRetriever.find_date(article_content)
-    mail = EMailRetriever.find_email(article_content)
-    keywords = KeyWordsRetriever.find_keywords(article_content)
-    country = LocationRetriever.find_country(article_content)
-    city = LocationRetriever.find_city(article_content)
+    affiliation = AffiliationRetriever.find_affiliation(soup)
+    language = LanguageRetriever.find_language(soup)
+    authors = AuthorsRetriever.find_authors(soup)
+    date = DateRetriever.find_date(soup)
+    mail = EMailRetriever.find_email(soup)
+    keywords = KeyWordsRetriever.find_keywords(soup)
+    country = LocationRetriever.find_country(soup)
+    city = LocationRetriever.find_city(soup)
     entities = EntitiesRetriever.find_entities(pmid, dir_path=PATH_TO_ARTICLES_ENTITIES)
 
     return Article(PMID=pmid, authors=authors, language=language, e_mail=mail, date=date, affiliation=affiliation,

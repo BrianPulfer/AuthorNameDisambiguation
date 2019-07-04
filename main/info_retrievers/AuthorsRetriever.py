@@ -11,10 +11,17 @@ def find_authors(article_content):
     authors = list()
     authors_tags = article_content.find_all('Author')
 
+    lastname, forename, initials = "", "", ""
+
     for data in authors_tags:
-        lastname = data.LastName.string
-        forename = data.ForeName.string
-        initials = data.Initials.string
+        if data.LastName:
+            lastname = data.LastName.string
+
+        if data.ForeName:
+            forename = data.ForeName.string
+
+        if data.Initials:
+            initials = data.Initials.string
 
         authors.append(Author(lastname, forename, initials))
 
