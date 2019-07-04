@@ -1,5 +1,7 @@
 import datetime
 
+from bs4 import BeautifulSoup
+
 
 def find_date(article_content, pubstatus="pubmed"):
     """Finds the publication date of the article string
@@ -9,14 +11,15 @@ def find_date(article_content, pubstatus="pubmed"):
     :return: the pubblication date as datetime.
     """
 
-    if len(article_content.split('<PubMedPubDate PubStatus="'+pubstatus+'">')) < 2:
+    dates = article_content.findAll("PubMedPubDate", {"PubStatus": pubstatus})
+
+    if dates is None or len(dates) == 0:
         return None
 
-    pubmeddate =\
-        article_content.split('<PubMedPubDate PubStatus="'+pubstatus+'">')[1].split("</PubMedPubDate>")[0]
+    date = dates[0]
 
-    day = int(pubmeddate.split('<Day>')[1].split('</Day>')[0])
-    month = int(pubmeddate.split('<Month>')[1].split('</Month>')[0])
-    year = int(pubmeddate.split('<Year>')[1].split('</Year>')[0])
+    day = int(date.Day.string)
+    month = int(date.Month.string)
+    year = int(date.Year.string)
 
     return datetime.datetime(year, month, day)

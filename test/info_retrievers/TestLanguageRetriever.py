@@ -1,5 +1,7 @@
 import unittest
 
+from bs4 import BeautifulSoup
+
 from main.info_retrievers import LanguageRetriever
 from main.eutilities import EUtilities
 
@@ -10,7 +12,9 @@ class TestLanguageRetriever(unittest.TestCase):
         pmid = "12388643"
         article = EUtilities.fetch(EUtilities.DATABASES.PubMed, EUtilities.Query(any_terms=[pmid]), 'xml')
 
-        language = LanguageRetriever.find_language(article.content.decode('utf-8'))
+        soup = BeautifulSoup(article.content.decode('utf-8'), 'xml')
+
+        language = LanguageRetriever.find_language(soup)
         self.assertEqual('eng', language)
 
 

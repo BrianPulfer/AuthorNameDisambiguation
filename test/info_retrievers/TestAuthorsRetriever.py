@@ -1,5 +1,7 @@
 import unittest
 
+from bs4 import BeautifulSoup
+
 from main.info_retrievers import AuthorsRetriever
 from main.eutilities import EUtilities
 
@@ -15,7 +17,7 @@ class TestAuthorsRetriever(unittest.TestCase):
         article = EUtilities.fetch(EUtilities.DATABASES.PubMed, q, "xml")
 
         # Extracting article's authors
-        authors = AuthorsRetriever.find_authors(article.content.decode('utf-8'))
+        authors = AuthorsRetriever.find_authors(BeautifulSoup(article.content.decode('utf-8'), "xml"))
 
         self.assertEqual(3, len(authors))
 

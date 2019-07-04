@@ -1,5 +1,7 @@
 import unittest
 
+from bs4 import BeautifulSoup
+
 from main.info_retrievers import EMailRetriever
 from main.eutilities import EUtilities
 
@@ -15,10 +17,10 @@ class TestEmailRetriever(unittest.TestCase):
         query = EUtilities.Query(any_terms=[pmid])
 
         xml_article = EUtilities.fetch(EUtilities.DATABASES.PubMed, query, rettype="xml", retmode="text")
-        xml_article_raw_content = xml_article.content.decode('utf-8')
+        soup = BeautifulSoup(xml_article.content.decode('utf-8'), "xml")
 
         # Retrieving a mail
-        mail = EMailRetriever.find_email(xml_article_raw_content)
+        mail = EMailRetriever.find_email(soup)
 
         # Checking that the mail is correct
         self.assertEqual('yongzhang945@hotmail.com', mail)
@@ -29,19 +31,11 @@ class TestEmailRetriever(unittest.TestCase):
         query = EUtilities.Query(any_terms=[pmid])
 
         xml_article = EUtilities.fetch(EUtilities.DATABASES.PubMed, query, rettype="xml")
-        xml_article_raw_content = xml_article.content.decode('utf-8')
+        soup = BeautifulSoup(xml_article.content.decode('utf-8'), "xml")
 
-        no_mail = EMailRetriever.find_email(xml_article_raw_content)
+        no_mail = EMailRetriever.find_email(soup)
 
         self.assertEqual(None, no_mail)
-
-    def test_find_emails(self):
-        """Tests that all e-mail are retrieved from a string (method 'find_emails()'"""
-
-        mails = EMailRetriever.find_emails("reach me at: first@testmail.com and second@testmail.org. "
-                                           "Invalid mail are anythingendingwith@ or @nythingstarting")
-
-        self.assertEqual(['first@testmail.com', 'second@testmail.org'], mails)
 
 
 if __name__ == '__main__':

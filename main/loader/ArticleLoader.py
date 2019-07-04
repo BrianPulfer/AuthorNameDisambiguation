@@ -1,5 +1,7 @@
 import definitions
 
+from bs4 import BeautifulSoup
+
 from main.model.Article import Article
 
 from main.info_retrievers import AffiliationRetriever, AuthorsRetriever, DateRetriever, EMailRetriever,\
@@ -15,6 +17,9 @@ def load_article(pmid):
     file = open(PATH_TO_ARTICLES+str(pmid)+'.xml', 'r')
     article_content = file.read()
     file.close()
+
+    # Converting raw string into an object
+    article_content = BeautifulSoup(article_content, 'html.parser')
 
     affiliation = AffiliationRetriever.find_affiliation(article_content)
     language = LanguageRetriever.find_language(article_content)

@@ -2,6 +2,7 @@ numpy
 pandas
 requests
 lxml
+BeautifulSoup4
 nltk
 country-list
 python-Levenshtein

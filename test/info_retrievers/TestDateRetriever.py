@@ -1,6 +1,8 @@
 import unittest
 import datetime
 
+from bs4 import BeautifulSoup
+
 from main.info_retrievers import DateRetriever
 from main.eutilities import EUtilities
 
@@ -14,10 +16,11 @@ class TestDateRetriever(unittest.TestCase):
         query = EUtilities.Query(any_terms=[pmid])
 
         article = EUtilities.fetch(EUtilities.DATABASES.PubMed, query, rettype="xml")
+        soup = BeautifulSoup(article.content.decode('utf-8'), "xml")
 
         # Getting 2/3 dates from the article
-        pubmed_date = DateRetriever.find_date(article.content.decode('utf-8'))
-        medline_date = DateRetriever.find_date(article.content.decode('utf-8'), pubstatus='medline')
+        pubmed_date = DateRetriever.find_date(soup)
+        medline_date = DateRetriever.find_date(soup, pubstatus='medline')
 
         # Checking that the retrieved dates are correct
         self.assertEqual(datetime.datetime(2010, 2, 2), pubmed_date)

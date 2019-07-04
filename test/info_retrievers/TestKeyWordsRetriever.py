@@ -1,5 +1,7 @@
 import unittest
 
+from bs4 import BeautifulSoup
+
 from main.info_retrievers import KeyWordsRetriever
 from main.eutilities import EUtilities
 
@@ -13,8 +15,10 @@ class TestMeshTermsRetriever(unittest.TestCase):
         query = EUtilities.Query(any_terms=[pmid])
         article = EUtilities.fetch(EUtilities.DATABASES.PubMed, query, 'xml')
 
+        soup = BeautifulSoup(article.content.decode('utf-8'), "xml")
+
         # Extracting mesh terms from article's content
-        mesh_terms = KeyWordsRetriever.find_keywords(article.content.decode('utf-8'))
+        mesh_terms = KeyWordsRetriever.find_keywords(soup)
 
         # Checking mesh terms content
         self.assertEqual(13, len(mesh_terms))
