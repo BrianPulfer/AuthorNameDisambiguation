@@ -9,7 +9,9 @@ import gov.nih.nlm.nls.tc.Lib.Configuration;
 import gov.nih.nlm.nls.tc.Lib.Count2f;
 
 // JDK imports
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Vector;
 
 
 public class APIWrapper {
@@ -17,14 +19,18 @@ public class APIWrapper {
 
     // JDs and STs API's
     private JdiApi jdi;
-    private StiApi sti = new StiApi(new Configuration("data.Config.tc", true));
+    private StiApi sti;
 
-    public APIWrapper(String tcPath){
-        Hashtable<String, String> properties = new Hashtable<String, String>();
-        properties.put("ROOT_DIR", tcPath);
-
-        this.jdi = new JdiApi(properties);
+    public APIWrapper(){
+        this.jdi = new JdiApi("./data/Config/tc.properties");
+        this.sti = new StiApi(new Configuration("./data/Config/tc.properties", false));
     }
+
+    public APIWrapper(String tcConfigFile){
+        this.jdi = new JdiApi(tcConfigFile);
+        this.sti = new StiApi(tcConfigFile);
+    }
+
 
     public List<String> getJDs(String text){
         /**Given a PubMed ID, returns the article's Journal Descriptors*/
@@ -51,6 +57,7 @@ public class APIWrapper {
         return journalDescriptors;
     }
 
+
     public List<String> getSTs(String text){
         /**Given a PubMed ID, returns the article's Semantic Types */
         Vector<Count2f> scores = sti.GetStiScoresByText(text, new InputFilterOption(LegalWordsOption.DEFAULT_JDI));
@@ -72,7 +79,6 @@ public class APIWrapper {
             }
         }
 
-        //sti.Close();
         return semanticTypes;
     }
 
