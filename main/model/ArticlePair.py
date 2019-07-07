@@ -18,7 +18,7 @@ class ArticlePair:
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_authors_score(), self.get_email_score(), self.get_date_score(), self.get_keywords_score(),
                 self.get_county_score(), self.get_city_score(), self.get_affiliation_score(), self.get_entities_score(),
-                self.get_initials_score()]
+                self.get_initials_score(), self.get_jds_score(), self.get_sts_score()]
 
     def get_email_score(self):
         """Returns the Levenshtein distance between the articles e-mail addresses"""
@@ -183,6 +183,38 @@ class ArticlePair:
             if initials1 == initials2:
                 return 1
         return 0
+
+    def get_jds_score(self):
+        """Returns the number of matching Journal Descriptors between the articles"""
+        jds1 = self.article1.get_jds()
+        jds2 = self.article2.get_jds()
+
+        if jds1 is None or jds2 is None:
+            return 0
+
+        matches = 0
+
+        for jd1 in jds1:
+            for jd2 in jds2:
+                if jd1 == jd2:
+                    matches = matches + 1
+        return matches
+
+    def get_sts_score(self):
+        """Returns the number of matching Semantic Types between the articles"""
+        sts1 = self.article1.get_sts()
+        sts2 = self.article2.get_sts()
+
+        if sts1 is None or sts2 is None:
+            return 0
+
+        matches = 0
+
+        for st1 in sts1:
+            for st2 in sts2:
+                if st1 == st2:
+                    matches = matches + 1
+        return matches
 
     # Getters
     def get_article_1(self):

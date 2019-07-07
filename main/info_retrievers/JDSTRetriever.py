@@ -5,14 +5,18 @@ from py4j.java_gateway import JavaGateway
 
 
 def initialize_java_server():
-    java_class_path = os.path.dirname(os.path.abspath(__file__)) + "/JavaJDST/target/classes/JDSTServer"
-    command = "java "+java_class_path
-    os.system(command)
-    time.sleep(3)
+    # TODO: Run command line commands to start the java program
+    setup_command_1 = "export CLASSPATH=tc2011dist.jar:$CLASSPATH"
+    setup_command_2 = "export CLASSPATH=py4j-0.10.8.1.jar:$CLASSPATH"
+
+    java_class_path = os.path.dirname(os.path.abspath(__file__)) + "/JavaJDST JDSTServer"
+    run_command = "java -cp "+java_class_path
+
+    total_command = setup_command_1+" && "+setup_command_2+" && "+run_command
+    os.system(total_command)
 
 
 class JDSTRetriever:
-
     JAVA_SERVER_INITIALIZED = True
 
     def __init__(self):
@@ -29,3 +33,6 @@ class JDSTRetriever:
     def get_sts(self, text):
         """Given an article's PMID, returns the article Semantic Types"""
         return self._apiwrapper.getSTs(text)
+
+    def close(self):
+        self._apiwrapper.close()

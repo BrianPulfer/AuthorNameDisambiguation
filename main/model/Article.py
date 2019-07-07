@@ -9,7 +9,8 @@ class Article:
 
     def __init__(self, PMID: int = None, main_author_initials: str = None, language: str = None, authors: list = list(),
                  e_mail: str = None, date: datetime = None, affiliation: Affiliation = None, country: str = None,
-                 city: str = None, key_words: list = list(), entities: list = None, raw_text: str = None):
+                 city: str = None, key_words: list = list(), entities: list = None, jds: list = None, sts: list = None,
+                 raw_text: str = None):
         self.PMID = PMID
         self.main_author_initials = main_author_initials
         self.authors = authors
@@ -21,7 +22,10 @@ class Article:
         self.city = city
         self.key_words = key_words
         self.entities = entities
+        self.jds = jds
+        self.sts = sts
         self.raw_text = raw_text
+
 
     # Getters and Setters
     def get_PMID(self):
@@ -69,6 +73,18 @@ class Article:
     def set_key_words(self, key_words):
         self.key_words = key_words
 
+    def get_jds(self):
+        return self.jds
+
+    def set_jds(self, jds: list):
+        self.jds = jds
+
+    def get_sts(self):
+        return self.sts
+
+    def set_sts(self, sts: list):
+        self.sts = sts
+
     def get_raw_text(self):
         return self.raw_text
 
@@ -107,4 +123,6 @@ class Article:
                 self.country is not "" and self.country is not None and \
                 self.city is not "" and self.city is not None and \
                 self.affiliation.get_infos() is not "" and self.affiliation.get_infos() is not None and \
-                self.entities is not None
+                self.entities is not None and\
+                self.jds is not None and\
+                self.sts is not None
