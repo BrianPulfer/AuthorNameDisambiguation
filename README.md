@@ -6,9 +6,7 @@ This project has the purpose of training a classifier which will be able to tell
 Various classifier are trained with different algorithms, such as Random Forest and K-NN. Also a Neural Network is implemented.
 
 ## Environment requirements
-Python3
-JDK 8 or greater
-20GB of free space on disk
+Python3, JDK 8 or greater, 20GB of free space on disk
 
 ## Set-up
 ### Step 1:
@@ -21,7 +19,6 @@ Unzip the tgz file. This should generate a 'tc2011' folder. Move the tc2011/data
 ### Step 3:
 Open the project in an IDE of your preferece (PyCharm suggested) and create a new virtual evironment using a python3 interpreter.
 Install all the requirements specified in the 'requirements.txt' file.
-
 
 ## Dataset
 These are the files that make up the AND corpus: 

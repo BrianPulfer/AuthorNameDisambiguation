@@ -18,6 +18,7 @@ class TestJDSTRetriever(unittest.TestCase):
         return article_content
 
     def test_get_jds(self):
+        """Tests that the Journal Descriptors are correctly retrieved from the article"""
         retriever = JDSTRetriever()
 
         jds = retriever.get_jds(self.get_test_text())
@@ -29,6 +30,7 @@ class TestJDSTRetriever(unittest.TestCase):
         self.assertEqual(3, len(jds))
 
     def test_get_sts(self):
+        """Tests that the Semantic Types are correctly retrieved from the article"""
         retriever = JDSTRetriever()
 
         sts = retriever.get_sts(self.get_test_text())
