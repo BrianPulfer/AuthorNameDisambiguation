@@ -40,6 +40,33 @@ def normalize_set(ds):
     return normalized_set
 
 
+def fill_empty_with_average(set):
+    """Given a set, replaces all the -1 values with the respective column average"""
+    matrix = np.array(set)
+    averages = list()
+
+    # Getting each row's average without considering -1 values.
+    for col in range(len(matrix[0])):
+        sum, count = 0, 0
+
+        for row in range(len(matrix)):
+            if matrix[row][col] == -1:
+                pass
+            else:
+                sum = sum + matrix[row][col]
+                count = count + 1
+
+        averages.append(sum/count)
+
+    # Applying the averages to the -1 values
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            if matrix[i][j] == -1:
+                matrix[i][j] = averages[j]
+
+    return matrix
+
+
 def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path="./dataset/400_pairs_test.csv"):
     # Positive instances in the training set: 970. Negative instances in the training set: 503
     # Positive instances in the testing set: 217. Negative instances in the testing set: 182
@@ -102,9 +129,13 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         x_test.append(article_pair.scores())
 
+    # Filling empty datas with average values
+    x_train_filled = fill_empty_with_average(x_train)
+    x_test_filled = fill_empty_with_average(x_test)
+
     # Normalizing data
-    x_train_norm = normalize_set(x_train).astype('float64')
-    x_test_norm = normalize_set(x_test).astype('float64')
+    x_train_norm = normalize_set(x_train_filled).astype('float64')
+    x_test_norm = normalize_set(x_test_filled).astype('float64')
 
     # KNN - CLASSIFIER
     classifier = KNN(5)
@@ -117,12 +148,6 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     classifier.fit(x_train_norm, y_train)
     rf_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
     print("Random Forest - Classifier accuracy: "+str(int(rf_accuracy*100))+"%")
-
-    # FEED FORWARD NEURAL NETWORK - CLASSIFIER
-    classifier = Sequential(len(x_train_norm[0]), 2)
-    classifier.fit(x_train_norm, y_train, epochs=6, steps_per_epoch=1)
-    seq_accuracy = compute_accuracy(classifier.predict(x_train_norm), y_test)
-    print("TensorFlow - Sequential classifier accuracy: "+str(int(seq_accuracy*100))+"%")
 
 
 if __name__ == '__main__':

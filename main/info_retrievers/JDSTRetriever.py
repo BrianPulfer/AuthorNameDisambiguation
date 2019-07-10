@@ -17,6 +17,7 @@ def initialize_java_server():
 
 
 class JDSTRetriever:
+    # TODO: Set initialized as false
     JAVA_SERVER_INITIALIZED = True
 
     def __init__(self):

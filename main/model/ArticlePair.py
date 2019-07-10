@@ -25,13 +25,8 @@ class ArticlePair:
         mail1 = self.article1.get_e_mail()
         mail2 = self.article2.get_e_mail()
 
-        if mail1 is None:
-            mail1 = ""
-        if mail2 is None:
-            mail2 = ""
-
-        if mail1 == "" and mail2 == "":
-            return 9
+        if mail1 is None or mail2 is None:
+            return -1
 
         return Levenshtein.distance(mail1.lower(), mail2.lower())
 
@@ -98,14 +93,8 @@ class ArticlePair:
         country1 = self.article1.get_country()
         country2 = self.article2.get_country()
 
-        if country1 is None:
-            country1 = ""
-
-        if country2 is None:
-            country2 = ""
-
-        if country1 == "" and country1 == country2:
-            return 0
+        if country1 is None or country2 is None:
+            return -1
 
         if country1.lower().strip() == country2.lower().strip():
             return 1
@@ -116,13 +105,8 @@ class ArticlePair:
         city1 = self.article1.get_city()
         city2 = self.article2.get_city()
 
-        if city1 is None:
-            city1 = ""
-        if city2 is None:
-            city2 = ""
-
-        if city1 == "" and city2 == "":
-            return 0
+        if city1 is None or city2 is None:
+            return -1
 
         if city1.lower().strip() == city2.lower().strip():
             return 1
@@ -133,14 +117,8 @@ class ArticlePair:
         infos1 = self.article1.get_affiliation().get_infos()
         infos2 = self.article2.get_affiliation().get_infos()
 
-        if infos1 is None:
-            infos1 = ""
-        if infos2 is None:
-            infos2 = ""
-
-        if infos1 == "" and infos2 == "":
-            return 120
-
+        if infos1 is None or infos2 is None:
+            return -1
         return Levenshtein.distance(infos1.lower(), infos2.lower())
 
     def get_entities_score(self):
@@ -169,7 +147,7 @@ class ArticlePair:
             if language1 == language2:
                 return 1
             return 0
-        return 0
+        return -1
 
     def get_initials_score(self):
         """Returns 1 if the articles share the same main author's initials, 0 otherwise"""
@@ -182,7 +160,8 @@ class ArticlePair:
 
             if initials1 == initials2:
                 return 1
-        return 0
+            return 0
+        return -1
 
     def get_jds_score(self):
         """Returns the number of matching Journal Descriptors between the articles"""
@@ -190,7 +169,7 @@ class ArticlePair:
         jds2 = self.article2.get_jds()
 
         if jds1 is None or jds2 is None:
-            return 0
+            return -1
 
         matches = 0
 
@@ -206,7 +185,7 @@ class ArticlePair:
         sts2 = self.article2.get_sts()
 
         if sts1 is None or sts2 is None:
-            return 0
+            return -1
 
         matches = 0
 
