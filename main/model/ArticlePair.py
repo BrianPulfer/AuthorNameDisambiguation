@@ -19,7 +19,7 @@ class ArticlePair:
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_authors_score(), self.get_email_score(), self.get_date_score(), self.get_keywords_score(),
                 self.get_county_score(), self.get_city_score(), self.get_affiliation_score(), self.get_entities_score(),
-                self.get_initials_score(), self.get_jds_score(), self.get_sts_score()]
+                self.get_jds_score(), self.get_sts_score()]
 
     def get_email_score(self):
         """Returns the Levenshtein distance between the articles e-mail addresses"""

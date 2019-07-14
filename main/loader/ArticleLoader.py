@@ -32,6 +32,7 @@ def load_article(pmid):
     city = LocationRetriever.find_city(soup)
     entities = EntitiesRetriever.find_entities(pmid, dir_path=PATH_TO_ARTICLES_ENTITIES)
 
+
     # Retrieving JDS and STS infos
     jds, sts, text = "", "", ""
 

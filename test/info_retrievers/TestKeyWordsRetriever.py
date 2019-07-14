@@ -18,11 +18,13 @@ class TestMeshTermsRetriever(unittest.TestCase):
         soup = BeautifulSoup(article.content.decode('utf-8'), "xml")
 
         # Extracting mesh terms from article's content
-        mesh_terms = KeyWordsRetriever.find_keywords(soup)
+        keywords = KeyWordsRetriever.find_keywords(soup)
 
         # Checking mesh terms content
-        self.assertEqual(13, len(mesh_terms))
-        self.assertEqual('Airway Resistance', mesh_terms[0])
+        self.assertEqual(13, len(keywords))
+        self.assertEqual('Airway Resistance', keywords[0])
+
+        print(keywords)
 
 
 if __name__ == '__main__':
