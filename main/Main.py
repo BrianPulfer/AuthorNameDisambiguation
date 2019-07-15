@@ -1,12 +1,16 @@
+# Python imports
 import numpy as np
 import pandas as pd
 from decimal import Decimal
 
+# Info retrievers imports
 from main.info_retrievers import AmbiguityScoreRetriever
 
+# Model and loader imports
 from main.loader import ArticleLoader
 from main.model.ArticlePair import ArticlePair
 
+# Classifiers imports
 from main.classifiers.KNN import KNN
 from main.classifiers.RandomForest import RandomForest
 from main.classifiers.Sequential import Sequential
