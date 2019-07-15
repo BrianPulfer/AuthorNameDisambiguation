@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from decimal import Decimal
 
+from main.info_retrievers import AmbiguityScoreRetriever
 
 from main.loader import ArticleLoader
 from main.model.ArticlePair import ArticlePair
@@ -27,15 +28,16 @@ def compute_accuracy(classifier_results, labels):
     return Decimal(correct)/Decimal(len(labels))
 
 
-def normalize_set(ds):
+def normalize_set(ds, binaries: list):
     """Applies standardization (AKA Z-Score normalization) on the 2 dimensional set"""
     normalized_set = np.array(ds)
     numpy_set = np.array(ds)
     for i in range(len(numpy_set[0])):
-        avg = np.mean(numpy_set[:, i])
-        std = np.std(numpy_set[:, i])
+        if not binaries[i]:
+            avg = np.mean(numpy_set[:, i])
+            std = np.std(numpy_set[:, i])
 
-        normalized_set[:, i] = (numpy_set[:, i] - avg) / std
+            normalized_set[:, i] = (numpy_set[:, i] - avg) / std
 
     return normalized_set
 
@@ -106,9 +108,19 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         article1 = ArticleLoader.load_article(pmid_left)
         article1.set_main_author_initials(training_set[i][2])
+        article1.set_ambiguity(
+            AmbiguityScoreRetriever.get_ambiguity_score(training_set[i][1],
+                                                        training_set[i][2],
+                                                        training_set,
+                                                        1, 2, 5, 6))
 
         article2 = ArticleLoader.load_article(pmid_right)
         article2.set_main_author_initials(training_set[i][6])
+        article2.set_ambiguity(
+            AmbiguityScoreRetriever.get_ambiguity_score(training_set[i][5],
+                                                        training_set[i][6],
+                                                        training_set,
+                                                        1, 2, 5, 6))
 
         article_pair = ArticlePair(article1, article2)
 
@@ -121,9 +133,19 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         article1 = ArticleLoader.load_article(pmid_left)
         article1.set_main_author_initials(testing_set[i][2])
+        article1.set_ambiguity(
+            AmbiguityScoreRetriever.get_ambiguity_score(testing_set[i][1],
+                                                        testing_set[i][2],
+                                                        testing_set,
+                                                        1, 2, 5, 6))
 
         article2 = ArticleLoader.load_article(pmid_right)
         article2.set_main_author_initials(testing_set[i][6])
+        article2.set_ambiguity(
+            AmbiguityScoreRetriever.get_ambiguity_score(testing_set[i][5],
+                                                        testing_set[i][6],
+                                                        testing_set,
+                                                        1, 2, 5, 6))
 
         article_pair = ArticlePair(article1, article2)
 
@@ -134,8 +156,10 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     x_test_filled = fill_empty_with_average(x_test)
 
     # Normalizing data
-    x_train_norm = normalize_set(x_train_filled).astype('float64')
-    x_test_norm = normalize_set(x_test_filled).astype('float64')
+    binaries_features = ArticlePair.binary_scores()
+
+    x_train_norm = normalize_set(x_train_filled, binaries_features).astype('float64')
+    x_test_norm = normalize_set(x_test_filled, binaries_features).astype('float64')
 
     # KNN - CLASSIFIER
     classifier = KNN(5)

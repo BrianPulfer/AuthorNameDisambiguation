@@ -15,11 +15,17 @@ class ArticlePair:
         self.article2 = article2
         self.label = label
 
+    @staticmethod
+    def binary_scores():
+        """Static method which returns a list of true's and false's.
+        The list indicates if the scores in a particular column are binary or not."""
+        return [False, False, False, False, True, True, False, False, False, False, False]
+
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_authors_score(), self.get_email_score(), self.get_date_score(), self.get_keywords_score(),
                 self.get_county_score(), self.get_city_score(), self.get_affiliation_score(), self.get_entities_score(),
-                self.get_jds_score(), self.get_sts_score()]
+                self.get_jds_score(), self.get_sts_score(), self.get_ambiguity_score()]
 
     def get_email_score(self):
         """Returns the Levenshtein distance between the articles e-mail addresses"""
@@ -195,6 +201,10 @@ class ArticlePair:
                 if st1 == st2:
                     matches = matches + 1
         return matches
+
+    def get_ambiguity_score(self):
+        """Returns an average the two article's ambiguity"""
+        return (self.article1.get_ambiguity() + self.article2.get_ambiguity()) / 2
 
     # Getters
     def get_article_1(self):

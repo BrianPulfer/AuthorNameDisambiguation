@@ -10,8 +10,9 @@ class Article:
     def __init__(self, PMID: int = None, main_author_initials: str = None, language: str = None, authors: list = list(),
                  e_mail: str = None, date: datetime = None, affiliation: Affiliation = None, country: str = None,
                  city: str = None, key_words: list = list(), entities: list = None, jds: list = None, sts: list = None,
-                 raw_text: str = None):
+                 ambiguity=-1, raw_text: str = None):
         self.PMID = PMID
+        self.ambiguity = ambiguity
         self.main_author_initials = main_author_initials
         self.authors = authors
         self.language = language
@@ -33,6 +34,12 @@ class Article:
 
     def set_PMID(self, pmid):
         self.PMID = pmid
+
+    def get_ambiguity(self):
+        return self.ambiguity
+
+    def set_ambiguity(self, ambiguity):
+        self.ambiguity = ambiguity
 
     def get_main_author_initials(self):
         return self.main_author_initials
@@ -125,4 +132,5 @@ class Article:
                 self.affiliation.get_infos() is not "" and self.affiliation.get_infos() is not None and \
                 self.entities is not None and\
                 self.jds is not None and\
-                self.sts is not None
+                self.sts is not None and \
+                self.ambiguity is not -1

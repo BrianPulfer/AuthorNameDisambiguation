@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 from main.model.Article import Article
 
-from main.info_retrievers import AffiliationRetriever, AuthorsRetriever, DateRetriever, EMailRetriever,\
+from main.info_retrievers import AffiliationRetriever, AmbiguityScoreRetriever, AuthorsRetriever, DateRetriever, EMailRetriever,\
     KeyWordsRetriever, LocationRetriever, EntitiesRetriever, LanguageRetriever, JDSTRetriever
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'
