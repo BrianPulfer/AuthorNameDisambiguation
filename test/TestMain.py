@@ -47,8 +47,9 @@ class MainTest(unittest.TestCase):
         # Checking that there is no null value in any cell of the matrix of any csv file
         for current in range(len(sets)):
             for row in range(len(sets[current])):
-                for col in range(len(sets[current][row])):
-                    self.assertFalse(pd.isnull(sets[current][row, col]))
+                self.assertFalse(pd.isnull(sets[current][row, 0]))   # No PMID1 can be null
+                self.assertFalse(pd.isnull(sets[current][row, 4]))   # No PMID2 can be null
+                self.assertFalse(pd.isnull(sets[current][row, 8]))   # No Authorship can be null
 
     def test_normalize_set(self):
         """Tests that a given dataset is correctly normalized"""
@@ -65,12 +66,14 @@ class MainTest(unittest.TestCase):
         new_col3 = (dataset[:, 3] - col3_mean) / col3_std
 
         new_set = [new_col0, new_col1, new_col2, new_col3]
-        normalized_set = Main.normalize_set(dataset)
+        normalized_set = Main.normalize_set(dataset, [False, False, False, False])
 
         for col in range(len(normalized_set[0])):
             for row in range(len(normalized_set)):
                 self.assertEqual(new_set[col][row], normalized_set[row, col])
 
+    def test_fill_empty_with_average(self):
+        pass
 
 if __name__ == '__main__':
     unittest.main()

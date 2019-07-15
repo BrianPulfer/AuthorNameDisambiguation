@@ -17,6 +17,11 @@ class TestSequential(unittest.TestCase):
         output_size = len(set(labels))
 
         classifier = Sequential(input_size, output_size)
+
+        # Converting dataset and labels to floats and ints
+        dataset = dataset.astype('float64')
+        labels = labels.astype('int64')
+
         classifier.fit(dataset, labels)
 
         predictions = classifier.predict(np.array([[1, 1]]))

@@ -29,6 +29,7 @@ class TestQueries(unittest.TestCase):
 
     def test_search(self):
         """Tests that a valid result is returned for a valid GET request."""
+        # IMPORTANT: This tests fails when executed with all the other tests. Run the test alone to check if successful.
 
         q = EUtilities.Query()
         q.set_pubblication_date('2009')

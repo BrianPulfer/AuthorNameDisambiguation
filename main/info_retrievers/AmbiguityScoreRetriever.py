@@ -2,7 +2,7 @@ import numpy as np
 
 
 def get_ambiguity_score(namespace_lastname: str, namespace_initial: str,  dataset,
-                        ds_ln1_col, ds_fn1_col, ds_ln2_col,ds_fn2_col):
+                        ds_ln1_col, ds_fn1_col, ds_ln2_col, ds_fn2_col):
     """
     Calculates how ambiguous a name is in rapport to its dataset.
     :param namespace_lastname: The namespace full lastname
@@ -16,17 +16,29 @@ def get_ambiguity_score(namespace_lastname: str, namespace_initial: str,  datase
     """
     ds = np.array(dataset)
 
-    total_rows = len(ds)
-    matching_rows = 0
+    total_authors = len(ds)*2
+    matching_authors = 0
 
     for elem in dataset:
-        # If every cell selected is a string ...
-        if type(elem[ds_ln1_col]) is str and type(elem[ds_fn1_col]) is str \
-                and type(elem[ds_ln2_col]) is str and type(elem[ds_fn2_col]) is str:
+        # Retrieving the row's authors infos
+        lastname1, firstname1, lastname2, firstname2 = \
+            elem[ds_ln1_col], elem[ds_fn1_col], elem[ds_ln2_col], elem[ds_fn2_col]
 
-            # ...and if they match, increase the counter.
-            if elem[ds_ln1_col] == namespace_lastname and elem[ds_fn1_col][0] == namespace_initial\
-                    or elem[ds_ln2_col == namespace_lastname and elem[ds_fn2_col == namespace_initial]]:
-                matching_rows = matching_rows + 1
+        # If first author infos are legal and match, increase counter
+        if are_strings([lastname1, firstname1]):
+            if lastname1 == namespace_lastname and firstname1[0] == namespace_initial:
+                matching_authors = matching_authors + 1
 
-    return matching_rows/total_rows
+        # If second author infos are legal and match, increase counter
+        if are_strings([lastname2, firstname2]):
+            if lastname2 == namespace_lastname and firstname2[0] == namespace_initial:
+                matching_authors = matching_authors + 1
+
+    return matching_authors/total_authors
+
+
+def are_strings(names: list):
+    for n in names:
+        if type(n) is not str:
+            return False
+    return True

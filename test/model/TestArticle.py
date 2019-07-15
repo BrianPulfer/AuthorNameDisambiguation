@@ -16,9 +16,14 @@ class TestArticle(unittest.TestCase):
         article.set_e_mail("notReal@test.com")
         article.set_date(datetime.datetime(2003, 5, 24))
         article.set_affiliation(Affiliation(infos="Test infos"))
+        article.set_city('New York')
+        article.set_country('USA')
         article.set_authors([Author("Kennedy", "Becker", "K.B.")])
         article.set_key_words(['Asthma', 'Anxiety'])
         article.set_entities(['Test entity 1', 'Test entity 2'])
+        article.set_jds(['jd1', 'jd2'])
+        article.set_sts(['st1', 'st2', 'st3'])
+        article.set_ambiguity(0.1)
 
         self.assertTrue(article.has_all_data())
 

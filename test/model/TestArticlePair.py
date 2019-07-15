@@ -15,18 +15,6 @@ class TestArticlePair(unittest.TestCase):
         email2 = 'samemail@test.com'
         email3 = 'somemail@best.com'
 
-        fn1 = 'Chris'
-        fn2 = 'Christopher'
-        fn3 = 'Charlie'
-
-        ln1 = 'Pepper'
-        ln2 = 'PEPPER'
-        ln3 = 'Prist'
-
-        i1 = 'CP'
-        i2 = 'C.P'
-        i3 = 'cp'
-
         affiliation1_infos = "Istituto Dalle Molle sull'Intelligenza Artificiale"
         affiliation2_infos = "Istituto dalle Molle sull'intelligenza artificiale"
         affiliation3_infos = "Nursing Dept., Xuzhou Children's Hospital, Xuzhou 221006, China."
@@ -35,9 +23,9 @@ class TestArticlePair(unittest.TestCase):
         affiliation2 = Affiliation(affiliation2_infos)
         affiliation3 = Affiliation(affiliation3_infos)
 
-        article1 = Article(e_mail=email1, affiliation=affiliation1, lastname=ln1, firstname=fn1, initials=i1)
-        article2 = Article(e_mail=email2, affiliation=affiliation2, lastname=ln2, firstname=fn2, initials=i2)
-        article3 = Article(e_mail=email3, affiliation=affiliation3, lastname=ln3, firstname=fn3, initials=i3)
+        article1 = Article(e_mail=email1, affiliation=affiliation1)
+        article2 = Article(e_mail=email2, affiliation=affiliation2)
+        article3 = Article(e_mail=email3, affiliation=affiliation3)
 
         ap1 = ArticlePair(article1, article2)
         ap2 = ArticlePair(article1, article3)
@@ -49,16 +37,6 @@ class TestArticlePair(unittest.TestCase):
         # Testing affiliation score
         self.assertEqual(0, ap1.get_affiliation_score())
         self.assertEqual(52, ap2.get_affiliation_score())
-
-        # Testing names and initials scores
-        self.assertEqual(5, ap1.get_lastnames_score())
-        self.assertEqual(5, ap2.get_lastnames_score())
-
-        self.assertEqual(6, ap1.get_firstnames_score())
-        self.assertEqual(3, ap2.get_firstnames_score())
-
-        self.assertEqual(1, ap1.get_initials_score())
-        self.assertEqual(2, ap2.get_initials_score())
 
     def test_date_score(self):
         """Tests that the articles date score matches the distances of the dates (absolute value) in days"""

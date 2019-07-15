@@ -9,3 +9,4 @@ python-Levenshtein
 sklearn
 tensorflow
 py4j
+coverage
