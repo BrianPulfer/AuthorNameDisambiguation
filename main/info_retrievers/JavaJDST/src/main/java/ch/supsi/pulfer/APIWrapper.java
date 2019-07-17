@@ -1,4 +1,4 @@
-// Text Categorization 2011 imports
+package ch.supsi.pulfer;// Text Categorization 2011 imports
 import gov.nih.nlm.nls.tc.Api.JdiApi;
 import gov.nih.nlm.nls.tc.Api.StiApi;
 import gov.nih.nlm.nls.tc.FilterApi.InputFilterOption;
