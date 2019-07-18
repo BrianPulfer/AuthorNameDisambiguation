@@ -33,9 +33,12 @@ def compute_accuracy(classifier_results, labels):
 
 
 def normalize_set(ds, binaries: list):
-    """Applies standardization (AKA Z-Score normalization) on the 2 dimensional set"""
+    """Applies standardization (AKA Z-Score normalization) on the 2 dimensional set.
+    Binaries features are not normalized."""
+
     normalized_set = np.array(ds)
     numpy_set = np.array(ds)
+
     for i in range(len(numpy_set[0])):
         if not binaries[i]:
             avg = np.mean(numpy_set[:, i])
@@ -47,7 +50,7 @@ def normalize_set(ds, binaries: list):
 
 
 def fill_empty_with_average(set):
-    """Given a set, replaces all the -1 values with the respective column average"""
+    """Given a set, replaces all the -1 values with the respective column average (-1 values excluded)"""
     matrix = np.array(set)
     averages = list()
 
@@ -74,6 +77,7 @@ def fill_empty_with_average(set):
 
 
 def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path="./dataset/400_pairs_test.csv"):
+    """Main method - Trains and tests various classifiers"""
     # Positive instances in the training set: 970. Negative instances in the training set: 503
     # Positive instances in the testing set: 217. Negative instances in the testing set: 182
     # Nominative training set length is 1500 Instances. After filtering out null values there are 1473 instances
@@ -113,18 +117,20 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
         article1 = ArticleLoader.load_article(pmid_left)
         article1.set_main_author_initials(training_set[i][2])
         article1.set_ambiguity(
-            AmbiguityScoreRetriever.get_ambiguity_score(training_set[i][1],
-                                                        training_set[i][2],
-                                                        training_set,
-                                                        1, 2, 5, 6))
+            AmbiguityScoreRetriever.get_ambiguity_score(namespace_lastname=training_set[i][1],
+                                                        namespace_initial=training_set[i][2],
+                                                        dataset=training_set,
+                                                        ds_ln1_col=1, ds_fn1_col=2,
+                                                        ds_ln2_col=5, ds_fn2_col=6))
 
         article2 = ArticleLoader.load_article(pmid_right)
         article2.set_main_author_initials(training_set[i][6])
         article2.set_ambiguity(
-            AmbiguityScoreRetriever.get_ambiguity_score(training_set[i][5],
-                                                        training_set[i][6],
-                                                        training_set,
-                                                        1, 2, 5, 6))
+            AmbiguityScoreRetriever.get_ambiguity_score(namespace_lastname=training_set[i][5],
+                                                        namespace_initial=training_set[i][6],
+                                                        dataset=training_set,
+                                                        ds_ln1_col=1, ds_fn1_col=2,
+                                                        ds_ln2_col=5, ds_fn2_col=6))
 
         article_pair = ArticlePair(article1, article2)
 
@@ -165,17 +171,19 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     x_train_norm = normalize_set(x_train_filled, binaries_features).astype('float64')
     x_test_norm = normalize_set(x_test_filled, binaries_features).astype('float64')
 
-    # KNN - CLASSIFIER
-    classifier = KNN(5)
-    classifier.fit(x_train_norm, y_train)
-    knn_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
-    print("5NN - Classifier accuracy: " + str(int(knn_accuracy*100))+"%")
+    # Trying out different values for K (5,7 and 9) in K-NN and trees for the random forest (50, 70 and 90)
+    for i in range(5, 11, 2):
+        # KNN - CLASSIFIER
+        classifier = KNN(i)
+        classifier.fit(x_train_norm, y_train)
+        knn_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
+        print(str(i)+"NN - Classifier accuracy: " + str(int(knn_accuracy*100))+"%")
 
-    # RANDOM FOREST - CLASSIFIER
-    classifier = RandomForest(50)
-    classifier.fit(x_train_norm, y_train)
-    rf_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
-    print("Random Forest - Classifier accuracy: "+str(int(rf_accuracy*100))+"%")
+        # RANDOM FOREST - CLASSIFIER
+        classifier = RandomForest(i*10)
+        classifier.fit(x_train_norm, y_train)
+        rf_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
+        print("Random Forest (" + str(i*10) + " trees) - Classifier accuracy: "+str(int(rf_accuracy*100))+"%\n")
 
 
 if __name__ == '__main__':
