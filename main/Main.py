@@ -76,6 +76,29 @@ def fill_empty_with_average(set):
     return matrix
 
 
+def get_confusion_matrix(predictions, labels):
+    """Given a classifier predictions and the actual labels, returns a 2x2 (confusion) matrix:
+        | True Negatives | False Positives |
+        | False Negatives| True Positives  |"""
+
+    tp, fp, tn, fn = 0, 0, 0, 0
+
+    for i in range(len(predictions)):
+        if predictions[i] == labels[i]:
+            if predictions[i] == 1:
+                tp = tp + 1
+            else:
+                tn = tn + 1
+        else:
+            if predictions[i] == 0:
+                fn = fn + 1
+            else:
+                fp = fp + 1
+
+    tp, fp, tn, fn = tp/len(predictions), fp/len(predictions), tn/len(predictions), fn/len(predictions)
+    return np.array([[tn, fp], [fn, tp]])
+
+
 def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path="./dataset/400_pairs_test.csv"):
     """Main method - Trains and tests various classifiers"""
     # Positive instances in the training set: 970. Negative instances in the training set: 503
@@ -176,14 +199,24 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
         # KNN - CLASSIFIER
         classifier = KNN(i)
         classifier.fit(x_train_norm, y_train)
-        knn_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
-        print(str(i)+"NN - Classifier accuracy: " + str(int(knn_accuracy*100))+"%")
+        predictions = classifier.predict(x_test_norm)
+
+        knn_accuracy = compute_accuracy(predictions, y_test)
+        conf_matrix = get_confusion_matrix(predictions, y_test)
+
+        print("\n"+str(i)+"NN - Classifier accuracy: " + str(int(knn_accuracy*100))+"%")
+        print(conf_matrix)
 
         # RANDOM FOREST - CLASSIFIER
         classifier = RandomForest(i*10)
         classifier.fit(x_train_norm, y_train)
-        rf_accuracy = compute_accuracy(classifier.predict(x_test_norm), y_test)
-        print("Random Forest (" + str(i*10) + " trees) - Classifier accuracy: "+str(int(rf_accuracy*100))+"%\n")
+        predictions = classifier.predict(x_test_norm)
+
+        rf_accuracy = compute_accuracy(predictions, y_test)
+        conf_matrix = get_confusion_matrix(predictions, y_test)
+
+        print("\nRandom Forest (" + str(i*10) + " trees) - Classifier accuracy: "+str(int(rf_accuracy*100))+"%\n")
+        print(conf_matrix)
 
 
 if __name__ == '__main__':
