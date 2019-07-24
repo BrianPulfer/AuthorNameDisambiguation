@@ -25,20 +25,17 @@ def get_ambiguity_score(namespace_lastname: str, namespace_initial: str,  datase
             elem[ds_ln1_col], elem[ds_fn1_col], elem[ds_ln2_col], elem[ds_fn2_col]
 
         # If first author infos are legal and match, increase counter
-        if are_strings([lastname1, firstname1]):
+        if are_strings(lastname1, firstname1):
             if lastname1 == namespace_lastname and firstname1[0] == namespace_initial:
                 matching_authors = matching_authors + 1
 
         # If second author infos are legal and match, increase counter
-        if are_strings([lastname2, firstname2]):
+        if are_strings(lastname2, firstname2):
             if lastname2 == namespace_lastname and firstname2[0] == namespace_initial:
                 matching_authors = matching_authors + 1
 
     return matching_authors/total_authors
 
 
-def are_strings(names: list):
-    for n in names:
-        if type(n) is not str:
-            return False
-    return True
+def are_strings(*args):
+    return all(map(lambda _: type(_) is str, args))

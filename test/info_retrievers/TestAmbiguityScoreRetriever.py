@@ -21,6 +21,10 @@ class TestAmbiguityScoreRetriever(unittest.TestCase):
 
         self.assertEqual(3/6, AmbiguityScoreRetriever.get_ambiguity_score(lastname, firstname[0], dataset, 0, 1, 2, 3))
 
+    def test_are_strings(self):
+        self.assertTrue(AmbiguityScoreRetriever.are_strings("String1", 'str2', '5'))
+        self.assertFalse(AmbiguityScoreRetriever.are_strings('String1', 'str2', 5, '5'))
+
 
 if __name__ == '__main__':
     unittest.main()
