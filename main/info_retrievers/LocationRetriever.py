@@ -1,4 +1,3 @@
-from lxml import objectify
 from country_list import countries_for_language
 
 

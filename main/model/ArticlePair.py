@@ -1,6 +1,5 @@
 import copy
 import Levenshtein
-import random
 
 from main.model.Article import Article
 

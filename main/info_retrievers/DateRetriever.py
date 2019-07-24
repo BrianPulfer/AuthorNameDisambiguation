@@ -1,6 +1,5 @@
 import datetime
 
-from bs4 import BeautifulSoup
 
 
 def find_date(article_content, pubstatus="pubmed"):
