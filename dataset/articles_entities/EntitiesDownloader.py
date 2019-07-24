@@ -3,12 +3,12 @@ import sys
 import pandas as pd
 
 import definitions
-from main.oger.OgerUtility import OgerUtility
+from main.oger.oger_utility import OgerUtility
 
 
 PATH_TO_TRAINING_SET = './../1500_pairs_train.csv'
 PATH_TO_TESTING_SET = './../400_pairs_test.csv'
-UTILITY = OgerUtility('./../../main/oger/test/testfiles/test_terms.tsv')
+UTILITY = OgerUtility('./../../main/oger_test/test/testfiles/test_terms.tsv')
 
 
 def download_entities(pmids=None):

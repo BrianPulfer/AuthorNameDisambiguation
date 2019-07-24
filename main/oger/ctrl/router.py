@@ -565,7 +565,7 @@ class LoadContext:
             <attempt to load>
 
     - Include a list of IDs in the exception raised by the
-      loader, given as an attribute called `ids`.
+      loader_test, given as an attribute called `ids`.
     '''
     def __init__(self, ignore_load_errors, collect_missing):
         self._ignore_load_errors = ignore_load_errors

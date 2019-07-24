@@ -583,7 +583,7 @@ class OffsetWriter(_OffsetManager):
     '''
     @staticmethod
     def _start(unit):
-        # Unit is a oger.doc.document.Section/Sentence object.
+        # Unit is a oger_test.doc.document.Section/Sentence object.
         return unit.start
 
     @staticmethod

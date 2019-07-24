@@ -14,7 +14,7 @@ from .document import Collection
 
 class _Loader:
     '''
-    Abstract base loader.
+    Abstract base loader_test.
 
     Subclasses must implement load_one().
     '''

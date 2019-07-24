@@ -52,7 +52,7 @@ TESTFILES = join(HERE, 'testfiles')
 TERMLIST = join(TESTFILES, 'test_terms.tsv')
 CACHE = tempfile.TemporaryDirectory()
 IDFILES = join(TESTFILES, 'idfiles')
-OUTPUT = 'oger-test'
+OUTPUT = 'oger_test-test'
 OUTPUT_FORMATS = doc.OUTFMTS
 
 TESTCASES = [

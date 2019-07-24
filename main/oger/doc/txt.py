@@ -20,7 +20,7 @@ from ..util.stream import text_stream
 
 class _TXTLoaderMixin:
     '''
-    Base loader for plain-text documents.
+    Base loader_test for plain-text documents.
     '''
     def _document(self, stream, docid):
         if self.config.p.single_section:

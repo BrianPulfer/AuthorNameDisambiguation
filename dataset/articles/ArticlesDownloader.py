@@ -1,7 +1,7 @@
 import sys
 import os
 import pandas as pd
-from main.eutilities import EUtilities
+from main.eutilities import e_utilities
 
 """USAGE: 
     'python ArticlesDownloader.py [pmid1] [pmid2] [pmdi3]' will download 2 articles.
@@ -20,7 +20,7 @@ def download_article(article_id):
     exists = os.path.isfile(file_name)
     if not exists:
         file = open(file_name, 'wb')
-        article = EUtilities.fetch(EUtilities.DATABASES.PubMed, EUtilities.Query(any_terms=[article_id]), 'xml')
+        article = e_utilities.fetch(e_utilities.DATABASES.PubMed, e_utilities.Query(any_terms=[article_id]), 'xml')
         file.write(article.content)
         file.close()
 
