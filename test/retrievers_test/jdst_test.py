@@ -1,8 +1,7 @@
 import unittest
 import definitions
 
-from main.retrievers.jdst import JDSTRetriever
-
+from main.retrievers.jnius_jdst import jdst
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'
 
@@ -19,9 +18,7 @@ class TestJDSTRetriever(unittest.TestCase):
 
     def test_get_jds(self):
         """Tests that the Journal Descriptors are correctly retrieved from the article"""
-        retriever = JDSTRetriever()
-
-        jds = retriever.get_jds(self.get_test_text())
+        jds = jdst.get_jds(self.get_test_text())
 
         self.assertEqual('Behavioral Sciences', jds[0])
         self.assertEqual('Nutritional Sciences', jds[1])
@@ -31,9 +28,7 @@ class TestJDSTRetriever(unittest.TestCase):
 
     def test_get_sts(self):
         """Tests that the Semantic Types are correctly retrieved from the article"""
-        retriever = JDSTRetriever()
-
-        sts = retriever.get_sts(self.get_test_text())
+        sts = jdst.get_sts(self.get_test_text())
 
         self.assertEqual('Conceptual Entity', sts[0])
         self.assertEqual('Pathologic Function', sts[1])

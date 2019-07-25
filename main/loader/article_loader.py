@@ -4,8 +4,9 @@ from bs4 import BeautifulSoup
 
 from main.model.article import Article
 
+from main.retrievers.jnius_jdst import jdst
 from main.retrievers import affiliation, authors, date, email,\
-    keywords, location, entities, language, jdst
+    keywords, location, entities, language
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'
 PATH_TO_ARTICLES_ENTITIES = definitions.ROOT_DIR + '/dataset/articles_entities/'
@@ -38,18 +39,17 @@ def load_article(pmid):
 
     if soup.ArticleTitle is not None:
         if soup.ArticleTitle.string is not None:
-            text = soup.ArticleTitle.string
+            text = str(soup.ArticleTitle.string)
     if soup.AbstractText is not None:
         if soup.AbstractText.string is not None:
-            text = text + soup.AbstractText.string
+            text = str(text + soup.AbstractText.string)
 
     if len(text) == 0:
         jds = list()
         sts = list()
     else:
-        jdst_retriever = jdst.JDSTRetriever()
-        jds = jdst_retriever.get_jds(text)
-        sts = jdst_retriever.get_sts(text)
+        jds = jdst.get_jds(text)
+        sts = jdst.get_sts(text)
 
     return Article(PMID=pmid, authors=auts, language=lan, e_mail=mail, date=dat, affiliation=aff,
                    country=country, city=city, key_words=keys, entities=ents, sts=sts, jds=jds)
