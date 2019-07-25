@@ -1,38 +1,38 @@
-Gene
-Gene Expression
-Cell
-Carcinoma
-tumor
-tumors
-cell
-carcinoma
-tumors
-tumor
-RNA
-genome
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-gene
-gene expression
-gene
-gene expression
-transport
-cancer
-cancer cell
-cell
-tumors
-immune markers
-CD4
-T-cell
-cell
-leukocyte
-tumor
-cell
-Cancer
+SO:0000704
+GO:0010467
+CL:0000000
+D002277
+D009369
+D009369
+CL:0000000
+D002277
+D009369
+D009369
+SO:0000356
+SO:0001026
+Q41249
+Q01289
+Q9SDT1
+Q59987
+Q39617
+P15904
+O66148
+O80333
+SO:0000704
+GO:0010467
+SO:0000704
+GO:0010467
+GO:0006810
+D009369
+CL:0001064
+CL:0000000
+D009369
+D015415
+PR:000001004
+CL:0000084
+CL:0000000
+CL:0000738
+D009369
+CL:0000000
+D009369
 

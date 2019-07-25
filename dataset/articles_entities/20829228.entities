@@ -1,16 +1,16 @@
-mutation
-disease
-heart failure
-disease
-sequence
-mutation
-heart failure
-mutation
-formation
-wild-type
-Escherichia coli
-Escherichia coli
-formation
-gene
-gene
+SO:0000109
+D004194
+D006333
+D004194
+SO:0000001
+SO:0000109
+D006333
+SO:0000109
+GO:0009058
+SO:0000817
+562
+D004926
+GO:0009058
+SO:0000704
+SO:0000704
 

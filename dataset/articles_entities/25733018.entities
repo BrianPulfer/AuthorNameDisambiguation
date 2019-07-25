@@ -1,11 +1,11 @@
-stem cell
-cell
-regeneration
-steroid
-steroid
-stem cell
-cell
-aging
-regeneration
-can
+CL:0000034
+CL:0000000
+GO:0031099
+CHEBI:35341
+CHEBI:35341
+CL:0000034
+CL:0000000
+GO:0007568
+GO:0031099
+CHEBI:29320
 

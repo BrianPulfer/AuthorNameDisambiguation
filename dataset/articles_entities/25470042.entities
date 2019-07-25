@@ -1,34 +1,34 @@
-histone
-breast cancer
-cancer
-gene
-region
-cancers
-protein
-protein
-protein
-histone
-chromatin
-human
-human
-breast cancer
-cancer
-cancer cell
-cell
-Genome
-chromatin
-breast cancer
-cancer
-complex
-complex
-RNA
-dissociation
-human
-human
-breast cancer
-cancer
-growth
-mouse
-mouse
-cancers
+PR:000041244
+D001943
+D009369
+SO:0000704
+SO:0000001
+D009369
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+PR:000041244
+D002843
+9606
+D006801
+D001943
+D009369
+CL:0001064
+CL:0000000
+SO:0001026
+D002843
+D001943
+D009369
+SO:0001784
+SO:0001784
+SO:0000356
+D004213
+9606
+D006801
+D001943
+D009369
+GO:0040007
+D051379
+10090
+D009369
 

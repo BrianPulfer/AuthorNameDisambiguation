@@ -1,69 +1,69 @@
-helix
-helix
-helix
-membrane
-localization
-cell
-cell death
-caspase-dependent programmed cell death
-cell
-cell death
-apoptosis
-apoptosis
-effector
-protein
-protein
-protein
-cell
-cell death
-downstream
-protein
-protein
-protein
-protein kinase
-Protein
-Protein
-Protein
-Protein Kinase
-cell
-cell death
-phosphorylation
-cell
-cell death
-helix
-helix
-helix
-formation
-membrane
-complex
-cell
-cell death
-alanine
-mutagenesis
-clusters
-cluster
-membrane
-localization
-cluster
-membrane
-translocation
-membrane
-localization
-cell
-cell death
-molecule
-nucleotide
-binding
-binding
-binding site
-translocation
-inhibitor
-molecules
-nucleotide
-binding
-binding
-binding site
-signal
-signal
-signal transduction
+SO:0001116
+SO:0001114
+SO:0001117
+GO:0016020
+GO:0051179
+CL:0000000
+GO:0008219
+GO:0006915
+CL:0000000
+GO:0008219
+GO:0006915
+GO:0097194
+CHEBI:35224
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CL:0000000
+GO:0008219
+SO:0001633
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D011494
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D011494
+CL:0000000
+GO:0008219
+GO:0016310
+CL:0000000
+GO:0008219
+SO:0001116
+SO:0001114
+SO:0001117
+GO:0009058
+GO:0016020
+SO:0001784
+CL:0000000
+GO:0008219
+SO:0001435
+GO:0006280
+CHEBI:33731
+CHEBI:33731
+GO:0016020
+GO:0051179
+CHEBI:33731
+GO:0016020
+SO:0000199
+GO:0016020
+GO:0051179
+CL:0000000
+GO:0008219
+CHEBI:25367
+CHEBI:36976
+GO:0005488
+SO:0001091
+SO:0001091
+SO:0000199
+CHEBI:35222
+CHEBI:25367
+CHEBI:36976
+GO:0005488
+SO:0001091
+SO:0001091
+SO:0000725
+SO:0000418
+GO:0007165
 

@@ -5,15 +5,14 @@ import pandas as pd
 import definitions
 from main.oger.oger_utility import OgerUtility
 
-
 PATH_TO_TRAINING_SET = './../1500_pairs_train.csv'
 PATH_TO_TESTING_SET = './../400_pairs_test.csv'
-UTILITY = OgerUtility('./../../main/oger_test/test/testfiles/test_terms.tsv')
+UTILITY = OgerUtility(definitions.ROOT_DIR + '/main/oger/test/testfiles/test_terms.tsv')
 
 
-def download_entities(pmids=None):
-    """Downloads the entities in a .entities file for the specified pmids.
-    Downloads all entities of the dataset if no pmids are given."""
+def write_entities(pmids=None):
+    """Writing the entities in a .entities file for the specified pmids.
+    Writes all entities of the dataset if no pmids are given."""
 
     if pmids is None:
         # If no pmids are given as argument, downloads entities for every PMID in the dataset.
@@ -41,11 +40,11 @@ def download_entities(pmids=None):
                 pmids[i] = pmids[i][:-2]
 
     print("Downloading entities for", len(pmids), "articles.")
-    download(pmids)
+    write(pmids)
     print("Entities successfully written to files.")
 
 
-def download(pmids):
+def write(pmids):
     """Writes the entities to files for the specified pmids."""
 
     # Writing once per each file because bugs happens otherwise (inefficient, might be changed)
@@ -58,7 +57,7 @@ def download(pmids):
 
             for i in range(len(entities)):
                 for j in range(len(entities[i])):
-                    file.write(entities[i][j].text+"\n")
+                    file.write(entities[i][j].cid+"\n")
                 file.write("\n")
 
             file.close()
@@ -66,8 +65,8 @@ def download(pmids):
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        download_entities(sys.argv[1:])
+        write_entities(sys.argv[1:])
     else:
-        download_entities()
+        write_entities()
 
     print("Program finished")

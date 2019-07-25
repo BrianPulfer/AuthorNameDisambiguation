@@ -1,32 +1,32 @@
-ligands
-ligands
-rheumatoid arthritis
-arthritis
-cell
-extracellular
-extracellular matrix
-ligand
-ligand
-binding
-binding
-signaling
-intracellular
-cell
-secretion
-disease
-Tumors
-apoptosis
-apoptosis
-signaling
-rheumatoid arthritis
-arthritis
-cytokines
-ligands
-ligands
-signaling
-cytokines
-tumors
-extracellular
-extracellular matrix
-can
+CHEBI:52214
+D008024
+D001172
+D001168
+CL:0000000
+GO:0005576
+GO:0031012
+CHEBI:52214
+GO:0005488
+GO:0005488
+SO:0001091
+GO:0023052
+GO:0005622
+CL:0000000
+GO:0046903
+D004194
+D009369
+GO:0006915
+GO:0097194
+GO:0023052
+D001172
+D001168
+D016207
+CHEBI:52214
+D008024
+GO:0023052
+D016207
+D009369
+GO:0005576
+GO:0031012
+CHEBI:29320
 

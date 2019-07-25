@@ -1,16 +1,16 @@
-mutation
-mutation
-chromosome
-Allele
-chain
-red blood cell
-cell
-platelet
-white blood cell
-cell
-CD34
-Fibrosis
-mutation
-disease
-mutation
+SO:0000109
+SO:0000109
+GO:0005694
+SO:0001023
+SO:0000419
+CL:0000232
+CL:0000000
+CL:0000233
+CL:0000738
+CL:0000000
+PR:000001003
+D005355
+SO:0000109
+D004194
+SO:0000109
 

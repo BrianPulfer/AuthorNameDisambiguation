@@ -1,12 +1,12 @@
-chromosome
-genome
-chromosome
-boundary
-chromosome
-breakpoint
-gene
-breakpoint
-gene
-genome
-chromosome
+GO:0005694
+SO:0001026
+GO:0005694
+SO:0000699
+GO:0005694
+SO:0000699
+SO:0000704
+SO:0000699
+SO:0000704
+SO:0001026
+GO:0005694
 

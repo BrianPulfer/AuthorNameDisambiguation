@@ -1,21 +1,21 @@
-cell
-cell cycle
-gene
-gene expression
-gene
-yeast
-cell
-cell cycle
-cell
-cell cycle
-cell
-cell cycle
-regulated
-cell
-cell cycle
-cell
-cell cycle
-cell
-cell cycle
-can
+CL:0000000
+GO:0007049
+SO:0000704
+GO:0010467
+SO:0000704
+D015003
+CL:0000000
+GO:0007049
+CL:0000000
+GO:0007049
+CL:0000000
+GO:0007049
+SO:0000119
+CL:0000000
+GO:0007049
+CL:0000000
+GO:0007049
+CL:0000000
+GO:0007049
+CHEBI:29320
 

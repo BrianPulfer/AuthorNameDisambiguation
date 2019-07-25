@@ -1,28 +1,28 @@
-RNA
-binding
-binding
-binding proteins
-proteins
-proteins
-cell
-lymphocyte
-cell
-cell cycle
-antigen
-antigen
-RNA
-binding
-binding
-binding proteins
-proteins
-proteins
-B cell
-cell
-protein
-protein
-protein
-transition
-cell
-cell cycle
-immunoglobulin
+SO:0000356
+GO:0005488
+SO:0001091
+D002352
+D011506
+CHEBI:36080
+CL:0000000
+CL:0000542
+CL:0000000
+GO:0007049
+CHEBI:59132
+D000941
+SO:0000356
+GO:0005488
+SO:0001091
+D002352
+D011506
+CHEBI:36080
+CL:0000236
+CL:0000000
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+SO:1000009
+CL:0000000
+GO:0007049
+D007136
 

@@ -1,26 +1,26 @@
-RNA
-RNA
-sequence
-biosynthesis
-secondary metabolites
-metabolites
-rhythm
-hormone
-hormone
-signal
-signal
-signal transduction
-degradation
-biosynthesis
-secondary metabolites
-metabolites
-gene
-gene expression
-metabolic process
-rhythmic process
-transcription
-transcription factor
-methylation
-can
-growth
+SO:0000356
+SO:0000356
+SO:0000001
+GO:0009058
+CHEBI:25212
+CHEBI:25212
+GO:0048511
+CHEBI:24621
+D006728
+SO:0000725
+SO:0000418
+GO:0007165
+GO:0009056
+GO:0009058
+CHEBI:25212
+CHEBI:25212
+SO:0000704
+GO:0010467
+GO:0008152
+GO:0048511
+GO:0006351
+GO:0000982
+GO:0032259
+CHEBI:29320
+GO:0040007
 

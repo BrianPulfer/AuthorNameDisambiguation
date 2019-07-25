@@ -1,29 +1,29 @@
-tumor
-human
-human
-ovarian cancer
-cancer
-protein
-protein
-protein
-melanoma
-breast cancer
-cancer
-cancer
-pancreatic cancer
-cancer
-extracellular
-cell
-cell
-downstream
-signaling
-cell
-ovarian cancer
-cancer
-carcinoma
-ovarian cancer
-cancer
-cadherin
-cadherin
-drug
+D009369
+9606
+D006801
+D010051
+D009369
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D008545
+D001943
+D009369
+D009369
+D010190
+D009369
+GO:0005576
+CL:0000000
+CL:0000000
+SO:0001633
+GO:0023052
+CL:0000000
+D010051
+D009369
+D002277
+D010051
+D009369
+GO:0008014
+GO:0008014
+CHEBI:23888
 

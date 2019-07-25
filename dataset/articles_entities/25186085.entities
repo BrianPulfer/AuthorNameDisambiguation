@@ -1,36 +1,36 @@
-MET
-metastasis
-cell
-carcinoma
-MET
-cell
-carcinoma
-MET
-metastases
-cancers
-metastasis
-MET
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-metastasis
-metastases
-human
-human
-MET
-antibody
-antibody
-human
-human
-antibody
-antibody
-MET
-MET
-MET
-MET
-metastasis
-metastasis
+SO:0001442
+D009362
+CL:0000000
+D002277
+SO:0001442
+CL:0000000
+D002277
+SO:0001442
+D009362
+D009369
+D009362
+SO:0001442
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+D009362
+D009362
+9606
+D006801
+SO:0001442
+GO:0019815
+GO:0042571
+9606
+D006801
+GO:0019815
+GO:0042571
+SO:0001442
+SO:0001442
+SO:0001442
+SO:0001442
+D009362
+D009362
 

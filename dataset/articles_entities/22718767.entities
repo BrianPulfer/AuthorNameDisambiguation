@@ -1,38 +1,38 @@
-genome
-parasite
-parasite
-membrane
-amino
-amino acids
-amino acids
-amino acids
-acids
-amino
-amino acids
-amino acids
-amino acids
-acids
-ATPase
-calcium
-calcium
-calcium
-amino
-amino acids
-amino acids
-amino acids
-acids
-binding
-binding
-ATPase
-calcium
-calcium
-calcium
-salt
-salt
-calcium
-calcium
-calcium
-binding
-binding
-parasite
+SO:0001026
+D010271
+D010271
+GO:0016020
+CHEBI:46882
+D000596
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+CHEBI:46882
+D000596
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+D000251
+CHEBI:22984
+D002118
+CHEBI:29320
+CHEBI:46882
+D000596
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+GO:0005488
+SO:0001091
+D000251
+CHEBI:22984
+D002118
+CHEBI:29320
+CHEBI:26710
+CHEBI:24866
+CHEBI:22984
+D002118
+CHEBI:29320
+GO:0005488
+SO:0001091
+D010271
 

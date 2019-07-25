@@ -1,39 +1,39 @@
-phospholipid
-plasma membrane
-membrane
-ATPases
-ATPases
-phospholipid
-phospholipids
-lipid
-ATPases
-membrane
-ATPases
-membrane
-human
-human
-ATPases
-complex
-plasma membrane
-membrane
-glucose
-glucose
-glucose
-glucose
-transport
-degradation
-epidermal growth factor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-EGF
-transport
-toxin
-fragment
-complex
-plasma membrane
-membrane
+CHEBI:16247
+GO:0005886
+GO:0016020
+D000251
+D000251
+CHEBI:16247
+CHEBI:16247
+CHEBI:18059
+D000251
+GO:0016020
+D000251
+GO:0016020
+9606
+D006801
+D000251
+SO:0001784
+GO:0005886
+GO:0016020
+CHEBI:4167
+CHEBI:42758
+CHEBI:17234
+D005947
+GO:0006810
+GO:0009056
+GO:0005154
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0005154
+GO:0006810
+CHEBI:27026
+SO:0000731
+SO:0001784
+GO:0005886
+GO:0016020
 

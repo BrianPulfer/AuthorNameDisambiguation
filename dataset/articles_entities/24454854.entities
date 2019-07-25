@@ -1,43 +1,43 @@
-cell
-lung cancer
-cancer
-tumors
-signaling
-signaling pathway
-protein
-protein
-protein
-tumor
-poly
-ADP
-ADP
-tumor
-cell
-lung cancer
-cancer
-lung cancer
-cancer
-cell
-tumor
-metastasis
-lung cancer
-cancer
-cancer cell
-cell
-cell
-cell
-cell cycle
-regulated
-cell
-cell proliferation
-lung cancer
-cancer
-cancer cell
-cell
-signaling
-signaling pathway
-regulated
-cell
-cell growth
-growth
+CL:0000000
+D008175
+D009369
+D009369
+GO:0023052
+GO:0007165
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D009369
+CL:0000775
+P02783
+P24935
+D009369
+CL:0000000
+D008175
+D009369
+D008175
+D009369
+CL:0000000
+D009369
+D009362
+D008175
+D009369
+CL:0001064
+CL:0000000
+CL:0000000
+CL:0000000
+GO:0007049
+SO:0000119
+CL:0000000
+GO:0008283
+D008175
+D009369
+CL:0001064
+CL:0000000
+GO:0023052
+GO:0007165
+SO:0000119
+CL:0000000
+GO:0016049
+GO:0040007
 

@@ -1,14 +1,14 @@
-ligand
-ligand
-glioma
-disease
-growth
-signalling
-signalling pathway
-signalling
-glioma
-signalling
-glioma
-cell
-signalling
+CHEBI:52214
+GO:0005488
+D005910
+D004194
+GO:0040007
+GO:0023052
+GO:0007165
+GO:0023052
+D005910
+GO:0023052
+D005910
+CL:0000000
+GO:0023052
 

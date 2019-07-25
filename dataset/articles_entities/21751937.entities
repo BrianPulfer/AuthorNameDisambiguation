@@ -1,12 +1,12 @@
-peptide
-peptide
-T-cell
-cell
-protein
-protein
-protein
-hsp
-immune response
-humans
-cell
+PR:000018263
+PR:000018264
+CL:0000084
+CL:0000000
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CHEBI:50430
+GO:0006955
+D006801
+CL:0000000
 

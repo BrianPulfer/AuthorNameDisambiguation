@@ -1,37 +1,37 @@
-Breast carcinoma
-carcinoma
-regulated
-cell
-gene
-regulation
-cell
-cell
-molecules
-cell
-regulation
-breast cancer
-cancer
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-regulated
-cell
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-beta
-beta
-beta
-element
-homeostasis
-growth
-met
-tumor
-regulated
+D001943
+D002277
+SO:0000119
+CL:0000000
+SO:0000704
+GO:0065007
+CL:0000000
+CL:0000000
+CHEBI:25367
+CL:0000000
+GO:0065007
+D001943
+D009369
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+SO:0000119
+CL:0000000
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CHEBI:10545
+CHEBI:10545
+CHEBI:10545
+CHEBI:33250
+GO:0042592
+GO:0040007
+SO:0001442
+D009369
+SO:0000119
 

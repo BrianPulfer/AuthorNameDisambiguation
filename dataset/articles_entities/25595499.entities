@@ -1,10 +1,10 @@
-carriers
-disease
-mutation
-gene
-mutation
-chain
-DNA
-chromosome
-carriers
+CHEBI:78059
+D004194
+SO:0000109
+SO:0000704
+SO:0000109
+SO:0000419
+GO:0005574
+GO:0005694
+CHEBI:78059
 

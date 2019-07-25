@@ -1,43 +1,43 @@
-Gene
-Gene expression
-gene
-gene expression
-cell
-cell
-protein
-protein
-protein
-protein synthesis
-synthesis
-genome
-gene
-gene expression
-complement
-gene
-gene expression
-gene
-gene
-gene expression
-RNA
-gene
-gene expression
-cancer
-pathogenesis
-diseases
-breast cancer
-cancer
-disease
-schizophrenia
-exon
-splicing
-transcription
-chromatin
-DNA
-protein
-protein
-protein
-gene
-gene expression
-gene
-gene expression
+SO:0000704
+GO:0010467
+SO:0000704
+GO:0010467
+CL:0000000
+CL:0000000
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0006412
+GO:0009058
+SO:0001026
+SO:0000704
+GO:0010467
+D003165
+SO:0000704
+GO:0010467
+SO:0000704
+SO:0000704
+GO:0010467
+SO:0000356
+SO:0000704
+GO:0010467
+D009369
+GO:0009405
+D004194
+D001943
+D009369
+D004194
+D012559
+SO:0000147
+GO:0045292
+GO:0006351
+D002843
+GO:0005574
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+SO:0000704
+GO:0010467
+SO:0000704
+GO:0010467
 

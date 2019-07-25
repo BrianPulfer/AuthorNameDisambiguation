@@ -1,82 +1,82 @@
-gene
-gene expression
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-cell
-cell proliferation
-transport
-gene
-gene expression
-regulated
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-protein
-protein
-protein
-protein kinase
-protein kinase B
-protein kinase B
-PKB
-PKB
-PKB
-Akt
-Akt
-Akt
-Akt
-Akt
-reactive oxygen species
-reactive oxygen species
-oxygen
-oxygen
-oxygen
-ROS
-ROS
-Akt
-Akt
-Akt
-Akt
-Akt
-Ser
-Ser
-Ser
-phosphorylation
-ROS
-ROS
-Akt
-Akt
-Akt
-Akt
-Akt
-Ser
-Ser
-Ser
-phosphorylation
-ROS
-ROS
-can
-cell
-cell proliferation
-ROS
-ROS
-Akt
-Akt
-Akt
-Akt
-Akt
-Ser
-Ser
-Ser
-phosphorylation
+SO:0000704
+GO:0010467
+CHEBI:43474
+CHEBI:26020
+CHEBI:35780
+CHEBI:18367
+CHEBI:26078
+CHEBI:43474
+CHEBI:26020
+CHEBI:35780
+CHEBI:18367
+CHEBI:26078
+CL:0000000
+GO:0008283
+GO:0006810
+SO:0000704
+GO:0010467
+SO:0000119
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D011494
+PR:000002190
+Q8INB9
+PR:000002190
+PR:000029189
+Q8INB9
+PR:000029189
+PR:P31750
+PR:000002190
+Q8INB9
+PR:P54644
+D017382
+CHEBI:26523
+CHEBI:25805
+D010100
+CHEBI:15379
+PR:Q78DX7
+CHEBI:26523
+PR:000029189
+PR:P31750
+PR:000002190
+Q8INB9
+PR:P54644
+SO:0001444
+CHEBI:29999
+CHEBI:17115
+GO:0016310
+PR:Q78DX7
+CHEBI:26523
+PR:000029189
+PR:P31750
+PR:000002190
+Q8INB9
+PR:P54644
+SO:0001444
+CHEBI:29999
+CHEBI:17115
+GO:0016310
+PR:Q78DX7
+CHEBI:26523
+CHEBI:29320
+CL:0000000
+GO:0008283
+PR:Q78DX7
+CHEBI:26523
+PR:000029189
+PR:P31750
+PR:000002190
+Q8INB9
+PR:P54644
+SO:0001444
+CHEBI:29999
+CHEBI:17115
+GO:0016310
 

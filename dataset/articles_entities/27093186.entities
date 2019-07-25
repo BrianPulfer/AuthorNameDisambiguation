@@ -1,23 +1,23 @@
-Cell
-Lung Cancer
-Cancer
-cell
-lung cancer
-cancer
-disease
-disease
-tumors
-tumor
-TP53
-TP53
-mutation
-Serine
-Serine
-Arginine
-Arginine
-Splicing
-DNA
-mRNA
-DNA
-biomarker
+CL:0000000
+D008175
+D009369
+CL:0000000
+D008175
+D009369
+D004194
+D004194
+D009369
+D009369
+PR:000003035
+PR:000003035
+SO:0000109
+SO:0001444
+CHEBI:17115
+CHEBI:16467
+SO:0001451
+GO:0045292
+GO:0005574
+SO:0000234
+GO:0005574
+CHEBI:59163
 

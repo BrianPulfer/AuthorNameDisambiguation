@@ -1,81 +1,81 @@
-lysine
-binding
-binding
-human
-human
-ligand
-ligand
-binding
-binding
-lysine
-binding
-binding
-lysine
-lysine
-lysine
-lysine
-ligands
-ligands
-ligand
-ligand
-protein
-protein
-protein
-binding
-binding
-ligands
-ligands
-lysine
-binding
-binding
-amino
-amino acids
-amino acids
-amino acids
-acids
-Glu
-Glu
-Glu
-glutamic acid
-glutamic acid
-glutamic acid
-glutamic acid
-acid
-Lys
-lysine
-chain
-binding
-binding
-amino
-amino acids
-amino acids
-amino acids
-acids
-binding
-binding
-amino
-carbon
-carbon
-carbon
-ligands
-ligands
-atoms
-beta
-carbon
-carbon
-carbon
-chain
-amino
-amino acids
-amino acids
-amino acids
-acids
-Arginine
-Arginine
-lysine
-arginine
-arginine
-binding
-binding
-binding site
+SO:0001450
+GO:0005488
+SO:0001091
+9606
+D006801
+CHEBI:52214
+GO:0005488
+GO:0005488
+SO:0001091
+SO:0001450
+GO:0005488
+SO:0001091
+SO:0001450
+SO:0001450
+SO:0001450
+SO:0001450
+CHEBI:52214
+D008024
+CHEBI:52214
+GO:0005488
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0005488
+SO:0001091
+CHEBI:52214
+D008024
+SO:0001450
+GO:0005488
+SO:0001091
+CHEBI:46882
+D000596
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+CHEBI:18237
+SO:0001454
+CHEBI:16015
+D018698
+CHEBI:18237
+SO:0001454
+CHEBI:16015
+CHEBI:37527
+SO:0001450
+SO:0001450
+SO:0000419
+GO:0005488
+SO:0001091
+CHEBI:46882
+D000596
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+GO:0005488
+SO:0001091
+CHEBI:46882
+CHEBI:27594
+D002244
+CHEBI:33415
+CHEBI:52214
+D008024
+CHEBI:33250
+CHEBI:10545
+CHEBI:27594
+D002244
+CHEBI:33415
+SO:0000419
+CHEBI:46882
+D000596
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+CHEBI:16467
+SO:0001451
+SO:0001450
+CHEBI:16467
+SO:0001451
+GO:0005488
+SO:0001091
+SO:0001091
 

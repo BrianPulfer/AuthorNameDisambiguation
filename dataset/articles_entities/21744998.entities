@@ -1,38 +1,38 @@
-antibody
-antibody
-breast cancer
-cancer
-biomarker
-breast cancer
-cancer
-breast cancer
-cancer
-sera
-E.coli
-E.coli
-mice
-mice
-protein
-protein
-protein
-antibody
-antibody
-breast cancer
-cancer
-antigen
-antigen
-E.coli
-E.coli
-cell
-mice
-mice
-breast cancer
-cancer
-sera
-breast cancer
-cancer
-antibody
-antibody
-breast cancer
-cancer
+GO:0019815
+GO:0042571
+D001943
+D009369
+CHEBI:59163
+D001943
+D009369
+D001943
+D009369
+GO:0004617
+562
+D004926
+D051379
+10095
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0019815
+GO:0042571
+D001943
+D009369
+CHEBI:59132
+D000941
+562
+D004926
+CL:0000000
+D051379
+10095
+D001943
+D009369
+GO:0004617
+D001943
+D009369
+GO:0019815
+GO:0042571
+D001943
+D009369
 

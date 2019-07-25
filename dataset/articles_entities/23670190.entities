@@ -1,25 +1,25 @@
-human
-human
-cell
-human
-human
-CD34
-cell
-human
-human
-ligand
-ligand
-Delta
-T cell
-cell
-CD34
-T cell
-cell
-cell
-aging
-CD34
-monocyte
-monocyte
-T cell
-cell
+9606
+D006801
+CL:0000000
+9606
+D006801
+PR:000001003
+CL:0000000
+9606
+D006801
+CHEBI:52214
+GO:0005488
+CHEBI:36375
+CL:0000084
+CL:0000000
+PR:000001003
+CL:0000084
+CL:0000000
+CL:0000000
+GO:0007568
+PR:000001003
+CL:0001054
+CL:0000576
+CL:0000084
+CL:0000000
 

@@ -1,13 +1,13 @@
-biomarker
-cancer
-biomarker
-cancer
-tumor
-antibody
-antibody
-cell
-Disease
-Cox
-disease
-disease
+CHEBI:59163
+D009369
+CHEBI:59163
+D009369
+D009369
+GO:0019815
+GO:0042571
+CL:0000000
+D004194
+CVCL_E534
+D004194
+D004194
 

@@ -1,12 +1,12 @@
-gene
-bovine
-transition
-transition
-gestation
-gene
-regulated
-gene
-metabolism
-gene
-behavior
+SO:0000704
+9913
+SO:1000009
+SO:1000009
+GO:0007565
+SO:0000704
+SO:0000119
+SO:0000704
+GO:0008152
+SO:0000704
+GO:0007610
 

@@ -1,75 +1,75 @@
-metabolism
-colorectal cancer
-cancer
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-antibody
-antibody
-antibody
-antibody
-colorectal cancer
-cancer
-epidermal growth factor
-epidermal growth factor receptor
-epidermal growth factor receptor
-epidermal growth factor receptor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-EGFR
-EGFR
-EGFR
-signaling
-drug
-EGFR
-EGFR
-EGFR
-colorectal carcinoma
-carcinoma
-cell
-protein
-protein
-protein
-glucose
-glucose
-glucose
-glucose
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-lactate
-lactate
-Lactate
-Lactate
-glucose
-glucose
-glucose
-glucose
-tumor
-lactate
-lactate
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-protein
-protein
-protein
-hypoxia
-metabolism
-EGFR
-EGFR
-EGFR
-colorectal cancer
-cancer
+GO:0008152
+D015179
+D009369
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0019815
+GO:0042571
+GO:0019815
+GO:0042571
+D015179
+D009369
+GO:0005154
+P04412
+P0CY46
+PR:000006933
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+P04412
+P0CY46
+PR:000006933
+GO:0023052
+CHEBI:23888
+P04412
+P0CY46
+PR:000006933
+D015179
+D002277
+CL:0000000
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CHEBI:4167
+CHEBI:42758
+CHEBI:17234
+D005947
+CHEBI:43474
+CHEBI:26020
+CHEBI:35780
+CHEBI:18367
+CHEBI:26078
+CHEBI:24996
+D019344
+CHEBI:24996
+D019344
+CHEBI:4167
+CHEBI:42758
+CHEBI:17234
+D005947
+D009369
+CHEBI:24996
+D019344
+CHEBI:43474
+CHEBI:26020
+CHEBI:35780
+CHEBI:18367
+CHEBI:26078
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D000860
+GO:0008152
+P04412
+P0CY46
+PR:000006933
+D015179
+D009369
 

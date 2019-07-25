@@ -1,14 +1,14 @@
-T-cell
-cell
-lymphoma
-leukemia
-lymphoma
-neoplasm
-B-cell
-cell
-man
-disease
-tumor
-CD34
-CD79a
+CL:0000084
+CL:0000000
+D008223
+D007938
+D008223
+D009369
+CL:0000236
+CL:0000000
+9606
+D004194
+D009369
+PR:000001003
+PR:000001285
 

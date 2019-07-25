@@ -1,31 +1,31 @@
-Gene
-Gene expression
-biomarker
-cancer
-peptide
-peptide
-peptide
-peptide
-cancer
-biomarkers
-gene
-gene expression
-biomarkers
-prostate cancer
-cancer
-peptide
-peptide
-Gene
-Gene expression
-DNA
-regulated
-gene
-prostate cancer
-cancer
-peptide
-peptide
-Gene
-Gene expression
-cancer
-vaccines
+SO:0000704
+GO:0010467
+CHEBI:59163
+D009369
+PR:000018263
+PR:000018264
+PR:000018263
+PR:000018264
+D009369
+D015415
+SO:0000704
+GO:0010467
+D015415
+D011471
+D009369
+PR:000018263
+PR:000018264
+SO:0000704
+GO:0010467
+GO:0005574
+SO:0000119
+SO:0000704
+D011471
+D009369
+PR:000018263
+PR:000018264
+SO:0000704
+GO:0010467
+D009369
+D014612
 

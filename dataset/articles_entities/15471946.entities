@@ -1,28 +1,28 @@
-cell
-cell proliferation
-protein
-protein
-protein
-gene
-gene expression
-mouse
-mouse
-mice
-mice
-gene
-Mice
-Mice
-mutation
-deficiency
-cell
-cell proliferation
-secretion
-proteins
-proteins
-protein
-protein
-protein
-beta
-cell
-cell proliferation
+CL:0000000
+GO:0008283
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+SO:0000704
+GO:0010467
+D051379
+10090
+D051379
+10095
+SO:0000704
+D051379
+10095
+SO:0000109
+SO:1000029
+CL:0000000
+GO:0008283
+GO:0046903
+D011506
+CHEBI:36080
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CHEBI:10545
+CL:0000000
+GO:0008283
 

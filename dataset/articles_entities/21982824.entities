@@ -1,12 +1,12 @@
-spp
-toxin
-growth
-protein
-protein
-protein
-spp
-growth
-growth
-growth
-cell
+GO:0042499
+CHEBI:27026
+GO:0040007
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0042499
+GO:0040007
+GO:0040007
+GO:0040007
+CL:0000000
 

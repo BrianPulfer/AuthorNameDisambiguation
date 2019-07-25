@@ -1,29 +1,29 @@
-infection
-host
-parasite
-infection
-mice
-mice
-infection
-fibrosis
-infection
-fibrosis
-nitric oxide
-nitric oxide
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-TNF
-infection
-gamma
-alanine
-aspartate aminotransferase
-AST
-phosphatase
-mice
-mice
-parasite
+D007239
+GO:0018995
+D010271
+D007239
+D051379
+10095
+D007239
+D005355
+D007239
+D005355
+D009569
+CHEBI:16480
+GO:0008219
+GO:0019835
+GO:0008220
+D009336
+GO:0001906
+GO:0070265
+PR:000000134
+D007239
+CHEBI:30212
+SO:0001435
+PR:000008154
+PR:000008154
+GO:0016791
+D051379
+10095
+D010271
 

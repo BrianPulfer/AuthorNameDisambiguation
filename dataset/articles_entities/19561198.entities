@@ -1,54 +1,54 @@
-Fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-transcription
-translation
-Fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-regeneration
-gene
-synthesis
-RNA
-elements
-mRNA
-translation
-regulation
-regeneration
-protein
-protein
-protein
-mouse
-mouse
-siRNA
-promoter
-translation
-promoter
-region
-cis
-cis
-cis
-cis
-cis
-cis
-cis
-cis
-element
-translation
-mRNA
-transcription
-translation
-promoter
-element
-gene
-gene expression
-regulation
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0006351
+GO:0006412
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0031099
+SO:0000704
+GO:0009058
+SO:0000356
+CHEBI:33250
+SO:0000234
+GO:0006412
+GO:0065007
+GO:0031099
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D051379
+10090
+SO:0000646
+SO:0000167
+GO:0006412
+SO:0000167
+SO:0000001
+Q2HJ53
+Q9PW70
+PR:Q9PW70
+PR:000005503
+Q62225
+PR:Q62225
+Q9NSE2
+O70512
+CHEBI:33250
+GO:0006412
+SO:0000234
+GO:0006351
+GO:0006412
+SO:0000167
+CHEBI:33250
+SO:0000704
+GO:0010467
+GO:0065007
 

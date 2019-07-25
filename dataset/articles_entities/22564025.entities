@@ -1,28 +1,28 @@
-human
-human
-carcinoma
-cell
-apoptosis
-apoptosis
-Apoptosis
-Apoptosis
-cell
-cell death
-apoptosis
-apoptosis
-apoptosis
-apoptosis
-apoptosis
-apoptosis
-cell
-cell death
-regulation
-membrane
-apoptosis
-apoptosis
-apoptosis
-apoptosis
-translocation
-signaling
-signaling pathway
+9606
+D006801
+D002277
+CL:0000000
+GO:0006915
+GO:0097194
+GO:0006915
+GO:0097194
+CL:0000000
+GO:0008219
+GO:0006915
+GO:0097194
+GO:0006915
+GO:0097194
+GO:0006915
+GO:0097194
+CL:0000000
+GO:0008219
+GO:0065007
+GO:0016020
+GO:0006915
+GO:0097194
+GO:0006915
+GO:0097194
+SO:0000199
+GO:0023052
+GO:0007165
 

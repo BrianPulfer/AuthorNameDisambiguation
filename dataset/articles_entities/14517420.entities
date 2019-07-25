@@ -1,45 +1,45 @@
-human
-human
-gene
-gene expression
-mRNA
-mRNA
-human
-human
-growth
-epidermal growth factor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-EGF
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-VEGF
-VEGF
-VEGF
-VEGF
-cell
-cell growth
-growth
-monocyte
-monocyte
-protein
-protein
-protein
-EGF
-mRNA
-cell
-cell surface
-proteins
-proteins
-cadherin
-beta
-beta
+9606
+D006801
+SO:0000704
+GO:0010467
+SO:0000234
+SO:0000234
+9606
+D006801
+GO:0040007
+GO:0005154
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0005154
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+PR:P16612
+PR:P67964
+PR:O73682
+PR:000017284
+CL:0000000
+GO:0016049
+GO:0040007
+CL:0001054
+CL:0000576
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0005154
+SO:0000234
+CL:0000000
+GO:0009986
+D011506
+CHEBI:36080
+GO:0008014
+CHEBI:10545
+CHEBI:10545
 

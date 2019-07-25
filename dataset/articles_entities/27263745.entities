@@ -1,18 +1,18 @@
-stem cell
-cell
-hepatitis
-anemia
-Hepatitis
-anemia
-anemia
-anemia
-hepatitis
-anemia
-inflammation
-inflammation
-bleeding
-platelet
-stem cell
-cell
-platelet
+CL:0000034
+CL:0000000
+D006505
+D000740
+D006505
+D000740
+D000740
+D000740
+D006505
+D000740
+GO:0006954
+D007249
+D006470
+CL:0000233
+CL:0000034
+CL:0000000
+CL:0000233
 

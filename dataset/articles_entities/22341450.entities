@@ -1,19 +1,19 @@
-assembly
-signaling
-molecules
-cell
-pathogenesis
-Escherichia coli
-Escherichia coli
-nucleotide
-Map
-signal
-signal
-signal transduction
-Map
-Map
-plasma membrane
-membrane
-signaling
-extracellular
+SO:0001248
+GO:0023052
+CHEBI:25367
+CL:0000000
+GO:0009405
+562
+D004926
+CHEBI:36976
+GO:0004239
+SO:0000725
+SO:0000418
+GO:0007165
+GO:0004239
+GO:0004239
+GO:0005886
+GO:0016020
+GO:0023052
+GO:0005576
 

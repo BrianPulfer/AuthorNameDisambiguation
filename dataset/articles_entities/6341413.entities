@@ -1,23 +1,23 @@
-immunoglobulins
-cell
-cell membrane
-membrane
-disease
-immunoglobulins
-complement
-cell
-cell surface
-disease
-cell
-cell membrane
-membrane
-IgA
-IgA
-cirrhosis
-alcohol
-alcohol
-alcohol
-alcohol
-membrane
-immune response
+D007136
+CL:0000000
+GO:0005886
+GO:0016020
+D004194
+D007136
+D003165
+CL:0000000
+GO:0009986
+D004194
+CL:0000000
+GO:0005886
+GO:0016020
+PR:P11911
+PR:000001285
+D005355
+CHEBI:16236
+CHEBI:30879
+CHEBI:16236
+CHEBI:30879
+GO:0016020
+GO:0006955
 

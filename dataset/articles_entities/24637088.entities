@@ -1,12 +1,12 @@
-protein
-protein
-protein
-human
-human
-mRNA
-CD4
-mRNA
-cell
-cell surface
-mRNA
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+9606
+D006801
+SO:0000234
+PR:000001004
+SO:0000234
+CL:0000000
+GO:0009986
+SO:0000234
 

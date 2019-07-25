@@ -1,11 +1,11 @@
-Cell
-DNA
-Neutrophil
-Extracellular
-strand
-DNA
-neutrophil
-extracellular
-creatinine
-creatinine
+CL:0000000
+GO:0005574
+CL:0000775
+GO:0005576
+SO:0001111
+GO:0005574
+CL:0000775
+GO:0005576
+CHEBI:16737
+D003404
 

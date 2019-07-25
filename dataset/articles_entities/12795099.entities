@@ -1,26 +1,26 @@
-human
-human
-breast cancer
-cancer
-cancer cell
-cell
-human
-human
-breast cancer
-cancer
-cancer cell
-cell
-estrogen
-estrogen
-cancer
-cancer cell
-cell
-cancer
-cancer cell
-cell
-drug
-intracellular
-metabolites
-breast cancer
-cancer
+9606
+D006801
+D001943
+D009369
+CL:0001064
+CL:0000000
+9606
+D006801
+D001943
+D009369
+CL:0001064
+CL:0000000
+CHEBI:50114
+D004967
+D009369
+CL:0001064
+CL:0000000
+D009369
+CL:0001064
+CL:0000000
+CHEBI:23888
+GO:0005622
+CHEBI:25212
+D001943
+D009369
 

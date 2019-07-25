@@ -1,105 +1,105 @@
-extracellular
-signal
-signal
-regulated
-fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-beta
-growth
-breast cancer
-cancer
-protein
-protein
-protein
-extracellular
-regulated
-inhibitors
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-signaling
-breast tumors
-tumors
-signaling
-protein
-protein
-protein
-extracellular
-regulated
-extracellular
-regulated
-ERK
-ERK)1
-inhibitor
-growth
-estrogen
-estrogen
-breast cancer
-cancer
-fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-beta
-epidermal growth factor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-EGF
-EGF
-growth
-ERK
-ERK1
-ERK
-ERK1
-phosphorylation
-inhibitors
-protein
-protein
-protein
-ERK
-ERK2
-growth
-EGF
-ERK
-ERK1
-signaling
-ERK
-ERK1
-inhibitors
-inhibitor
-methyl
-methyl
-PKC
-PKC
-PKC
-PKC
-PKC
-inhibitor
-phosphorylation
-ERK
-ERK1
-Phosphorylation
-ERK
-growth
-ERK
-ERK1
-inhibitors
-estrogen
-estrogen
-cancers
+GO:0005576
+SO:0000725
+SO:0000418
+SO:0000119
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CHEBI:10545
+GO:0040007
+D001943
+D009369
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0005576
+SO:0000119
+CHEBI:35222
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0023052
+D001943
+D009369
+GO:0023052
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0005576
+SO:0000119
+GO:0005576
+SO:0000119
+GO:0004707
+GO:0004707
+CHEBI:35222
+GO:0040007
+CHEBI:50114
+D004967
+D001943
+D009369
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CHEBI:10545
+GO:0005154
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0005154
+GO:0005154
+GO:0040007
+GO:0004707
+GO:0004707
+GO:0004707
+GO:0004707
+GO:0016310
+CHEBI:35222
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0004707
+GO:0004707
+GO:0040007
+GO:0005154
+GO:0004707
+GO:0004707
+GO:0023052
+GO:0004707
+GO:0004707
+CHEBI:35222
+CHEBI:35222
+CHEBI:29309
+CHEBI:32875
+P05130
+P13678
+PR:000045382
+C537180
+P34722
+CHEBI:35222
+GO:0016310
+GO:0004707
+GO:0004707
+GO:0016310
+GO:0004707
+GO:0040007
+GO:0004707
+GO:0004707
+CHEBI:35222
+CHEBI:50114
+D004967
+D009369
 

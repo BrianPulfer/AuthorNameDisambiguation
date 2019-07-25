@@ -1,25 +1,25 @@
-human
-human
-squamous cell carcinoma
-cell
-carcinoma
-Squamous Cell Carcinoma
-Cell
-Carcinoma
-cell
-cell proliferation
-ERK
-ERK
-phosphorylation
-cell
-drug
-drug
-Cluster
-drugs
-drugs
-cell
-cell proliferation
-ERK
-human
-human
+9606
+D006801
+D002294
+CL:0000000
+D002277
+D002294
+CL:0000000
+D002277
+CL:0000000
+GO:0008283
+GO:0004707
+GO:0004707
+GO:0016310
+CL:0000000
+CHEBI:23888
+CHEBI:23888
+CHEBI:33731
+CHEBI:23888
+D004364
+CL:0000000
+GO:0008283
+GO:0004707
+9606
+D006801
 

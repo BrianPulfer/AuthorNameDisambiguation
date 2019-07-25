@@ -1,54 +1,54 @@
-cell
-cell cycle
-metastasis
-estrogen
-estrogen
-ovarian cancer
-cancer
-cancer
-cancer cell
-cell
-cell proliferation
-metastasis
-protein
-protein
-protein
-cyclin
-cyclin
-ovarian cancer
-cancer
-estrogen
-estrogen
-estradiol
-estradiol
-estradiol
-cell
-cell proliferation
-antagonist
-wound
-cell
-Protein
-Protein
-Protein
-cyclin
-mouse
-mouse
-tumor
-formation
-tumor
-formation
-mouse
-mouse
-cell
-cell proliferation
-cell
-antigen
-antigen
-tumor
-cancer
-cell
-cell cycle
-metastasis
-gene
-gene expression
+CL:0000000
+GO:0007049
+D009362
+CHEBI:50114
+D004967
+D010051
+D009369
+D009369
+CL:0001064
+CL:0000000
+GO:0008283
+D009362
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0016538
+GO:0016538
+D010051
+D009369
+CHEBI:50114
+D004967
+CHEBI:16469
+D004958
+CHEBI:23965
+CL:0000000
+GO:0008283
+CHEBI:48706
+D014947
+CL:0000000
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0016538
+D051379
+10090
+D009369
+GO:0009058
+D009369
+GO:0009058
+D051379
+10090
+CL:0000000
+GO:0008283
+CL:0000000
+CHEBI:59132
+D000941
+D009369
+D009369
+CL:0000000
+GO:0007049
+D009362
+SO:0000704
+GO:0010467
 

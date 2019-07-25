@@ -1,14 +1,14 @@
-complex
-translocation
-leukemia
-chromosome
-leukemia
-malignancy
-T-cell
-cell
-B-cell
-cell
-disease
-complex
-translocation
+SO:0001784
+SO:0000199
+D007938
+GO:0005694
+D007938
+D009369
+CL:0000084
+CL:0000000
+CL:0000236
+CL:0000000
+D004194
+SO:0001784
+SO:0000199
 

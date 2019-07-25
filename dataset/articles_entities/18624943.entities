@@ -1,16 +1,16 @@
-cell
-regeneration
-formation
-formation
-human
-human
-cell
-cell cycle
-phosphatase
-behavior
-gene
-gene expression
-formation
-mice
-mice
+CL:0000000
+GO:0031099
+GO:0009058
+GO:0009058
+9606
+D006801
+CL:0000000
+GO:0007049
+GO:0016791
+GO:0007610
+SO:0000704
+GO:0010467
+GO:0009058
+D051379
+10095
 

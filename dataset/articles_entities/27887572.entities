@@ -1,29 +1,29 @@
-methylation
-gene
-methylation
-DNA
-biomarker
-methylation
-gene
-gene
-Sequence
-CYP
-gene
-genome
-gene
-cluster
-cancer
-cancer, cell
-cell
-cell cycle
-signaling
-angiogenesis
-cluster
-T-cell
-cell
-regulation
-white blood cell
-cell
-tobacco
-tobacco
+GO:0032259
+SO:0000704
+GO:0032259
+GO:0005574
+CHEBI:59163
+GO:0032259
+SO:0000704
+SO:0000704
+SO:0000001
+CHEBI:38559
+SO:0000704
+SO:0001026
+SO:0000704
+CHEBI:33731
+D009369
+CL:0001064
+CL:0000000
+GO:0007049
+GO:0023052
+GO:0001525
+CHEBI:33731
+CL:0000084
+CL:0000000
+GO:0065007
+CL:0000738
+CL:0000000
+D014026
+4097
 

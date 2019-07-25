@@ -1,66 +1,66 @@
-membrane
-signal
-signal
-signal transduction
-downstream
-protein
-protein
-protein
-regulation
-epidermal growth factor
-epidermal growth factor receptor
-epidermal growth factor receptor
-epidermal growth factor receptor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-molecule
-mice
-mice
-hypertension
-hypertrophy
-fibrosis
-mice
-mice
-sham
-sham
-mice
-mice
-mice
-mice
-hypertrophy
-body weight
-mice
-mice
-mice
-mice
-hypertrophy
-hypertension
-mice
-mice
-mice
-mice
-tyrosine
-epidermal growth factor
-epidermal growth factor receptor
-epidermal growth factor receptor
-epidermal growth factor receptor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-mice
-mice
-molecule
-mice
-mice
-inflammation
-inflammation
-hypertrophy
-regulation
+GO:0016020
+SO:0000725
+SO:0000418
+GO:0007165
+SO:0001633
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0065007
+GO:0005154
+P04412
+P0CY46
+PR:000006933
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CHEBI:25367
+D051379
+10095
+D006973
+D006984
+D005355
+D051379
+10095
+CHEBI:45615
+C005703
+D051379
+10095
+D051379
+10095
+D006984
+D001835
+D051379
+10095
+D051379
+10095
+D006984
+D006973
+D051379
+10095
+D051379
+10095
+SO:0001446
+GO:0005154
+P04412
+P0CY46
+PR:000006933
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+D051379
+10095
+CHEBI:25367
+D051379
+10095
+GO:0006954
+D007249
+D006984
+GO:0065007
 

@@ -1,16 +1,16 @@
-cell
-swine
-swine
-swine
-swine
-myocardial infarction
-cytokines
-cell
-TNF
-TNF-alpha
-cell
-TNF
-TNF-alpha
-inflammatory response
-cell
+CL:0000000
+9823
+D013552
+9823
+D013552
+D009203
+D016207
+CL:0000000
+PR:000000134
+PR:000000134
+CL:0000000
+PR:000000134
+PR:000000134
+GO:0006954
+CL:0000000
 

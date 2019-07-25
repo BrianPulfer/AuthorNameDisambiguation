@@ -1,31 +1,31 @@
-regulation
-gene
-gene expression
-histone
-DNA
-methylation
-microRNA
-miRNA
-regulation
-mRNA
-translation
-can
-DNA
-inflammation
-inflammation
-reactive oxygen species
-reactive oxygen species
-oxygen
-oxygen
-oxygen
-ROS
-ROS
-cell
-extracellular
-extracellular matrix
-DNA
-methylation
-memory
-chromatin
-miRNA
+GO:0065007
+SO:0000704
+GO:0010467
+PR:000041244
+GO:0005574
+GO:0032259
+SO:0000276
+SO:0000276
+GO:0065007
+SO:0000234
+GO:0006412
+CHEBI:29320
+GO:0005574
+GO:0006954
+D007249
+D017382
+CHEBI:26523
+CHEBI:25805
+D010100
+CHEBI:15379
+PR:Q78DX7
+CHEBI:26523
+CL:0000000
+GO:0005576
+GO:0031012
+GO:0005574
+GO:0032259
+GO:0007613
+D002843
+SO:0000276
 

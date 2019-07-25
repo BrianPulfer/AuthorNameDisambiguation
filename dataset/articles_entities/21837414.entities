@@ -1,15 +1,15 @@
-gene
-cytokines
-nitric oxide
-nitric oxide
-TNF
-intron
-genotype
-allele
-SNP
-Carriers
-genotype
-SNP
-SNP
-pathogenesis
+SO:0000704
+D016207
+D009569
+CHEBI:16480
+PR:000000134
+SO:0000188
+SO:0001027
+SO:0001023
+P86981
+CHEBI:78059
+SO:0001027
+P86981
+P86981
+GO:0009405
 

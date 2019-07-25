@@ -1,12 +1,12 @@
-neoplasms
-diseases
-disease
-exon
-exon
-disease
-tumor
-mutation
-region
-mutation
-disease
+D009369
+D004194
+D004194
+SO:0000147
+SO:0000147
+D004194
+D009369
+SO:0000109
+SO:0000001
+SO:0000109
+D004194
 

@@ -1,46 +1,46 @@
-human
-human
-prostate cancer
-cancer
-mice
-mice
-gene
-gene expression
-cancer
-prostate cancer
-cancer
-cancer cell
-cell
-gene
-gene expression
-cell
-cell
-human
-human
-prostate cancer
-cancer
-nude mice
-mice
-mice
-gene
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-regulated
-carcinogenesis
-Gene
-cell
-angiogenesis
-prostate cancer
-cancer
-cancer cell
-cell
-complex
-cell
-cell
+9606
+D006801
+D011471
+D009369
+D051379
+10095
+SO:0000704
+GO:0010467
+D009369
+D011471
+D009369
+CL:0001064
+CL:0000000
+SO:0000704
+GO:0010467
+CL:0000000
+CL:0000000
+9606
+D006801
+D011471
+D009369
+10090
+D051379
+10095
+SO:0000704
+Q41249
+Q01289
+Q9SDT1
+Q59987
+Q39617
+P15904
+O66148
+O80333
+SO:0000119
+D063646
+SO:0000704
+CL:0000000
+GO:0001525
+D011471
+D009369
+CL:0001064
+CL:0000000
+SO:0001784
+CL:0000000
+CL:0000000
 

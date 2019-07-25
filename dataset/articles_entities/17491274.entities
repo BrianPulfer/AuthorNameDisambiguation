@@ -1,28 +1,28 @@
-Hypoxia
-prostate cancer
-cancer
-Hypoxia
-prostate cancer
-cancer
-angiogenesis
-cell
-cell proliferation
-glucose
-glucose
-glucose
-glucose
-metabolism
-p53
-p53
-p53
-p53
-signal
-signal
-signal transduction
-prostate cancer
-cancer
-prostate cancer
-cancer
-prostate cancer
-cancer
+D000860
+D011471
+D009369
+D000860
+D011471
+D009369
+GO:0001525
+CL:0000000
+GO:0008283
+CHEBI:4167
+CHEBI:42758
+CHEBI:17234
+D005947
+GO:0008152
+PR:000003035
+PR:Q42578
+PR:P10361
+PR:P02340
+SO:0000725
+SO:0000418
+GO:0007165
+D011471
+D009369
+D011471
+D009369
+D011471
+D009369
 

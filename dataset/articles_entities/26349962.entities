@@ -1,65 +1,65 @@
-protein
-protein
-protein
-cancer
-cancer cell
-cell
-proteins
-proteins
-cancer
-inhibitors
-can
-drugs
-drugs
-breast cancer
-cancer
-protein
-protein
-protein
-localisation
-proteins
-proteins
-colorectal cancer
-cancer
-cell
-ovarian cancer
-cancer
-cancer cell
-cell
-ovarian cancer
-cancer
-cancer cell
-cell
-drug
-colorectal cancer
-cancer
-cancer cell
-cell
-Cell
-protein
-protein
-protein
-degradation
-inhibitors
-Protein
-Protein
-Protein
-cancer
-cancer cell
-cell
-drug
-protein
-protein
-protein
-protein
-protein
-protein
-translocation
-cytoplasm
-cell
-cell membrane
-membrane
-localisation
-proteins
-proteins
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D009369
+CL:0001064
+CL:0000000
+D011506
+CHEBI:36080
+D009369
+CHEBI:35222
+CHEBI:29320
+CHEBI:23888
+D004364
+D001943
+D009369
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0051179
+D011506
+CHEBI:36080
+D015179
+D009369
+CL:0000000
+D010051
+D009369
+CL:0001064
+CL:0000000
+D010051
+D009369
+CL:0001064
+CL:0000000
+CHEBI:23888
+D015179
+D009369
+CL:0001064
+CL:0000000
+CL:0000000
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0009056
+CHEBI:35222
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D009369
+CL:0001064
+CL:0000000
+CHEBI:23888
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+SO:0000199
+GO:0005737
+CL:0000000
+GO:0005886
+GO:0016020
+GO:0051179
+D011506
+CHEBI:36080
 

@@ -1,12 +1,12 @@
-human
-human
-disease
-regulation
-toxin
-diseases
-disease
-obesity
-disease
-infection
-diseases
+9606
+D006801
+D004194
+GO:0065007
+CHEBI:27026
+D004194
+D004194
+D009765
+D004194
+D007239
+D004194
 

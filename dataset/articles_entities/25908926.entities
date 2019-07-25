@@ -1,37 +1,37 @@
-hepatocellular carcinoma
-carcinoma
-transition
-signaling
-signaling pathway
-protein
-protein
-protein
-human
-human
-hepatocellular carcinoma
-carcinoma
-metastasis
-RNA
-cell
-cell proliferation
-apoptosis
-apoptosis
-metastasis
-formation
-tumors
-tumor
-tumors
-wound
-metastasis
-hepatoma
-transition
-signaling
-signaling pathway
-cell
-cell growth
-growth
-apoptosis
-apoptosis
-regulation
-metastasis
+D006528
+D002277
+SO:1000009
+GO:0023052
+GO:0007165
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+9606
+D006801
+D006528
+D002277
+D009362
+SO:0000356
+CL:0000000
+GO:0008283
+GO:0006915
+GO:0097194
+D009362
+GO:0009058
+D009369
+D009369
+D009369
+D014947
+D009362
+D006528
+SO:1000009
+GO:0023052
+GO:0007165
+CL:0000000
+GO:0016049
+GO:0040007
+GO:0006915
+GO:0097194
+GO:0065007
+D009362
 

@@ -1,26 +1,26 @@
-Antigen
-Antigen
-T cell
-cell
-cell
-memory
-antigen
-antigen
-T cell
-cell
-T cell
-cell
-T cell
-cell
-transition
-transition
-T cell
-cell
-cell proliferation
-effector
-memory
-memory
-effector
-T cell
-cell
+CHEBI:59132
+D000941
+CL:0000084
+CL:0000000
+CL:0000000
+GO:0007613
+CHEBI:59132
+D000941
+CL:0000084
+CL:0000000
+CL:0000084
+CL:0000000
+CL:0000084
+CL:0000000
+SO:1000009
+SO:1000009
+CL:0000084
+CL:0000000
+GO:0008283
+CHEBI:35224
+GO:0007613
+GO:0007613
+CHEBI:35224
+CL:0000084
+CL:0000000
 

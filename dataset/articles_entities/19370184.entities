@@ -1,43 +1,43 @@
-TNF
-interferon
-interferon
-gamma
-rheumatoid arthritis
-arthritis
-tuberculosis
-TNF
-tuberculosis
-infections
-gamma
-immune response
-tuberculosis
-protein
-protein
-protein
-rheumatoid arthritis
-arthritis
-lymphocyte
-Cell
-tumor
-tumor necrosis factor
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-gamma
-cell
-cell expansion
-TNF
-gamma
-gamma
-delta
-rheumatoid arthritis
-arthritis
-TNF
-gamma
-TNF
-tuberculosis
-infection
+PR:000000134
+P51526
+P51527
+CHEBI:30212
+D001172
+D001168
+D014376
+PR:000000134
+D014376
+D007239
+CHEBI:30212
+GO:0006955
+D014376
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D001172
+D001168
+CL:0000542
+CL:0000000
+D009369
+GO:0005164
+GO:0008219
+GO:0019835
+GO:0008220
+D009336
+GO:0001906
+GO:0070265
+CHEBI:30212
+CL:0000000
+GO:0016049
+PR:000000134
+CHEBI:30212
+CHEBI:30212
+CHEBI:36375
+D001172
+D001168
+PR:000000134
+CHEBI:30212
+PR:000000134
+D014376
+D007239
 

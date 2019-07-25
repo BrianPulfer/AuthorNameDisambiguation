@@ -1,38 +1,38 @@
-T cell
-cell
-sensitization
-asthma
-Asthma
-T cell
-cell
-disease
-T cell
-cell
-cord
-T cell
-cell
-sensitization
-disease
-CD4
-CD4
-T cell
-cell
-sensitization
-disease
-CD4
-sensitization
-CD4
-T cell
-cell
-sensitization
-T cell
-cell
-sensitization
-regulated
-CD4
-sensitization
-sensitization
-CD4
-inflammatory response
-diseases
+CL:0000084
+CL:0000000
+GO:0046960
+D001249
+D001249
+CL:0000084
+CL:0000000
+D004194
+CL:0000084
+CL:0000000
+120970
+CL:0000084
+CL:0000000
+GO:0046960
+D004194
+PR:000001004
+PR:000001004
+CL:0000084
+CL:0000000
+GO:0046960
+D004194
+PR:000001004
+GO:0046960
+PR:000001004
+CL:0000084
+CL:0000000
+GO:0046960
+CL:0000084
+CL:0000000
+GO:0046960
+SO:0000119
+PR:000001004
+GO:0046960
+GO:0046960
+PR:000001004
+GO:0006954
+D004194
 

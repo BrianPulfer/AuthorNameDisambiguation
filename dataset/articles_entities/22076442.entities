@@ -1,16 +1,16 @@
-gene
-nucleotide
-SNP
-signal
-signal
-genome
-gene
-region
-SNP
-SNP
-gene
-region
-signaling
-signaling pathway
-pathogenesis
+SO:0000704
+CHEBI:36976
+P86981
+SO:0000725
+SO:0000418
+SO:0001026
+SO:0000704
+SO:0000001
+P86981
+P86981
+SO:0000704
+SO:0000001
+GO:0023052
+GO:0007165
+GO:0009405
 

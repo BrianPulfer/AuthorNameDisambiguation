@@ -1,30 +1,30 @@
-human
-human
-cell
-cell proliferation
-apoptosis
-apoptosis
-hypoxia
-gene
-gene expression
-disease
-miRNA
-human
-human
-chain
-cell
-cell proliferation
-apoptosis
-apoptosis
-gene
-cell
-cell proliferation
-apoptosis
-apoptosis
-hypoxia
-gene
-cell
-cell proliferation
-apoptosis
-apoptosis
+9606
+D006801
+CL:0000000
+GO:0008283
+GO:0006915
+GO:0097194
+D000860
+SO:0000704
+GO:0010467
+D004194
+SO:0000276
+9606
+D006801
+SO:0000419
+CL:0000000
+GO:0008283
+GO:0006915
+GO:0097194
+SO:0000704
+CL:0000000
+GO:0008283
+GO:0006915
+GO:0097194
+D000860
+SO:0000704
+CL:0000000
+GO:0008283
+GO:0006915
+GO:0097194
 

@@ -1,12 +1,12 @@
-ligand
-ligand
-binding
-binding
-ion
-pore
-calcium
-calcium
-calcium
-sodium
-sodium
+CHEBI:52214
+GO:0005488
+GO:0005488
+SO:0001091
+CHEBI:24870
+GO:0046930
+CHEBI:22984
+D002118
+CHEBI:29320
+CHEBI:26708
+D012964
 

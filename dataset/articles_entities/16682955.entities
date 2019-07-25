@@ -1,105 +1,105 @@
-binding
-binding
-MAP
-PI3-kinase
-PI3-kinase
-PI3-kinase
-PI3-kinase
-PI3-kinase
-PI3-kinase
-growth
-human
-human
-breast carcinoma
-carcinoma
-Fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-signaling
-can
-estrogen
-estrogen
-growth
-breast cancer
-cancer
-Fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-phosphorylation
-protein
-protein
-protein
-tyrosine
-tyrosine
-binding
-binding
-breast carcinoma
-carcinoma
-downstream
-signaling
-growth
-tyrosine
-phosphorylation
-complex
-formation
-protein
-protein
-protein
-protein kinase
-MAP
-Akt
-Akt
-Akt
-Akt
-Akt
-phosphorylation
-Ser
-Ser
-Ser
-Ser
-Ser
-Ser
-MAP
-MAP kinase activity
-phosphorylation
-MAP
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-signaling
-phosphorylation
-PI3-K
-PI3-K
-PI3-K
-PI3-K
-PI3-K
-PI3-K
-inhibitors
-MAP
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-PI-3 kinase
-Fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-formation
-cancers
+GO:0005488
+SO:0001091
+GO:0004239
+P42347
+P54676
+P54673
+P54675
+P54674
+P42348
+GO:0040007
+9606
+D006801
+D001943
+D002277
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0023052
+CHEBI:29320
+CHEBI:50114
+D004967
+GO:0040007
+D001943
+D009369
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0016310
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+SO:0001446
+SO:0001446
+GO:0005488
+SO:0001091
+D001943
+D002277
+SO:0001633
+GO:0023052
+GO:0040007
+SO:0001446
+GO:0016310
+SO:0001784
+GO:0009058
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D011494
+GO:0004239
+PR:000029189
+PR:P31750
+PR:000002190
+Q8INB9
+PR:P54644
+GO:0016310
+SO:0001444
+CHEBI:29999
+CHEBI:17115
+SO:0001444
+CHEBI:29999
+CHEBI:17115
+GO:0004239
+GO:0004707
+GO:0016310
+GO:0004239
+P42347
+P54676
+P54673
+P54675
+P54674
+P42348
+GO:0023052
+GO:0016310
+P42347
+P54676
+P54673
+P54675
+P54674
+P42348
+CHEBI:35222
+GO:0004239
+P42347
+P54676
+P54673
+P54675
+P54674
+P42348
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0009058
+D009369
 

@@ -1,15 +1,15 @@
-neutrophil
-lymphocyte
-wound
-neutrophil
-lymphocyte
-surrogate marker
-inflammation
-inflammation
-wound
-wounds
-wound
-can
-wound
-infection
+CL:0000775
+CL:0000542
+D014947
+CL:0000775
+CL:0000542
+D015415
+GO:0006954
+D007249
+D014947
+D014947
+D014947
+CHEBI:29320
+D014947
+D007239
 

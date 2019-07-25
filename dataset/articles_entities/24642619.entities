@@ -1,12 +1,12 @@
-cell
-T-cell
-cell
-cancers
-human
-human
-cell
-cell
-cell-surface
-mouse
-mouse
+CL:0000000
+CL:0000084
+CL:0000000
+D009369
+9606
+D006801
+CL:0000000
+CL:0000000
+GO:0009986
+D051379
+10090
 

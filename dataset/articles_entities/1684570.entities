@@ -1,24 +1,24 @@
-T cell
-cell
-cell surface
-cell
-transmembrane
-transmembrane
-signalling
-T cell
-cell
-cell
-lysis
-gamma
-cell
-antibodies
-cell
-transmembrane
-transmembrane
-signalling
-TCR
-TCR
-TCR
-can
-gamma
+CL:0000084
+CL:0000000
+GO:0009986
+CL:0000000
+GO:0044214
+GO:0016021
+GO:0023052
+CL:0000084
+CL:0000000
+CL:0000000
+GO:0019835
+CHEBI:30212
+CL:0000000
+D000906
+CL:0000000
+GO:0044214
+GO:0016021
+GO:0023052
+A2KF29
+GO:0042101
+PR:000015975
+CHEBI:29320
+CHEBI:30212
 

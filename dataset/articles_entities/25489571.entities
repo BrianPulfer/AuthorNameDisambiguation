@@ -1,16 +1,16 @@
-Regulation
-monocyte
-monocyte
-macrophage
-cytokines
-macrophage
-ligand
-ligand
-transcription
-transcription
-transcription factor
-transcription
-transcription
-methylation
-regulation
+GO:0065007
+CL:0001054
+CL:0000576
+CL:0000235
+D016207
+CL:0000235
+CHEBI:52214
+GO:0005488
+GO:0006351
+GO:0006351
+GO:0000982
+GO:0006351
+GO:0006351
+GO:0032259
+GO:0065007
 

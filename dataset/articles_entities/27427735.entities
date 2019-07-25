@@ -1,11 +1,11 @@
-Transport
-transport
-region
-region
-water
-water
-transport
-water
-water
-transport
+GO:0006810
+GO:0006810
+SO:0000001
+SO:0000001
+CHEBI:15377
+D014867
+GO:0006810
+CHEBI:15377
+D014867
+GO:0006810
 

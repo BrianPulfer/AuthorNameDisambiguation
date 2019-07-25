@@ -1,39 +1,39 @@
-Human
-Human
-ageing
-mice
-mice
-ageing
-atrophy
-acetylcholine
-acetylcholine
-biosynthesis
-secretion
-growth
-Human
-Human
-mice
-mice
-acetylcholine
-acetylcholine
-proteins
-proteins
-protein
-protein
-protein
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-human
-human
-can
-mice
-mice
-acetylcholine
-acetylcholine
-synthesis
-growth
+9606
+D006801
+GO:0007568
+D051379
+10095
+GO:0007568
+D001284
+CHEBI:15355
+D000109
+GO:0009058
+GO:0046903
+GO:0040007
+9606
+D006801
+D051379
+10095
+CHEBI:15355
+D000109
+D011506
+CHEBI:36080
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+9606
+D006801
+CHEBI:29320
+D051379
+10095
+CHEBI:15355
+D000109
+GO:0009058
+GO:0040007
 

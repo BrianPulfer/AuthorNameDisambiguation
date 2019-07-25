@@ -1,44 +1,44 @@
-protein
-protein
-protein
-breast cancer
-cancer
-DNA
-breast cancer
-cancer
-gene
-tumor
-ovarian cancers
-cancers
-protein
-protein
-protein
-breast cancer
-cancer
-cancers
-allele
-nucleus
-nucleus
-allele
-allele
-breast cancer
-cancer
-allele
-tumor
-breast cancer
-cancer
-protein
-protein
-protein
-breast cancer
-cancer
-protein
-protein
-protein
-tumorigenesis
-breast cancer
-cancer
-biomarker
-breast cancer
-cancer
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D001943
+D009369
+GO:0005574
+D001943
+D009369
+SO:0000704
+D009369
+D010051
+D009369
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D001943
+D009369
+D009369
+SO:0001023
+CHEBI:33252
+GO:0005634
+SO:0001023
+SO:0001023
+D001943
+D009369
+SO:0001023
+D009369
+D001943
+D009369
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D001943
+D009369
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D063646
+D001943
+D009369
+CHEBI:59163
+D001943
+D009369
 

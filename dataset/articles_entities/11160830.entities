@@ -1,14 +1,14 @@
-membrane
-assembly
-membrane
-fusion
-fusion
-macrophage
-can
-fusion
-can
-formation
-assembly
-fusion
-ischemia
+GO:0016020
+SO:0001248
+GO:0016020
+SO:0000806
+SO:0000806
+CL:0000235
+CHEBI:29320
+SO:0000806
+CHEBI:29320
+GO:0009058
+SO:0001248
+SO:0000806
+D007511
 

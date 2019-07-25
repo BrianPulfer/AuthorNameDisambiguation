@@ -1,18 +1,18 @@
-extracellular
-extracellular matrix
-cell
-formation
-formation
-cell
-can
-cell
-formation
-Cell
-growth
-human
-human
-protein
-protein
-protein
-storage
+GO:0005576
+GO:0031012
+CL:0000000
+GO:0009058
+GO:0009058
+CL:0000000
+CHEBI:29320
+CL:0000000
+GO:0009058
+CL:0000000
+GO:0040007
+9606
+D006801
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0051235
 

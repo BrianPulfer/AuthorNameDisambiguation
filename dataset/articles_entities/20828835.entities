@@ -1,34 +1,34 @@
-ligand
-ligand
-secretion
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-ligand
-ligand
-apoptosis
-apoptosis
-Membrane
-can
-signal
-signal
-signalling
-signalling
-secretion
-growth
-secretion
-mRNA
-ERK
-ERK1
-phosphorylation
-synthesis
-can
-signal
-signal
-molecule
-secretion
-regeneration
+CHEBI:52214
+GO:0005488
+GO:0046903
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CHEBI:52214
+GO:0005488
+GO:0006915
+GO:0097194
+GO:0016020
+CHEBI:29320
+SO:0000725
+SO:0000418
+GO:0023052
+GO:0023052
+GO:0046903
+GO:0040007
+GO:0046903
+SO:0000234
+GO:0004707
+GO:0004707
+GO:0016310
+GO:0009058
+CHEBI:29320
+SO:0000725
+SO:0000418
+CHEBI:25367
+GO:0046903
+GO:0031099
 

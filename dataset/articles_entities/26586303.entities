@@ -1,14 +1,14 @@
-metabolism
-human
-human
-inhibitor
-infections
-metabolism
-human
-human
-metabolite
-drug
-metabolism
-metabolite
-electron
+GO:0008152
+9606
+D006801
+CHEBI:35222
+D007239
+GO:0008152
+9606
+D006801
+CHEBI:25212
+CHEBI:23888
+GO:0008152
+CHEBI:25212
+CHEBI:10545
 

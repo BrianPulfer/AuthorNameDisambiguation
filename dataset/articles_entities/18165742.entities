@@ -1,14 +1,14 @@
-fusion
-spine
-human
-human
-Human
-Human
-cell
-cell growth
-growth
-cell
-can
-growth
-formation
+SO:0000806
+GO:0044309
+9606
+D006801
+9606
+D006801
+CL:0000000
+GO:0016049
+GO:0040007
+CL:0000000
+CHEBI:29320
+GO:0040007
+GO:0009058
 

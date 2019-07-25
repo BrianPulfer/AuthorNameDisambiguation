@@ -1,9 +1,9 @@
-genome
-biosynthesis
-genome
-gene
-genome
-genome
-gene
-synthesis
+SO:0001026
+GO:0009058
+SO:0001026
+SO:0000704
+SO:0001026
+SO:0001026
+SO:0000704
+GO:0009058
 

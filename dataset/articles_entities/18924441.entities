@@ -1,13 +1,13 @@
-gene
-peptide
-peptide
-human
-human
-circular
-nitric oxide
-nitric oxide
-can
-man
-inflammation
-inflammation
+SO:0000704
+PR:000018263
+PR:000018264
+9606
+D006801
+SO:0000988
+D009569
+CHEBI:16480
+CHEBI:29320
+9606
+GO:0006954
+D007249
 

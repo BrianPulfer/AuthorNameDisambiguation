@@ -1,10 +1,10 @@
-cell
-carcinoma
-cell
-carcinoma
-complex
-region
-blood clots
-tumors
-can
+CL:0000000
+D002277
+CL:0000000
+D002277
+SO:0001784
+SO:0000001
+D013927
+D009369
+CHEBI:29320
 

@@ -1,14 +1,14 @@
-junction
-molecules
-drug
-proteins
-proteins
-can
-uptake
-molecules
-toxin
-extracellular
-regulation
-regulation
-disease
+SO:0000699
+CHEBI:25367
+CHEBI:23888
+D011506
+CHEBI:36080
+CHEBI:29320
+GO:0098657
+CHEBI:25367
+CHEBI:27026
+GO:0005576
+GO:0065007
+GO:0065007
+D004194
 

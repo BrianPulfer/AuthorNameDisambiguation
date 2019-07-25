@@ -1,84 +1,84 @@
-human
-human
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-binding
-binding
-binding protein
-protein
-protein
-protein
-binding
-binding
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-binding
-binding
-binding proteins
-proteins
-proteins
-regulation
-growth
-ligand
-ligand
-binding
-binding
-peptide
-peptide
-human
-human
-amino
-amino acid
-amino acid
-acid
-Tyr
-Gly
-Gly
-Ala
-Ala
-Arg
-Arg
-Arg
-Glu
-Glu
-Glu
-Met
-processed
-amino
-amino
-amino acid
-amino acid
-acid
-Ligand
-Ligand
-solution
-binding
-binding
-binding
-binding
-fragment
-binding
-binding
-human
-human
-cysteine
-cysteine
-cysteine
-cysteine
-cysteine
-human
-human
-binding
-binding
-binding
-binding
-sequence
+9606
+D006801
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0005488
+SO:0001091
+D002352
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0005488
+SO:0001091
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0005488
+SO:0001091
+D002352
+D011506
+CHEBI:36080
+GO:0065007
+GO:0040007
+CHEBI:52214
+GO:0005488
+GO:0005488
+SO:0001091
+PR:000018263
+PR:000018264
+9606
+D006801
+CHEBI:46882
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+SO:0001446
+CHEBI:15428
+CHEBI:29947
+CVCL_J358
+SO:0001435
+CHEBI:16467
+CHEBI:29952
+SO:0001451
+CHEBI:18237
+SO:0001454
+CHEBI:16015
+SO:0001442
+SO:0000900
+CHEBI:46882
+CHEBI:46882
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+CHEBI:52214
+GO:0005488
+CHEBI:75958
+GO:0005488
+SO:0001091
+GO:0005488
+SO:0001091
+SO:0000731
+GO:0005488
+SO:0001091
+9606
+D006801
+SO:0001447
+D003545
+CHEBI:15356
+CHEBI:17561
+CHEBI:35237
+9606
+D006801
+GO:0005488
+SO:0001091
+GO:0005488
+SO:0001091
+SO:0000001
 

@@ -1,34 +1,34 @@
-gene
-human
-human
-human
-human
-mouse
-mouse
-cell
-human
-human
-breast cancer
-cancer
-cancer cell
-cell
-membrane
-proteins
-proteins
-drug
-nude mice
-mice
-mice
-tumor
-Tumors
-DNA
-protein
-protein
-protein
-protein
-protein
-protein
-protein kinase
-breast cancer
-cancer
+SO:0000704
+9606
+D006801
+9606
+D006801
+D051379
+10090
+CL:0000000
+9606
+D006801
+D001943
+D009369
+CL:0001064
+CL:0000000
+GO:0016020
+D011506
+CHEBI:36080
+CHEBI:23888
+10090
+D051379
+10095
+D009369
+D009369
+GO:0005574
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D011494
+D001943
+D009369
 

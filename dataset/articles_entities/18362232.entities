@@ -1,18 +1,18 @@
-chromosome
-coronary artery disease
-disease
-genome
-chromosome
-coronary artery disease
-disease
-nucleotide
-SNP
-myocardial infarction
-allele
-SNP
-allele
-SNP
-region
-SNP
-chromosome
+GO:0005694
+D003324
+D004194
+SO:0001026
+GO:0005694
+D003324
+D004194
+CHEBI:36976
+P86981
+D009203
+SO:0001023
+P86981
+SO:0001023
+P86981
+SO:0000001
+P86981
+GO:0005694
 

@@ -1,34 +1,34 @@
-hypoxia
-transition
-human
-human
-lung inflammation
-inflammation
-inflammation
-fibrosis
-injury
-transition
-hypoxia
-rat
-rat
-cell
-cell
-cadherin
-transcription
-hypoxia
-Hypoxia
-mRNA
-secretion
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-cadherin
-hypoxia
-human
-human
-hypoxia
-signaling
+D000860
+SO:1000009
+9606
+D006801
+D011014
+GO:0006954
+D007249
+D005355
+D014947
+SO:1000009
+D000860
+D051381
+10116
+CL:0000000
+CL:0000000
+GO:0008014
+GO:0006351
+D000860
+D000860
+SO:0000234
+GO:0046903
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+GO:0008014
+D000860
+9606
+D006801
+D000860
+GO:0023052
 

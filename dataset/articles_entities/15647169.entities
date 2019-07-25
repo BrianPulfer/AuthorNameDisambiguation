@@ -1,9 +1,9 @@
-membrane
-complex
-intracellular
-binding
-binding
-cell
-electron
-can
+GO:0016020
+SO:0001784
+GO:0005622
+GO:0005488
+SO:0001091
+CL:0000000
+CHEBI:10545
+CHEBI:29320
 

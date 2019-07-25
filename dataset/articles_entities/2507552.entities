@@ -1,13 +1,13 @@
-Polymorphonuclear leukocyte
-leukocyte
-human
-human
-PMN
-assembly
-assembly
-PMN
-toxin
-extracellular
-PMN
-PMN
+CL:0000775
+CL:0000738
+9606
+D006801
+CL:0000775
+SO:0001248
+SO:0001248
+CL:0000775
+CHEBI:27026
+GO:0005576
+CL:0000775
+CL:0000775
 

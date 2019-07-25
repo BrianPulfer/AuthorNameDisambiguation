@@ -1,11 +1,11 @@
-macrophage
-gene
-macrophage
-gene
-nucleotide
-SNP
-SNP
-allele
-allele
-promoter
+CL:0000235
+SO:0000704
+CL:0000235
+SO:0000704
+CHEBI:36976
+P86981
+P86981
+SO:0001023
+SO:0001023
+SO:0000167
 

@@ -1,34 +1,34 @@
-hormone
-hormone
-plasma membrane
-membrane
-plasma membrane
-membrane
-synthesis
-signaling
-plasma membrane
-membrane
-beta
-agonist
-signaling
-inhibitors
-beta
-isoforms
-phosphate
-phosphate
-phosphate
-phosphate
-phosphate
-signaling
-regulation
-small interfering RNA
-RNA
-siRNA
-regulation
-siRNA
-signaling
-plasma membrane
-membrane
-plasma membrane
-membrane
+CHEBI:24621
+D006728
+GO:0005886
+GO:0016020
+GO:0005886
+GO:0016020
+GO:0009058
+GO:0023052
+GO:0005886
+GO:0016020
+CHEBI:10545
+CHEBI:48705
+GO:0023052
+CHEBI:35222
+CHEBI:10545
+D020033
+CHEBI:43474
+CHEBI:26020
+CHEBI:35780
+CHEBI:18367
+CHEBI:26078
+GO:0023052
+GO:0065007
+SO:0000646
+SO:0000356
+SO:0000646
+GO:0065007
+SO:0000646
+GO:0023052
+GO:0005886
+GO:0016020
+GO:0005886
+GO:0016020
 

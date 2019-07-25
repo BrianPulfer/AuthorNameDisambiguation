@@ -1,24 +1,24 @@
-phospholipid
-water
-water
-liposomes
-phospholipid
-water
-water
-liposomes
-cell
-antimicrobial
-liposomes
-Staphylococcus aureus
-Staphylococcus aureus
-liposomes
-water
-water
-membrane
-topical
-infection
-inflammation
-inflammation
-mice
-mice
+CHEBI:16247
+CHEBI:15377
+D014867
+D008081
+CHEBI:16247
+CHEBI:15377
+D014867
+D008081
+CL:0000000
+CHEBI:33281
+D008081
+1280
+D013211
+D008081
+CHEBI:15377
+D014867
+GO:0016020
+GO:0003809
+D007239
+GO:0006954
+D007249
+D051379
+10095
 

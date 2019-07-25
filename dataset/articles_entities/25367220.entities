@@ -1,49 +1,49 @@
-MAP
-gene
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-human
-human
-cancers
-cell
-signaling
-phosphorylation
-human
-human
-cell
-mutation
-phosphorylation
-cell
-mutation
-mutation
-tyrosine
-phosphorylation
-tyrosine
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-MAP
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-PI3 kinase
-cell
-signal
-signal
-signal transduction
+GO:0004239
+SO:0000704
+P42347
+P54676
+P54673
+P54675
+P54674
+P42348
+9606
+D006801
+D009369
+CL:0000000
+GO:0023052
+GO:0016310
+9606
+D006801
+CL:0000000
+SO:0000109
+GO:0016310
+CL:0000000
+SO:0000109
+SO:0000109
+SO:0001446
+GO:0016310
+SO:0001446
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+P42347
+P54676
+P54673
+P54675
+P54674
+P42348
+GO:0004239
+P42347
+P54676
+P54673
+P54675
+P54674
+P42348
+CL:0000000
+SO:0000725
+SO:0000418
+GO:0007165
 

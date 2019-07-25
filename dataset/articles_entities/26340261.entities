@@ -1,19 +1,19 @@
-disease
-mutation
-beta
-excretion
-chromosome
-blood glucose
-glucose
-glucose
-glucose
-glucose
-hemoglobin
-hemoglobin
-hemoglobin
-hemoglobin
-diabetes mellitus
-cysts
-magnesium
-magnesium
+D004194
+SO:0000109
+CHEBI:10545
+GO:0007588
+GO:0005694
+D001786
+CHEBI:4167
+CHEBI:42758
+CHEBI:17234
+D005947
+P17724
+P73925
+Q03459
+P15160
+D003920
+D003560
+D008274
+CHEBI:25107
 

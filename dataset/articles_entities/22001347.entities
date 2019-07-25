@@ -1,55 +1,55 @@
-inflammation
-inflammation
-fibrosis
-Fibrosis
-regeneration
-fibrosis
-protein
-protein
-protein
-protein
-protein
-protein
-cysteine
-cysteine
-cysteine
-cysteine
-cysteine
-inflammation
-inflammation
-wild-type
-chimeras
-host
-fibrosis
-chimeras
-inflammation
-inflammation
-fibrosis
-tumor
-tumor necrosis factor
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-tumor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-tumor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-monocyte
-monocyte
-promoter
-chimeras
-fibrosis
+GO:0006954
+D007249
+D005355
+D005355
+GO:0031099
+D005355
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+SO:0001447
+D003545
+CHEBI:15356
+CHEBI:17561
+CHEBI:35237
+GO:0006954
+D007249
+SO:0000817
+D002678
+GO:0018995
+D005355
+D002678
+GO:0006954
+D007249
+D005355
+D009369
+GO:0005164
+GO:0008219
+GO:0019835
+GO:0008220
+D009336
+GO:0001906
+GO:0070265
+D009369
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+D009369
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CL:0001054
+CL:0000576
+SO:0000167
+D002678
+D005355
 

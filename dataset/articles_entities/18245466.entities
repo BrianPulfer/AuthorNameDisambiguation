@@ -1,82 +1,82 @@
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-malignant glioma
-glioma
-Malignant gliomas
-gliomas
-tumors
-growth
-tumor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-VEGF
-VEGF
-VEGF
-VEGF
-tumor
-tumor necrosis factor
-tumor necrosis factor-alpha
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-necrosis
-regulated
-tumors
-angiogenesis
-RNA
-elements
-region
-growth
-RNA
-malignant gliomas
-gliomas
-RNA
-growth
-malignant glioma
-glioma
-cell
-protein
-protein
-protein
-p38
-protein
-protein
-protein
-protein kinase
-MAPK
-malignant glioma
-glioma
-RNA
-VEGF
-VEGF
-VEGF
-VEGF
-regulation
-protein
-protein
-protein
-RNA
-binding
-binding
-mRNA
-cell
-cell proliferation
-cell
-apoptosis
-apoptosis
-p38
-MAPK
-malignant gliomas
-gliomas
-RNA
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+D005910
+D005910
+D005910
+D005910
+D009369
+GO:0040007
+D009369
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+PR:P16612
+PR:P67964
+PR:O73682
+PR:000017284
+D009369
+GO:0005164
+PR:000000134
+GO:0008219
+GO:0019835
+GO:0008220
+D009336
+GO:0001906
+GO:0070265
+SO:0000119
+D009369
+GO:0001525
+SO:0000356
+CHEBI:33250
+SO:0000001
+GO:0040007
+SO:0000356
+D005910
+D005910
+SO:0000356
+GO:0040007
+D005910
+D005910
+CL:0000000
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0004707
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D011494
+GO:0004707
+D005910
+D005910
+SO:0000356
+PR:P16612
+PR:P67964
+PR:O73682
+PR:000017284
+GO:0065007
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+SO:0000356
+GO:0005488
+SO:0001091
+SO:0000234
+CL:0000000
+GO:0008283
+CL:0000000
+GO:0006915
+GO:0097194
+GO:0004707
+GO:0004707
+D005910
+D005910
+SO:0000356
 

@@ -1,12 +1,12 @@
-molecule
-inhibitors
-intracellular
-signaling
-diseases
-tumor
-inhibitors
-cancer
-molecule
-inhibitors
-inhibitors
+CHEBI:25367
+CHEBI:35222
+GO:0005622
+GO:0023052
+D004194
+D009369
+CHEBI:35222
+D009369
+CHEBI:25367
+CHEBI:35222
+CHEBI:35222
 

@@ -1,32 +1,32 @@
-cell
-lung cancer
-cancer
-regulated
-cyclin
-human
-human
-cell
-lung cancer
-cancer
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-PCR
-Cell
-Cell proliferation
-Apoptosis
-Apoptosis
-regulation
-cell
-regulated
-cell
-gene
-cell
-cell proliferation
-apoptosis
-apoptosis
+CL:0000000
+D008175
+D009369
+SO:0000119
+GO:0016538
+9606
+D006801
+CL:0000000
+D008175
+D009369
+Q41249
+Q01289
+Q9SDT1
+Q59987
+Q39617
+P15904
+O66148
+O80333
+CL:0000000
+GO:0008283
+GO:0006915
+GO:0097194
+GO:0065007
+CL:0000000
+SO:0000119
+CL:0000000
+SO:0000704
+CL:0000000
+GO:0008283
+GO:0006915
+GO:0097194
 

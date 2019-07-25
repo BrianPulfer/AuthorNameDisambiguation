@@ -1,39 +1,39 @@
-diseases
-diseases
-rheumatoid arthritis
-arthritis
-cell
-diseases
-disease
-T-cell
-cell
-transcription
-transcription factor
-B-cell
-cell
-lymphoma
-molecules
-ligand
-ligand
-T-cell
-cell
-cell
-cell death
-protein
-protein
-protein
-cytokines
-memory
-antibodies
-mice
-mice
-rheumatoid arthritis
-arthritis
-CD4
-T-cell
-cell
-immune response
-diseases
-cell
-diseases
+D004194
+D004194
+D001172
+D001168
+CL:0000000
+D004194
+D004194
+CL:0000084
+CL:0000000
+GO:0006351
+GO:0000982
+CL:0000236
+CL:0000000
+D008223
+CHEBI:25367
+CHEBI:52214
+GO:0005488
+CL:0000084
+CL:0000000
+CL:0000000
+GO:0008219
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D016207
+GO:0007613
+D000906
+D051379
+10095
+D001172
+D001168
+PR:000001004
+CL:0000084
+CL:0000000
+GO:0006955
+D004194
+CL:0000000
+D004194
 

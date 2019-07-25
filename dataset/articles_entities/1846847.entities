@@ -1,18 +1,18 @@
-cell
-lung cancer
-cancer
-cell
-lung cancer
-cancer
-disease
-disease
-disease
-Cox
-cell
-adenocarcinoma
-cell
-carcinoma
-weight loss
-disease
-Cox
+CL:0000000
+D008175
+D009369
+CL:0000000
+D008175
+D009369
+D004194
+D004194
+D004194
+CVCL_E534
+CL:0000000
+D000230
+CL:0000000
+D002277
+D015431
+D004194
+CVCL_E534
 

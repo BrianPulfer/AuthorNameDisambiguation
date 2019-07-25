@@ -1,14 +1,14 @@
-cluster
-human
-human
-infections
-gene
-protein
-protein
-protein
-strains
-gene
-strains
-Mutation
-strains
+CHEBI:33731
+9606
+D006801
+D007239
+SO:0000704
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+D013180
+SO:0000704
+D013180
+SO:0000109
+D013180
 

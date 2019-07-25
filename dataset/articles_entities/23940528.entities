@@ -1,29 +1,29 @@
-injury
-cell
-gene
-gene expression
-gene
-gene expression
-ischemia
-cell
-gene
-gene expression
-ion
-glutamate
-glutamate
-glutamate
-glutamate
-glutamate
-homeostasis
-cell
-gene
-ischemia
-ischemia
-potassium
-potassium
-glutamate
-glutamate
-glutamate
-glutamate
-glutamate
+D014947
+CL:0000000
+SO:0000704
+GO:0010467
+SO:0000704
+GO:0010467
+D007511
+CL:0000000
+SO:0000704
+GO:0010467
+CHEBI:24870
+D018698
+CHEBI:18237
+CHEBI:16015
+CHEBI:29987
+CHEBI:14321
+GO:0042592
+CL:0000000
+SO:0000704
+D007511
+D007511
+CHEBI:26216
+D011188
+D018698
+CHEBI:18237
+CHEBI:16015
+CHEBI:29987
+CHEBI:14321
 

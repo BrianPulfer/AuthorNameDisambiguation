@@ -1,11 +1,11 @@
-neutrophil
-cancer
-neutrophil
-cancer
-inflammation
-inflammation
-cancer
-neutrophil
-neutrophil
-cancer
+CL:0000775
+D009369
+CL:0000775
+D009369
+GO:0006954
+D007249
+D009369
+CL:0000775
+CL:0000775
+D009369
 

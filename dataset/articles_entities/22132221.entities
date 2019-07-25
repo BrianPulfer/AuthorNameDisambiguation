@@ -1,49 +1,49 @@
-regulation
-hepatocellular carcinoma
-carcinoma
-cell
-cell cycle
-proteins
-proteins
-Histone
-signaling
-tumors
-human
-human
-hepatocellular carcinoma
-carcinoma
-tumor
-cell
-cell growth
-growth
-DNA
-synthesis
-regulated
-cell
-cell cycle
-cell
-cell cycle
-transition
-cyclin
-regulation
-phosphorylation
-protein
-protein
-protein
-formation
-tumor
-growth
-mouse
-mouse
-binding
-binding
-binding site
-region
-promoter
-regulation
-regulation
-cell
-cell cycle
-transcription
-cancer
+GO:0065007
+D006528
+D002277
+CL:0000000
+GO:0007049
+D011506
+CHEBI:36080
+PR:000041244
+GO:0023052
+D009369
+9606
+D006801
+D006528
+D002277
+D009369
+CL:0000000
+GO:0016049
+GO:0040007
+GO:0005574
+GO:0009058
+SO:0000119
+CL:0000000
+GO:0007049
+CL:0000000
+GO:0007049
+SO:1000009
+GO:0016538
+GO:0065007
+GO:0016310
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0009058
+D009369
+GO:0040007
+D051379
+10090
+GO:0005488
+SO:0001091
+SO:0001091
+SO:0000001
+SO:0000167
+GO:0065007
+GO:0065007
+CL:0000000
+GO:0007049
+GO:0006351
+D009369
 

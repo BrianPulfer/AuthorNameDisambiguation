@@ -1,16 +1,16 @@
-cell
-cell proliferation
-mice
-mice
-body weight
-cell
-nuclei
-cytoplasm
-cell
-cell
-hypertrophy
-hyperplasia
-cell
-cell
-cell cycle
+CL:0000000
+GO:0008283
+D051379
+10095
+D001835
+CL:0000000
+CHEBI:33252
+GO:0005737
+CL:0000000
+CL:0000000
+D006984
+D006965
+CL:0000000
+CL:0000000
+GO:0007049
 

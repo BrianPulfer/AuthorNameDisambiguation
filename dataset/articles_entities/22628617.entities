@@ -1,28 +1,28 @@
-gene
-disease
-diseases
-obesity
-insulin resistance
-type 2 diabetes
-chromosome
-mouse
-mouse
-strains
-mutation
-gene
-chromosome
-inhibitor
-cell
-cell growth
-growth
-metabolism
-mice
-mice
-gene
-gene expression
-nucleotide
-strains
-AML
-binding
-binding
+SO:0000704
+D004194
+D004194
+D009765
+D007333
+D003924
+GO:0005694
+D051379
+10090
+D013180
+SO:0000109
+SO:0000704
+GO:0005694
+CHEBI:35222
+CL:0000000
+GO:0016049
+GO:0040007
+GO:0008152
+D051379
+10095
+SO:0000704
+GO:0010467
+CHEBI:36976
+D013180
+D015470
+GO:0005488
+SO:0001091
 

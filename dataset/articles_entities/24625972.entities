@@ -1,28 +1,28 @@
-inhibitor
-ATPase
-degradation
-fibrosis
-fibrosis
-inhibitor
-fibrosis
-fibrosis
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-transition
-fibrosis
-mouse
-mouse
-degradation
-ATPase
-ATPase
-degradation
-ATPase
-fibrosis
-mouse
-mouse
-ATPase
+CHEBI:35222
+D000251
+GO:0009056
+D005355
+D005355
+CHEBI:35222
+D005355
+D005355
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+SO:1000009
+D005355
+D051379
+10090
+GO:0009056
+D000251
+D000251
+GO:0009056
+D000251
+D005355
+D051379
+10090
+D000251
 

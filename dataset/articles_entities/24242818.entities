@@ -1,13 +1,13 @@
-stem cell
-cell
-stem cell
-cell
-diseases
-malignancies
-diseases
-host
-disease
-T cell
-cell
-humans
+CL:0000034
+CL:0000000
+CL:0000034
+CL:0000000
+D004194
+D009369
+D004194
+GO:0018995
+D004194
+CL:0000084
+CL:0000000
+D006801
 

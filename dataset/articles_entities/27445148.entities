@@ -1,12 +1,12 @@
-transition
-beta
-gamma
-beta
-gamma
-transition
-processed
-transition
-beta
-gamma
-transition
+SO:1000009
+CHEBI:10545
+CHEBI:30212
+CHEBI:10545
+CHEBI:30212
+SO:1000009
+SO:0000900
+SO:1000009
+CHEBI:10545
+CHEBI:30212
+SO:1000009
 

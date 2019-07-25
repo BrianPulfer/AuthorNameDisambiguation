@@ -1,25 +1,25 @@
-tumor
-cell
-signal
-signal
-transcription
-cancer
-signaling
-signaling pathway
-signaling
-tumor
-Cell
-phosphorylation
-gene
-protein
-protein
-protein
-signaling
-signaling pathway
-signaling
-signaling pathway
-cell
-cell proliferation
-phosphorylation
-signaling
+D009369
+CL:0000000
+SO:0000725
+SO:0000418
+GO:0006351
+D009369
+GO:0023052
+GO:0007165
+GO:0023052
+D009369
+CL:0000000
+GO:0016310
+SO:0000704
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+GO:0023052
+GO:0007165
+GO:0023052
+GO:0007165
+CL:0000000
+GO:0008283
+GO:0016310
+GO:0023052
 

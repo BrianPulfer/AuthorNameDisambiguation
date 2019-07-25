@@ -1,19 +1,19 @@
-stem cell
-cell
-disease
-stem cell
-cell
-disease
-Medicine
-regeneration
-human
-human
-fusion
-human
-human
-fusion
-fusion
-humans
-human
-human
+CL:0000034
+CL:0000000
+D004194
+CL:0000034
+CL:0000000
+D004194
+CHEBI:23888
+GO:0031099
+9606
+D006801
+SO:0000806
+9606
+D006801
+SO:0000806
+SO:0000806
+D006801
+9606
+D006801
 

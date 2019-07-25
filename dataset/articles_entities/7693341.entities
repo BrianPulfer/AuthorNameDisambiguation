@@ -1,24 +1,24 @@
-human
-human
-breast cancer
-cancer
-Stem cell
-cell
-tumor
-diseases
-breast cancer
-cancer
-breast cancer
-cancer
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-Neutrophil
-neutrophil
-antibiotics
-antibiotics
-platelet
+9606
+D006801
+D001943
+D009369
+CL:0000034
+CL:0000000
+D009369
+D004194
+D001943
+D009369
+D001943
+D009369
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CL:0000775
+CL:0000775
+D000900
+CHEBI:33281
+CL:0000233
 

@@ -1,47 +1,47 @@
-localization
-human
-human
-stem cell
-cell
-human
-human
-beta
-cadherin
-beta
-gamma
-beta
-cadherin
-beta
-gamma
-human
-human
-beta
-cadherin
-beta
-gamma
-peg
-peg
-peg
-peg
-localization
-epidermal growth factor
-epidermal growth factor receptor
-epidermal growth factor receptor
-epidermal growth factor receptor
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-beta
-cadherin
-beta
-gamma
-electron
-localization
-human
-human
-human
-human
+GO:0051179
+9606
+D006801
+CL:0000034
+CL:0000000
+9606
+D006801
+CHEBI:10545
+GO:0008014
+CHEBI:10545
+CHEBI:30212
+CHEBI:10545
+GO:0008014
+CHEBI:10545
+CHEBI:30212
+9606
+D006801
+CHEBI:10545
+GO:0008014
+CHEBI:10545
+CHEBI:30212
+P09466
+PR:000012224
+P09466
+PR:000012224
+GO:0051179
+GO:0005154
+P04412
+P0CY46
+PR:000006933
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CHEBI:10545
+GO:0008014
+CHEBI:10545
+CHEBI:30212
+CHEBI:10545
+GO:0051179
+9606
+D006801
+9606
+D006801
 

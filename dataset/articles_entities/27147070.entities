@@ -1,24 +1,24 @@
-gene
-region
-chromosome
-gene
-chromosome
-map
-wild-type
-gene
-region
-SNP
-SNP
-chromosome
-region
-wild-type
-wild-type
-nucleotide
-amino
-amino acid
-amino acid
-acid
-proteins
-proteins
-complex
+SO:0000704
+SO:0000001
+GO:0005694
+SO:0000704
+GO:0005694
+GO:0004239
+SO:0000817
+SO:0000704
+SO:0000001
+P86981
+P86981
+GO:0005694
+SO:0000001
+SO:0000817
+SO:0000817
+CHEBI:36976
+CHEBI:46882
+CHEBI:33704
+CHEBI:33709
+CHEBI:37527
+D011506
+CHEBI:36080
+SO:0001784
 

@@ -1,45 +1,45 @@
-transition
-breast cancer
-cancer
-regulation
-protein
-protein
-protein
-arginine
-arginine
-tumorigenesis
-breast cancer
-cancer
-metastasis
-transition
-breast cancer
-cancer
-human
-human
-cancer
-stem cell
-cell
-breast cancer
-cancer
-breast cancer
-cancer
-metastasis
-mouse
-mouse
-cell
-cell growth
-growth
-arginine
-arginine
-histone
-promoter
-transcription
-metastasis
-cancer
-cancer cell
-cell
-cell growth
-growth
-breast cancer
-cancer
+SO:1000009
+D001943
+D009369
+GO:0065007
+CHEBI:16541
+SO:0000104
+CHEBI:36080
+CHEBI:16467
+SO:0001451
+D063646
+D001943
+D009369
+D009362
+SO:1000009
+D001943
+D009369
+9606
+D006801
+D009369
+CL:0000034
+CL:0000000
+D001943
+D009369
+D001943
+D009369
+D009362
+D051379
+10090
+CL:0000000
+GO:0016049
+GO:0040007
+CHEBI:16467
+SO:0001451
+PR:000041244
+SO:0000167
+GO:0006351
+D009362
+D009369
+CL:0001064
+CL:0000000
+GO:0016049
+GO:0040007
+D001943
+D009369
 

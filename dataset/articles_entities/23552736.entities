@@ -1,39 +1,39 @@
-cell
-cell proliferation
-transition
-prostate cancer
-cancer
-proteins
-proteins
-gene
-oncogenesis
-siRNA
-cancer
-cancer cell
-cell
-cell
-growth
-cell
-cell proliferation
-cell
-cell cycle
-tumor
-growth
-human
-human
-cell
-growth
-cell
-cell
-cell proliferation
-cell
-cell cycle
-cadherin
-cadherin
-transition
-transcription
-proteins
-proteins
-cell
-tumor
+CL:0000000
+GO:0008283
+SO:1000009
+D011471
+D009369
+D011506
+CHEBI:36080
+SO:0000704
+D063646
+SO:0000646
+D009369
+CL:0001064
+CL:0000000
+CL:0000000
+GO:0040007
+CL:0000000
+GO:0008283
+CL:0000000
+GO:0007049
+D009369
+GO:0040007
+9606
+D006801
+CL:0000000
+GO:0040007
+CL:0000000
+CL:0000000
+GO:0008283
+CL:0000000
+GO:0007049
+GO:0008014
+GO:0008014
+SO:1000009
+GO:0006351
+D011506
+CHEBI:36080
+CL:0000000
+D009369
 

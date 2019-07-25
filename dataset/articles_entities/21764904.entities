@@ -1,35 +1,35 @@
-inhibitors
-fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-cancer
-inhibitors
-fibroblast
-growth
-growth factor
-growth factor
-growth factor
-growth factor
-growth factor
-tyrosine
-cell
-inhibitors
-human
-human
-tumor
-cell
-isoforms
-inhibitors
-disease
+CHEBI:35222
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+D009369
+CHEBI:35222
+CL:0000057
+GO:0040007
+P08441
+Q6RZT5
+Q8V307
+Q776B5
+P08072
+SO:0001446
+CL:0000000
+CHEBI:35222
+9606
+D006801
+D009369
+CL:0000000
+D020033
+CHEBI:35222
+D004194
 
