@@ -13,6 +13,8 @@ from main.model.article_pair import ArticlePair
 # Classifiers imports
 from main.classifiers.knn import KNN
 from main.classifiers.random_forest import RandomForest
+from main.classifiers.cart import CART
+from main.classifiers.svm import SVM
 from main.classifiers.sequential import Sequential
 
 
@@ -97,6 +99,20 @@ def get_confusion_matrix(predictions, labels):
 
     tp, fp, tn, fn = tp/len(predictions), fp/len(predictions), tn/len(predictions), fn/len(predictions)
     return np.array([[tn, fp], [fn, tp]])
+
+
+def run_classifier(classifier, x_train, y_train, x_test, y_test):
+    """Trains and tests the classifier. Finally prints the accuracy and the confusion matrix"""
+    name = classifier.__class__.__name__
+
+    classifier.fit(x_train, y_train)
+    predictions = classifier.predict(x_test)
+
+    accuracy = compute_accuracy(predictions, y_test)
+    conf_matrix = get_confusion_matrix(predictions, y_test)
+
+    print('\n'+name+" accuracy: "+str(int(accuracy*100))+'%')
+    print(conf_matrix)
 
 
 def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path="./dataset/400_pairs_test.csv"):
@@ -198,25 +214,21 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     for i in range(5, 11, 2):
         # KNN - CLASSIFIER
         classifier = KNN(i)
-        classifier.fit(x_train_norm, y_train)
-        predictions = classifier.predict(x_test_norm)
-
-        knn_accuracy = compute_accuracy(predictions, y_test)
-        conf_matrix = get_confusion_matrix(predictions, y_test)
-
-        print("\n"+str(i)+"NN - Classifier accuracy: " + str(int(knn_accuracy*100))+"%")
-        print(conf_matrix)
+        run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+        print("For N = "+str(i))
 
         # RANDOM FOREST - CLASSIFIER
         classifier = RandomForest(i*10)
-        classifier.fit(x_train_norm, y_train)
-        predictions = classifier.predict(x_test_norm)
+        run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+        print("With "+str(i*10)+" trees")
 
-        rf_accuracy = compute_accuracy(predictions, y_test)
-        conf_matrix = get_confusion_matrix(predictions, y_test)
+    # CART - CLASSIFIER
+    classifier = CART()
+    run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
 
-        print("\nRandom Forest (" + str(i*10) + " trees) - Classifier accuracy: "+str(int(rf_accuracy*100))+"%")
-        print(conf_matrix)
+    # SVM - CLASSIFIER
+    classifier = SVM()
+    run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
 
 
 if __name__ == '__main__':
