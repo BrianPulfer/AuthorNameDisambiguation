@@ -26,7 +26,7 @@ class TestSequential(unittest.TestCase):
 
         predictions = classifier.predict(np.array([[1, 1]]))
 
-        self.assertEqual([1], predictions)
+        self.assertEqual(1, len(predictions))
 
 
 if __name__ == '__main__':

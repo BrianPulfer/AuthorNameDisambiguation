@@ -11,7 +11,7 @@ class TestEntitiesRetriever(unittest.TestCase):
         pmid = 1255999
         ents = entities.find_entities(pmid, path)
 
-        self.assertEqual(['disease', 'disease', 'Light', 'disease'], ents)
+        self.assertEqual(['D004194', 'D004194', 'CHEBI:30212', 'D004194'], ents)
 
         # Trying with an empty file (no entities for the article)
         pmid = 191009
