@@ -162,7 +162,7 @@ class ArticlePair:
 
         if isinstance(initials1, str) and isinstance(initials2, str):
             initials1 = self.article1.get_main_author_initials().lower().strip()
-            initials2 = self.article1.get_main_author_initials().lower().strip()
+            initials2 = self.article2.get_main_author_initials().lower().strip()
 
             if initials1 == initials2:
                 return 1
