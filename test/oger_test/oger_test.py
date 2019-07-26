@@ -1,4 +1,5 @@
 import unittest
+import definitions
 
 from main.oger.oger_utility import OgerUtility
 from main.oger.ctrl.router import Router, PipelineServer
@@ -10,11 +11,11 @@ class TestOrgerUtility(unittest.TestCase):
         2 articles are downloaded from pubmed and their content is verified.
         Entity recognition is run and denotations are verified."""
 
-        conf = Router(termlist_path='./../../main/oger_test/test/testfiles/test_terms.tsv')
+        conf = Router(termlist_path=definitions.ROOT_DIR + '/main/oger/test/testfiles/test_terms.tsv')
         pl = PipelineServer(conf)
 
         # Loading articles from local files
-        doc = pl.load_one('./../../main/oger_test/test/testfiles/txt/13373697.txt', 'txt')
+        doc = pl.load_one(definitions.ROOT_DIR + '/main/oger/test/testfiles/txt/13373697.txt', 'txt')
         self.assertTrue('The kind and the measure of ventilation disorders in tuberculous' in doc.text)
 
         # Downloading articles
@@ -64,7 +65,7 @@ class TestOrgerUtility(unittest.TestCase):
     def test_ogerutility(self):
         """Tests the OgerUtility class created to simplify the syntax"""
 
-        utility = OgerUtility('./../../main/oger_test/test/testfiles/test_terms.tsv')
+        utility = OgerUtility(definitions.ROOT_DIR + '/main/oger/test/testfiles/test_terms.tsv')
         entities = utility.get_entities_by_pmids(['21436587', '21436588'])
 
         # Verifying first article's first entity
