@@ -148,10 +148,35 @@ class TestArticlePair(unittest.TestCase):
         self.assertEqual(-1, ArticlePair(article1, article6).get_initials_score())
 
     def test_ambiguity_score(self):
-        pass
+        """Tests that the ambiguity score is correctly averaged"""
+
+        article1 = Article(ambiguity=0.10)
+        article2 = Article(ambiguity=0.20)
+
+        ambiguity = ArticlePair(article1, article2).get_ambiguity_score()
+        error = ambiguity - 0.15
+
+        # Approximation error is 2.77e-17
+        self.assertTrue(float(0.0000000000000001) > error)
 
     def test_lnlength_score(self):
-        pass
+        """Tests that the articles lastnames lengths are correctly averaged"""
+
+        author1 = Author('Pulfer', 'Brian', 'P.B.')
+        author2 = Author('Doe', 'John', 'DJ')
+        author3 = Author('Case', 'Test', 'C.T.')
+
+        article1 = Article(authors=[author1, author2])
+        article2 = Article(authors=[author1, author3])
+        article3 = Article(authors=[author2, author3])
+
+        ap1 = ArticlePair(article1, article2)
+        ap2 = ArticlePair(article1, article3)
+        ap3 = ArticlePair(article2, article3)
+
+        self.assertEqual(6, ap1.get_lnlength_score())
+        self.assertEqual(4.5, ap2.get_lnlength_score())
+        self.assertEqual(4.5, ap3.get_lnlength_score())
 
 
 if __name__ == '__main__':
