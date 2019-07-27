@@ -2,7 +2,7 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from main.retrievers import email
+from main.retrievers import mail
 from main.eutilities import e_utilities
 
 
@@ -20,10 +20,10 @@ class TestEmailRetriever(unittest.TestCase):
         soup = BeautifulSoup(xml_article.content.decode('utf-8'), "xml")
 
         # Retrieving a mail
-        mail = email.find_email(soup)
+        e_mail = mail.find_email(soup)
 
         # Checking that the mail is correct
-        self.assertEqual('yongzhang945@hotmail.com', mail)
+        self.assertEqual('yongzhang945@hotmail.com', e_mail)
 
         # Testing with an article that contains no e-mail addresses
         pmid = 31167299
@@ -33,7 +33,7 @@ class TestEmailRetriever(unittest.TestCase):
         xml_article = e_utilities.fetch(e_utilities.DATABASES.PubMed, query, rettype="xml")
         soup = BeautifulSoup(xml_article.content.decode('utf-8'), "xml")
 
-        no_mail = email.find_email(soup)
+        no_mail = mail.find_email(soup)
 
         self.assertEqual(None, no_mail)
 
