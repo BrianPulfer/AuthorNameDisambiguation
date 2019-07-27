@@ -116,7 +116,7 @@ def run_classifier(classifier, x_train, y_train, x_test, y_test):
 
 
 def test_classifiers(x_train_norm, y_train, x_test_norm, y_test):
-    """Tests a bunch of classifiers and prints accuracy and confusion matrix """
+    """Tests a bunch of classifiers. Prints accuracy and confusion matrix for each"""
 
     # Trying out different values for K (5,7 and 9) in K-NN and trees for the random forest (50, 70 and 90)
     for i in range(5, 11, 2):
@@ -141,6 +141,7 @@ def test_classifiers(x_train_norm, y_train, x_test_norm, y_test):
 
 def cross_validate(classifier, data, target, k):
     """Performs a k-fold cross validation using the given classifier, data and target"""
+
     # Shuffling dataset
     data_target = list()
 
@@ -291,7 +292,8 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     scores = cross_validate(best_classifier, data, target, k)
 
     accuracy = scores.mean()
-    print(best_classifier.__class__.__name__+" accuracy with "+str(k)+"-fold cross validation: "+str(accuracy*100)+"%")
+    print("\n"+best_classifier.__class__.__name__+" accuracy with "+str(k)+"-fold cross validation: "
+          + str(int(accuracy*100))+"%")
 
 
 if __name__ == '__main__':
