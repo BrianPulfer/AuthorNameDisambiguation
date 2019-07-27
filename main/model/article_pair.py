@@ -18,13 +18,24 @@ class ArticlePair:
     def binary_scores():
         """Static method which returns a list of true's and false's.
         The list indicates if the scores in a particular column are binary or not."""
-        return [False, False, False, False, True, True, False, False, False, False, False, False]
+        return [True, False, False, False, False, True, True, False, False, False, False, False, False]
 
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
-        return [self.get_authors_score(), self.get_email_score(), self.get_date_score(), self.get_keywords_score(),
-                self.get_county_score(), self.get_city_score(), self.get_affiliation_score(), self.get_entities_score(),
-                self.get_jds_score(), self.get_sts_score(), self.get_ambiguity_score(), self.get_lnlength_score()]
+        return [self.get_firstname_score(), self.get_authors_score(), self.get_email_score(), self.get_date_score(),
+                self.get_keywords_score(), self.get_county_score(), self.get_city_score(), self.get_affiliation_score(),
+                self.get_entities_score(), self.get_jds_score(), self.get_sts_score(), self.get_ambiguity_score(),
+                self.get_lnlength_score()]
+
+    def get_firstname_score(self):
+        """Checks if the articles main authors first names matches"""
+        if len(self.article1.authors) == 0 or \
+           len(self.article2.authors) == 0:
+            return -1
+
+        if self.article1.authors[0].forename == self.article2.authors[0].forename:
+            return 1
+        return 0
 
     def get_email_score(self):
         """Returns the Levenshtein distance between the articles e-mail addresses"""
