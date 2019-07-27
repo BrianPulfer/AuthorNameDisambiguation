@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from decimal import Decimal
 
-# Info retrievers_test imports
+# Info retrievers imports
 from main.retrievers import ambiguity_score
 
 # Model and loader_test imports
@@ -115,6 +115,76 @@ def run_classifier(classifier, x_train, y_train, x_test, y_test):
     print(conf_matrix)
 
 
+def test_classifiers(x_train_norm, y_train, x_test_norm, y_test):
+    """Tests a bunch of classifiers and prints accuracy and confusion matrix """
+
+    # Trying out different values for K (5,7 and 9) in K-NN and trees for the random forest (50, 70 and 90)
+    for i in range(5, 11, 2):
+        # KNN - CLASSIFIER
+        classifier = KNN(i)
+        run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+        print("For N = " + str(i))
+
+        # RANDOM FOREST - CLASSIFIER
+        classifier = RandomForest(i * 10)
+        run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+        print("With " + str(i * 10) + " trees")
+
+    # CART - CLASSIFIER
+    classifier = CART()
+    run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+
+    # SVM - CLASSIFIER
+    classifier = SVM()
+    run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+
+
+def cross_validate(classifier, data, target, k):
+    """Performs a k-fold cross validation using the given classifier, data and target"""
+    # Shuffling dataset
+    data_target = list()
+
+    for i in range(len(data)):
+        row = list(data[i])
+        row.append(target[i])
+
+        data_target.append(row)
+
+    data_target = np.array(data_target)
+    np.random.shuffle(data_target)
+
+    # Dividing dataset in partitions
+    partitions = list()
+    rows_per_partition = int(len(data_target) / k)
+
+    for i in range(k):
+        first_row = i * rows_per_partition
+        last_row = first_row + rows_per_partition
+
+        partitions.append(data_target[first_row:last_row][:])
+
+    # Applying the cross-validation
+    scores = list()
+
+    for i in range(k):
+        training = list()
+        for partition in partitions:
+            if not np.array_equal(partition, partitions[i]):
+                for row in partition:
+                    training.append(row)
+        training = np.array(training)
+
+        testing = partitions[i]
+
+        x_train, y_train = training[:, :len(training[i]) - 2], training[:, len(training[i]) - 1]
+        x_test, y_test = testing[:, :len(testing[i]) - 2], testing[:, len(testing[i]) - 1]
+
+        classifier.fit(x_train, y_train)
+        scores.append(compute_accuracy(classifier.predict(x_test), y_test))
+
+    return np.array(scores)
+
+
 def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path="./dataset/400_pairs_test.csv"):
     """Main method - Trains and tests various classifiers_test"""
     # Positive instances in the training set: 970. Negative instances in the training set: 503
@@ -210,25 +280,18 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     x_train_norm = normalize_set(x_train_filled, binaries_features).astype('float64')
     x_test_norm = normalize_set(x_test_filled, binaries_features).astype('float64')
 
-    # Trying out different values for K (5,7 and 9) in K-NN and trees for the random forest (50, 70 and 90)
-    for i in range(5, 11, 2):
-        # KNN - CLASSIFIER
-        classifier = KNN(i)
-        run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
-        print("For N = "+str(i))
+    # Testing the classifiers (OPTIONAL)
+    # test_classifiers(x_train_norm, y_train, x_test_norm, y_test)
 
-        # RANDOM FOREST - CLASSIFIER
-        classifier = RandomForest(i*10)
-        run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
-        print("With "+str(i*10)+" trees")
+    # K-Cross validating the best classifier
+    best_classifier = RandomForest(50)
+    k = 10
+    data = np.concatenate((x_train_norm, x_test_norm), axis=0)
+    target = np.concatenate((y_train, y_test), axis=0)
+    scores = cross_validate(best_classifier, data, target, k)
 
-    # CART - CLASSIFIER
-    classifier = CART()
-    run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
-
-    # SVM - CLASSIFIER
-    classifier = SVM()
-    run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
+    accuracy = scores.mean()
+    print(best_classifier.__class__.__name__+" accuracy with "+str(k)+"-fold cross validation: "+str(accuracy*100)+"%")
 
 
 if __name__ == '__main__':
