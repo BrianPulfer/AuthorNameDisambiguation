@@ -9,7 +9,7 @@ class Article:
 
     def __init__(self, PMID: int = None, main_author_initials: str = None, language: str = None, authors: list = list(),
                  e_mail: str = None, date: datetime = None, affiliation: Affiliation = None, country: str = None,
-                 city: str = None, key_words: list = list(), entities: list = None, jds: list = None, sts: list = None,
+                 city: str = None, mesh_terms: list = list(), entities: list = None, jds: list = None, sts: list = None,
                  ambiguity=-1, raw_text: str = None):
         self.PMID = PMID
         self.ambiguity = ambiguity
@@ -21,7 +21,7 @@ class Article:
         self.affiliation = affiliation
         self.country = country
         self.city = city
-        self.key_words = key_words
+        self.mesh_terms = mesh_terms
         self.entities = entities
         self.jds = jds
         self.sts = sts
@@ -74,11 +74,11 @@ class Article:
     def set_date(self, date):
         self.date = date
 
-    def get_key_words(self):
-        return self.key_words
+    def get_mesh_terms(self):
+        return self.mesh_terms
 
-    def set_key_words(self, key_words):
-        self.key_words = key_words
+    def set_mesh_terms(self, mesh_terms):
+        self.mesh_terms = mesh_terms
 
     def get_jds(self):
         return self.jds
@@ -124,13 +124,13 @@ class Article:
 
     def has_all_data(self):
         return len(self.authors) > 0 and \
-                self.e_mail is not "" and self.e_mail is not None and \
-                self.date is not None and \
-                len(self.key_words) > 0 and \
-                self.country is not "" and self.country is not None and \
-                self.city is not "" and self.city is not None and \
-                self.affiliation.get_infos() is not "" and self.affiliation.get_infos() is not None and \
-                self.entities is not None and\
-                self.jds is not None and\
-                self.sts is not None and \
-                self.ambiguity is not -1
+               self.e_mail is not "" and self.e_mail is not None and \
+               self.date is not None and \
+               len(self.mesh_terms) > 0 and \
+               self.country is not "" and self.country is not None and \
+               self.city is not "" and self.city is not None and \
+               self.affiliation.get_infos() is not "" and self.affiliation.get_infos() is not None and \
+               self.entities is not None and \
+               self.jds is not None and \
+               self.sts is not None and \
+               self.ambiguity is not -1

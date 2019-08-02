@@ -1,4 +1,4 @@
-def find_keywords(article_content):
+def find_mesh_terms(article_content):
     """Finds the article keywords given its raw content (as string)"""
 
     meshes = []

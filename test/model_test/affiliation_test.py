@@ -8,15 +8,12 @@ class TestAffiliation(unittest.TestCase):
 
     def test_class(self):
         """Tests all the class methods"""
-        infos = "Test Affiliation infos"
+        infos = "TEST: Dana-Farber Cancer Institute"
         affiliation = Affiliation(infos)
 
         self.assertEqual(infos, affiliation.get_infos())
-
-        infos = "Testing"
-        affiliation.set_infos(infos)
-
-        self.assertEqual(infos, affiliation.get_infos())
+        self.assertEqual(affiliation.TYPE.INSTITU, affiliation.get_type())
+        self.assertEqual(affiliation.DESCRIPTOR.CANCER, affiliation.get_descriptor())
 
 
 if __name__ == '__main__':

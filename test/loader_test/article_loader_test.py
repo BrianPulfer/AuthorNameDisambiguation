@@ -27,6 +27,11 @@ class TestArticleLoader(unittest.TestCase):
             self.assertTrue(article1.get_authors()[i].forename == article2.get_authors()[i].forename)
             self.assertTrue(article1.get_authors()[i].initials == article2.get_authors()[i].initials)
 
+        # Checking some contained data
+        self.assertEqual('Dice', article1.get_authors()[0].lastname)
+        self.assertEqual(1979, article1.get_date().year)
+        self.assertEqual('eng', article1.get_language())
+
 
 if __name__ == '__main__':
     unittest.main()

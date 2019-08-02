@@ -2,7 +2,7 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from main.retrievers import keywords
+from main.retrievers import mesh
 from main.eutilities import e_utilities
 
 
@@ -18,7 +18,7 @@ class TestMeshTermsRetriever(unittest.TestCase):
         soup = BeautifulSoup(article.content.decode('utf-8'), "xml")
 
         # Extracting mesh terms from article's content
-        keys = keywords.find_keywords(soup)
+        keys = mesh.find_mesh_terms(soup)
 
         # Checking mesh terms content
         self.assertEqual(13, len(keys))

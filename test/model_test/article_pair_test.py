@@ -31,8 +31,8 @@ class TestArticlePair(unittest.TestCase):
         ap2 = ArticlePair(article1, article3)
 
         # Testing e-mail score
-        self.assertEqual(0, ap1.get_email_score())
-        self.assertEqual(2, ap2.get_email_score())
+        self.assertEqual(1, ap1.get_email_score())
+        self.assertEqual(0, ap2.get_email_score())
 
         # Testing affiliation score
         self.assertEqual(0, ap1.get_affiliation_score())
@@ -52,8 +52,8 @@ class TestArticlePair(unittest.TestCase):
         real_pair2 = ArticlePair(article2, article1)
 
         self.assertEqual(0, same_pair.get_date_score())
-        self.assertEqual(365, real_pair1.get_date_score())
-        self.assertEqual(365, real_pair2.get_date_score())
+        self.assertEqual(1, real_pair1.get_date_score())
+        self.assertEqual(1, real_pair2.get_date_score())
 
     def test_country_score(self):
         """Tests that the score is 1 for articles of the same country, 0 otherwise"""
@@ -90,36 +90,34 @@ class TestArticlePair(unittest.TestCase):
 
     def test_authors_score(self):
         """Tests that the authors scores are correctly retrieved, checking that lower/upper-case letters are ignored."""
+        author1 = Author("Testing", "Test", "T.T.")
+        author2 = Author("Resting", "Rest", "R.R.")
+        author3 = Author("John", "Doe", "J.D.")
 
-        article1 = Article(authors=[Author("Testing", "Test", "T.T.")])
-        article2 = Article(authors=[Author("testing", "test", "t.t.")])
-        article3 = Article(authors=[Author("resting", "test", "T.T.")])
+        article1 = Article(authors=[author1, author2, author3])
+        article2 = Article(authors=[author1, author2, author3])
+        article3 = Article(authors=[author1, author2])
 
-        self.assertEqual(1, ArticlePair(article1, article2).get_authors_score())
-        self.assertEqual(0, ArticlePair(article1, article3).get_authors_score())
+        self.assertEqual(2, ArticlePair(article1, article2).get_coauthors_score())
+        self.assertEqual(1, ArticlePair(article1, article3).get_coauthors_score())
 
-    def test_keywords_score(self):
+    def test_mesh_score(self):
         """Tests that the number of shared keywords by the articles are correctly
         retrieved by ignoring lower/upper-case letters"""
 
-        article1 = Article(key_words=['test', 'Testing', 'unittest'])
-        article2 = Article(key_words=['test', 'TESTING'])
-        article3 = Article(key_words=[])
+        article1 = Article(mesh_terms=['test', 'Testing', 'unittest'])
+        article2 = Article(mesh_terms=['test', 'TESTING'])
+        article3 = Article(mesh_terms=[])
 
-        self.assertEqual(2, ArticlePair(article1, article2).get_keywords_score())
-        self.assertEqual(0, ArticlePair(article1, article3).get_keywords_score())
+        self.assertEqual(2, ArticlePair(article1, article2).get_mesh_score())
+        self.assertEqual(0, ArticlePair(article1, article3).get_mesh_score())
 
     def test_jdst_score(self):
         """Tests that the number of shared Journal Descriptors and Semantic Types are correctly computed"""
-        article1 = Article(jds=['A', 'B', 'C'])
-        article2 = Article(jds=['A', 'C'])
+        article1 = Article(jds=['A', 'B', 'C'], sts=['X', 'Y', 'Z'])
+        article2 = Article(jds=['A', 'C'], sts=['Z'])
 
-        self.assertEqual(2, ArticlePair(article1, article2).get_jds_score())
-
-        article1 = Article(sts=['A', 'B', 'C'])
-        article2 = Article(sts=['a', 'B'])
-
-        self.assertEqual(1, ArticlePair(article1, article2).get_sts_score())
+        self.assertEqual(3, ArticlePair(article1, article2).get_jdst_score())
 
     def test_language_score(self):
         """Tests that the language comparison is correctly implemented"""

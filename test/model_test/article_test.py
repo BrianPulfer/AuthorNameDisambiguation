@@ -19,7 +19,7 @@ class TestArticle(unittest.TestCase):
         article.set_city('New York')
         article.set_country('USA')
         article.set_authors([Author("Kennedy", "Becker", "K.B.")])
-        article.set_key_words(['Asthma', 'Anxiety'])
+        article.set_mesh_terms(['Asthma', 'Anxiety'])
         article.set_entities(['Test entity 1', 'Test entity 2'])
         article.set_jds(['jd1', 'jd2'])
         article.set_sts(['st1', 'st2', 'st3'])

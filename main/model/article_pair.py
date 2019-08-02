@@ -1,5 +1,6 @@
 import copy
 import Levenshtein
+import math
 
 from main.model.article import Article
 
@@ -18,153 +19,21 @@ class ArticlePair:
     def binary_scores():
         """Static method which returns a list of true's and false's.
         The list indicates if the scores in a particular column are binary or not."""
-        return [True, False, False, False, False, True, True, False, False, False, False, False, False]
+        return [False, True, False, False, False, True, True, True, False, False, True, False]
 
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
-        return [self.get_firstname_score(), self.get_authors_score(), self.get_email_score(), self.get_date_score(),
-                self.get_keywords_score(), self.get_county_score(), self.get_city_score(), self.get_affiliation_score(),
-                self.get_entities_score(), self.get_jds_score(), self.get_sts_score(), self.get_ambiguity_score(),
-                self.get_lnlength_score()]
+        return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
+                self.get_mesh_score(), self.get_jdst_score(), self.get_city_score(), self.get_county_score(),
+                self.get_language_score(), self.get_date_score(), self.get_affiliation_score(), self.get_email_score(),
+                self.get_org_type_descr_score()]
 
     def get_firstname_score(self):
         """Checks if the articles main authors first names matches"""
         if len(self.article1.authors) == 0 or \
            len(self.article2.authors) == 0:
             return -1
-
-        if self.article1.authors[0].forename == self.article2.authors[0].forename:
-            return 1
-        return 0
-
-    def get_email_score(self):
-        """Returns the Levenshtein distance between the articles e-mail addresses"""
-        mail1 = self.article1.get_e_mail()
-        mail2 = self.article2.get_e_mail()
-
-        if mail1 is None or mail2 is None:
-            return -1
-
-        return Levenshtein.distance(mail1.lower(), mail2.lower())
-
-    def get_authors_score(self):
-        """Returns the number of matching authors (forename, lastname, initials without considering the lower/upper
-        case and blank spaces) in the article"""
-        a1 = copy.copy(self.article1.get_authors())
-        a2 = copy.copy(self.article2.get_authors())
-
-        for i in range(len(a1)):
-            a1[i].lastname = a1[i].lastname.lower().strip()
-            a1[i].forename = a1[i].forename.lower().strip()
-            a1[i].initials = a1[i].initials.lower().strip()
-
-        for i in range(len(a2)):
-            a2[i].lastname = a2[i].lastname.lower().strip()
-            a2[i].forename = a2[i].forename.lower().strip()
-            a2[i].initials = a2[i].initials.lower().strip()
-
-        same_authors = 0
-
-        for author1 in a1:
-            for author2 in a2:
-                if author1.lastname == author2.lastname and author1.forename == author2.forename \
-                        and author1.initials == author2.initials:
-                    same_authors = same_authors + 1
-
-        return same_authors
-
-    def get_date_score(self):
-        """Returns the distance (in days, absolute value) between the two articles dates"""
-        if self.article1.get_date() is None or self.article2.get_date() is None:
-            return -1
-
-        delta = self.article1.get_date() - self.article2.get_date()
-        days = delta.days
-
-        if days < 0:
-            return -1*days
-        return days
-
-    def get_keywords_score(self):
-        """Returns the number of matching keywords between the articles"""
-        kw1 = copy.copy(self.article1.get_key_words())
-        kw2 = copy.copy(self.article2.get_key_words())
-
-        # Normalizing keywords
-        for i in range(len(kw1)):
-            kw1[i] = kw1[i].lower().strip()
-
-        for i in range(len(kw2)):
-            kw2[i] = kw2[i].lower().strip()
-
-        all_kws = list()
-        all_kws.extend(kw1)
-        all_kws.extend(kw2)
-
-        kws_set = set(all_kws)
-
-        return len(all_kws) - len(kws_set)
-
-    def get_county_score(self):
-        """Compares the two articles countries and returns 1 if they are equal, 0 otherwise."""
-        country1 = self.article1.get_country()
-        country2 = self.article2.get_country()
-
-        if country1 is None or country2 is None:
-            return -1
-
-        if country1.lower().strip() == country2.lower().strip():
-            return 1
-        return 0
-
-    def get_city_score(self):
-        """Compares the two articles cities and returns 1 if they are equal, 0 otherwise."""
-        city1 = self.article1.get_city()
-        city2 = self.article2.get_city()
-
-        if city1 is None or city2 is None:
-            return -1
-
-        if city1.lower().strip() == city2.lower().strip():
-            return 1
-        return 0
-
-    def get_affiliation_score(self):
-        """Returns the Levenshtein distance between the two articles affiliation informations"""
-        infos1 = self.article1.get_affiliation().get_infos()
-        infos2 = self.article2.get_affiliation().get_infos()
-
-        if infos1 is None or infos2 is None:
-            return -1
-        return Levenshtein.distance(infos1.lower(), infos2.lower())
-
-    def get_entities_score(self):
-        """Returns the number of matching entities between the articles"""
-        all_entities = list()
-        all_entities.extend(self.article1.get_entities())
-        all_entities.extend(self.article2.get_entities())
-
-        entities_set = set(all_entities)
-
-        return len(all_entities) - len(entities_set)
-
-    def get_language_score(self):
-        """Returns 1 if the articles share the same language, 0 otherwise"""
-
-        # NOTE: This score isn't used because to date (07.2019) all the article pairs in the training set always share
-        # the same language.
-
-        language1 = self.article1.get_language()
-        language2 = self.article2.get_language()
-
-        if language1 is not None and language2 is not None:
-            language1 = self.article1.get_language().lower().strip()
-            language2 = self.article1.get_language().lower().strip()
-
-            if language1 == language2:
-                return 1
-            return 0
-        return -1
+        return Levenshtein.distance(self.article1.authors[0].forename, self.article2.authors[0].forename)
 
     def get_initials_score(self):
         """Returns 1 if the articles share the same main author's initials, 0 otherwise"""
@@ -180,37 +49,175 @@ class ArticlePair:
             return 0
         return -1
 
-    def get_jds_score(self):
-        """Returns the number of matching Journal Descriptors between the articles"""
-        jds1 = self.article1.get_jds()
-        jds2 = self.article2.get_jds()
+    def get_coauthors_score(self):
+        """Returns the number of matching authors (forename, lastname, initials without considering the lower/upper
+        case and blank spaces) in the article"""
+        a1 = copy.copy(self.article1.get_authors())
+        a2 = copy.copy(self.article2.get_authors())
 
-        if jds1 is None or jds2 is None:
+        for i in range(len(a1)):
+            a1[i].lastname = a1[i].lastname.lower().strip()
+            a1[i].forename = a1[i].forename.lower().strip()
+            a1[i].initials = a1[i].initials.lower().strip()
+
+        for i in range(len(a2)):
+            a2[i].lastname = a2[i].lastname.lower().strip()
+            a2[i].forename = a2[i].forename.lower().strip()
+            a2[i].initials = a2[i].initials.lower().strip()
+
+        # Main authors are not count (removed from list)
+        if len(a1) > 0:
+            a1.remove(a1[0])
+        if len(a2) > 0:
+            a2.remove(a2[0])
+
+        same_authors = 0
+
+        for author1 in a1:
+            for author2 in a2:
+                if author1.lastname == author2.lastname and author1.forename == author2.forename \
+                        and author1.initials == author2.initials:
+                    same_authors = same_authors + 1
+
+        return same_authors
+
+    def get_mesh_score(self):
+        """Returns the number of matching keywords between the articles"""
+        mt1 = copy.copy(self.article1.get_mesh_terms())
+        mt2 = copy.copy(self.article2.get_mesh_terms())
+
+        # Normalizing keywords
+        for i in range(len(mt1)):
+            mt1[i] = mt1[i].lower().strip()
+
+        for i in range(len(mt2)):
+            mt2[i] = mt2[i].lower().strip()
+
+        all_ms = list()
+        all_ms.extend(mt1)
+        all_ms.extend(mt2)
+
+        ms_set = set(all_ms)
+
+        return len(all_ms) - len(ms_set)
+
+    def get_jdst_score(self):
+        """Counts the number of Journal Descriptors and Semantic Types shared by the articles"""
+        jds1, sts1 = self.article1.get_jds(), self.article1.get_sts()
+        jds2, sts2 = self.article2.get_jds(), self.article2.get_sts()
+
+        if jds1 is None or sts1 is None or jds2 is None or sts2 is None:
             return -1
 
-        matches = 0
+        retval = 0
 
+        # Counting shared Journal Descriptors
         for jd1 in jds1:
             for jd2 in jds2:
                 if jd1 == jd2:
-                    matches = matches + 1
-        return matches
+                    retval = retval + 1
 
-    def get_sts_score(self):
-        """Returns the number of matching Semantic Types between the articles"""
-        sts1 = self.article1.get_sts()
-        sts2 = self.article2.get_sts()
-
-        if sts1 is None or sts2 is None:
-            return -1
-
-        matches = 0
-
+        # Counting shared Semantic Types
         for st1 in sts1:
             for st2 in sts2:
                 if st1 == st2:
-                    matches = matches + 1
-        return matches
+                    retval = retval + 1
+
+        return retval
+
+    def get_city_score(self):
+        """Compares the two articles cities and returns 1 if they are equal, 0 otherwise."""
+        city1 = self.article1.get_city()
+        city2 = self.article2.get_city()
+
+        if city1 is None or city2 is None:
+            return -1
+
+        if city1.lower().strip() == city2.lower().strip():
+            return 1
+        return 0
+
+    def get_county_score(self):
+        """Compares the two articles countries and returns 1 if they are equal, 0 otherwise."""
+        country1 = self.article1.get_country()
+        country2 = self.article2.get_country()
+
+        if country1 is None or country2 is None:
+            return -1
+
+        if country1.lower().strip() == country2.lower().strip():
+            return 1
+        return 0
+
+    def get_language_score(self):
+        """Returns 1 if the articles share the same language, 0 otherwise"""
+        # NOTE: This score isn't used because to date (07.2019) all the article pairs in the training set always share
+        # the same language.
+        language1 = self.article1.get_language()
+        language2 = self.article2.get_language()
+
+        if language1 is not None and language2 is not None:
+            language1 = self.article1.get_language().lower().strip()
+            language2 = self.article1.get_language().lower().strip()
+
+            if language1 == language2:
+                return 1
+            return 0
+        return -1
+
+    def get_date_score(self):
+        """Returns the distance (in years, absolute value) between the two articles dates"""
+        if self.article1.get_date() is None or self.article2.get_date() is None:
+            return -1
+
+        delta = self.article1.get_date() - self.article2.get_date()
+        years = int(delta.days / 365)
+
+        if years < 0:
+            return -1*years
+        return years
+
+    def get_affiliation_score(self):
+        """Returns the Levenshtein distance between the two articles affiliation informations"""
+        infos1 = self.article1.get_affiliation().get_infos()
+        infos2 = self.article2.get_affiliation().get_infos()
+
+        if infos1 is None or infos2 is None:
+            return -1
+        return Levenshtein.distance(infos1.lower(), infos2.lower())
+
+    def get_email_score(self):
+        """Returns the Levenshtein distance between the articles e-mail addresses"""
+        mail1 = self.article1.get_e_mail()
+        mail2 = self.article2.get_e_mail()
+
+        if mail1 is not None and mail2 is not None:
+            if mail1 == mail2:
+                return 1
+            return 0
+        return -1
+
+    def get_org_type_descr_score(self):
+        """Returns the cosine between the articles vectors [org_desc, org_type]"""
+        t1, d1 = self.article1.get_affiliation().get_type(), self.article1.get_affiliation().get_descriptor()
+        t2, d2 = self.article2.get_affiliation().get_type(), self.article2.get_affiliation().get_descriptor()
+
+        if t1 and t2 and d1 and d2:
+            num = (d1.value * d2.value) + (t1.value * t2.value)
+            denum = math.sqrt((d1.value**2 + t1.value**2) + (d2.value**2 + t2.value**2))
+            return num/denum
+        return -1
+
+    """                                 UNUSED METHOD IN BASELINE VERSION                                           """
+    def get_entities_score(self):
+        """Returns the number of matching entities between the articles"""
+        all_entities = list()
+        all_entities.extend(self.article1.get_entities())
+        all_entities.extend(self.article2.get_entities())
+
+        entities_set = set(all_entities)
+
+        return len(all_entities) - len(entities_set)
 
     def get_ambiguity_score(self):
         """Returns an average the two article's ambiguity"""

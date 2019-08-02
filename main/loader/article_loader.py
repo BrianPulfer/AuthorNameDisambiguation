@@ -6,7 +6,7 @@ from main.model.article import Article
 
 from main.retrievers.jnius_jdst import jdst
 from main.retrievers import affiliation, authors, date, mail,\
-    keywords, location, entities, language
+    mesh, location, entities, language
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'
 PATH_TO_ARTICLES_ENTITIES = definitions.ROOT_DIR + '/dataset/articles_entities/'
@@ -29,7 +29,7 @@ def load_article(pmid):
     auts = authors.find_authors(soup)
     dat = date.find_date(soup)
     e_mail = mail.find_email(soup)
-    keys = keywords.find_keywords(soup)
+    meshes = mesh.find_mesh_terms(soup)
     country = location.find_country(soup)
     city = location.find_city(soup)
     ents = entities.find_entities(pmid, dir_path=PATH_TO_ARTICLES_ENTITIES)
@@ -52,4 +52,4 @@ def load_article(pmid):
         sts = jdst.get_sts(text)
 
     return Article(PMID=pmid, authors=auts, language=lan, e_mail=e_mail, date=dat, affiliation=aff,
-                   country=country, city=city, key_words=keys, entities=ents, sts=sts, jds=jds)
+                   country=country, city=city, mesh_terms=meshes, entities=ents, sts=sts, jds=jds)
