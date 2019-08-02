@@ -208,7 +208,7 @@ class ArticlePair:
             return num/denum
         return -1
 
-    """                                 UNUSED METHOD IN BASELINE VERSION                                           """
+    """                                 UNUSED METHODS IN BASELINE VERSION                                           """
     def get_entities_score(self):
         """Returns the number of matching entities between the articles"""
         all_entities = list()
