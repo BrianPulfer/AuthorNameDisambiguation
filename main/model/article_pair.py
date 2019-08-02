@@ -37,12 +37,16 @@ class ArticlePair:
 
     def get_initials_score(self):
         """Returns 1 if the articles share the same main author's initials, 0 otherwise"""
-        initials1 = self.article1.get_main_author_initials()
-        initials2 = self.article2.get_main_author_initials()
+        if self.article1.get_main_author() is None or\
+                self.article2.get_main_author() is None:
+            return -1
+
+        initials1 = self.article1.get_main_author().get_initials()
+        initials2 = self.article2.get_main_author().get_initials()
 
         if isinstance(initials1, str) and isinstance(initials2, str):
-            initials1 = self.article1.get_main_author_initials().lower().strip()
-            initials2 = self.article2.get_main_author_initials().lower().strip()
+            initials1 = self.article1.get_main_author().get_initials().lower().strip()
+            initials2 = self.article2.get_main_author().get_initials().lower().strip()
 
             if initials1 == initials2:
                 return 1
@@ -65,20 +69,16 @@ class ArticlePair:
             a2[i].forename = a2[i].forename.lower().strip()
             a2[i].initials = a2[i].initials.lower().strip()
 
-        # Main authors are not count (removed from list)
-        if len(a1) > 0:
-            a1.remove(a1[0])
-        if len(a2) > 0:
-            a2.remove(a2[0])
-
         same_authors = 0
 
         for author1 in a1:
-            for author2 in a2:
-                if author1.lastname == author2.lastname and author1.forename == author2.forename \
-                        and author1.initials == author2.initials:
-                    same_authors = same_authors + 1
-
+            # Main authors are not considered
+            if not author1.lastname == self.article1.get_main_author().lastname:
+                for author2 in a2:
+                    if not author2.lastname == self.article2.get_main_author().lastname:
+                        if author1.lastname == author2.lastname and author1.forename == author2.forename \
+                                and author1.initials == author2.initials:
+                            same_authors = same_authors + 1
         return same_authors
 
     def get_mesh_score(self):

@@ -1,19 +1,20 @@
 import datetime
 
 from main.model.affiliation import Affiliation
+from main.model.author import Author
 
 
 class Article:
     """Class that represents an article.
     Ideally contains all the data needed to be compared to another article."""
 
-    def __init__(self, PMID: int = None, main_author_initials: str = None, language: str = None, authors: list = list(),
+    def __init__(self, PMID: int = None, main_author: Author = None, language: str = None, authors: list = list(),
                  e_mail: str = None, date: datetime = None, affiliation: Affiliation = None, country: str = None,
                  city: str = None, mesh_terms: list = list(), entities: list = None, jds: list = None, sts: list = None,
                  ambiguity=-1, raw_text: str = None):
         self.PMID = PMID
         self.ambiguity = ambiguity
-        self.main_author_initials = main_author_initials
+        self.main_author = main_author
         self.authors = authors
         self.language = language
         self.e_mail = e_mail
@@ -41,11 +42,11 @@ class Article:
     def set_ambiguity(self, ambiguity):
         self.ambiguity = ambiguity
 
-    def get_main_author_initials(self):
-        return self.main_author_initials
+    def get_main_author(self):
+        return self.main_author
 
-    def set_main_author_initials(self, main_author_initials):
-        self.main_author_initials = main_author_initials
+    def set_main_author(self, main_author: Author):
+        self.main_author = main_author
 
     def get_language(self):
         return self.language
@@ -124,6 +125,7 @@ class Article:
 
     def has_all_data(self):
         return len(self.authors) > 0 and \
+               self.main_author is not None and \
                self.e_mail is not "" and self.e_mail is not None and \
                self.date is not None and \
                len(self.mesh_terms) > 0 and \

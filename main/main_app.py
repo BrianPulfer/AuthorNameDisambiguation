@@ -4,6 +4,7 @@ import pandas as pd
 from decimal import Decimal
 
 # Info retrievers imports
+from main.model.author import Author
 from main.retrievers import ambiguity_score
 
 # Model and loader_test imports
@@ -224,8 +225,9 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
         pmid_left = int(training_set[i][0])
         pmid_right = int(training_set[i][4])
 
+        # Loading first article and setting infos
         article1 = article_loader.load_article(pmid_left)
-        article1.set_main_author_initials(training_set[i][2])
+        article1.set_main_author(Author(training_set[i][1], training_set[i][3], training_set[i][2]))
         article1.set_ambiguity(
             ambiguity_score.get_ambiguity_score(namespace_lastname=training_set[i][1],
                                                 namespace_initial=training_set[i][2],
@@ -233,8 +235,9 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
                                                 ds_ln1_col=1, ds_fn1_col=2,
                                                 ds_ln2_col=5, ds_fn2_col=6))
 
+        # Loading second article and setting infos
         article2 = article_loader.load_article(pmid_right)
-        article2.set_main_author_initials(training_set[i][6])
+        article2.set_main_author(Author(training_set[i][5], training_set[i][7], training_set[i][6]))
         article2.set_ambiguity(
             ambiguity_score.get_ambiguity_score(namespace_lastname=training_set[i][5],
                                                 namespace_initial=training_set[i][6],
@@ -242,8 +245,10 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
                                                 ds_ln1_col=1, ds_fn1_col=2,
                                                 ds_ln2_col=5, ds_fn2_col=6))
 
+        # Creating the pair
         article_pair = ArticlePair(article1, article2)
 
+        # Putting the pair's vector in the training set
         x_train.append(article_pair.scores())
 
     # Filling testing set data
@@ -251,24 +256,28 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
         pmid_left = int(testing_set[i][0])
         pmid_right = int(testing_set[i][4])
 
+        # Loading first article and setting infos
         article1 = article_loader.load_article(pmid_left)
-        article1.set_main_author_initials(testing_set[i][2])
+        article1.set_main_author(Author(testing_set[i][1], testing_set[i][3], testing_set[i][2]))
         article1.set_ambiguity(
             ambiguity_score.get_ambiguity_score(testing_set[i][1],
                                                 testing_set[i][2],
                                                 testing_set,
                                                 1, 2, 5, 6))
 
+        # Loading second article and setting infos
         article2 = article_loader.load_article(pmid_right)
-        article2.set_main_author_initials(testing_set[i][6])
+        article2.set_main_author(Author(testing_set[i][5], testing_set[i][7], testing_set[i][6]))
         article2.set_ambiguity(
             ambiguity_score.get_ambiguity_score(testing_set[i][5],
                                                 testing_set[i][6],
                                                 testing_set,
                                                 1, 2, 5, 6))
 
+        # Creating the pair
         article_pair = ArticlePair(article1, article2)
 
+        # Putting the pair's vector in the testing set
         x_test.append(article_pair.scores())
 
     # Filling empty datas (-1) with average values

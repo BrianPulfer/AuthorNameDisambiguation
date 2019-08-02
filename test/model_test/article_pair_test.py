@@ -131,19 +131,16 @@ class TestArticlePair(unittest.TestCase):
 
     def test_initials_score(self):
         """Tests that the binary information (authors initials match) is correctly detected"""
+        author1 = Author("Lastname", "Forename", "L.F.")
+        author2 = Author("Lastname", "Test", "L.T.")
 
-        article1 = Article(main_author_initials='B.P.')
-        article2 = Article(main_author_initials='B.P.')
-        article3 = Article(main_author_initials='b.P.')
-        article4 = Article(main_author_initials='BP')
-        article5 = Article(main_author_initials='C.W.')
-        article6 = Article(main_author_initials=5)
+        article1 = Article(main_author=author1)
+        article2 = Article(main_author=author2)
+        article3 = Article()
 
-        self.assertEqual(1, ArticlePair(article1, article2).get_initials_score())
-        self.assertEqual(1, ArticlePair(article1, article3).get_initials_score())
-        self.assertEqual(0, ArticlePair(article1, article4).get_initials_score())
-        self.assertEqual(0, ArticlePair(article1, article5).get_initials_score())
-        self.assertEqual(-1, ArticlePair(article1, article6).get_initials_score())
+        self.assertEqual(1, ArticlePair(article1, article1).get_initials_score())
+        self.assertEqual(0, ArticlePair(article1, article2).get_initials_score())
+        self.assertEqual(-1, ArticlePair(article1, article3).get_initials_score())
 
     def test_ambiguity_score(self):
         """Tests that the ambiguity score is correctly averaged"""

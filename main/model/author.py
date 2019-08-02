@@ -5,3 +5,22 @@ class Author:
         self.lastname = lastname
         self.forename = forename
         self.initials = initials
+
+    # Getters and Setters
+    def get_initials(self):
+        return self.initials
+
+    def set_initial(self, initials):
+        self.initials = initials
+
+    def get_lastname(self):
+        return self.lastname
+
+    def set_lastname(self, lastname):
+        self.lastname = lastname
+
+    def get_forename(self):
+        return self.forename
+
+    def set_forename(self, forename):
+        self.forename = forename

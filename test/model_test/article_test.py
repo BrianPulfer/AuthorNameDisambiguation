@@ -24,6 +24,7 @@ class TestArticle(unittest.TestCase):
         article.set_jds(['jd1', 'jd2'])
         article.set_sts(['st1', 'st2', 'st3'])
         article.set_ambiguity(0.1)
+        article.set_main_author(Author("Lastname", "Forename", "Initials"))
 
         self.assertTrue(article.has_all_data())
 
