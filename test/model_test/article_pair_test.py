@@ -11,21 +11,15 @@ class TestArticlePair(unittest.TestCase):
     def test_Levenshtein_scores(self):
         """Tests that all the scores which uses the levensthein distance (email, affiliation) work properly"""
 
+        author1 = Author('lastname', 'firstname', 'L.F.')
+        author2 = Author('test', 'name', 'T.N.')
+
         email1 = 'samemail@test.com'
-        email2 = 'samemail@test.com'
-        email3 = 'somemail@best.com'
+        email2 = 'somemail@best.com'
 
-        affiliation1_infos = "Istituto Dalle Molle sull'Intelligenza Artificiale"
-        affiliation2_infos = "Istituto dalle Molle sull'intelligenza artificiale"
-        affiliation3_infos = "Nursing Dept., Xuzhou Children's Hospital, Xuzhou 221006, China."
-
-        affiliation1 = Affiliation(affiliation1_infos)
-        affiliation2 = Affiliation(affiliation2_infos)
-        affiliation3 = Affiliation(affiliation3_infos)
-
-        article1 = Article(e_mail=email1, affiliation=affiliation1)
-        article2 = Article(e_mail=email2, affiliation=affiliation2)
-        article3 = Article(e_mail=email3, affiliation=affiliation3)
+        article1 = Article(e_mail=email1, main_author=author1)
+        article2 = Article(e_mail=email1, main_author=author1)
+        article3 = Article(e_mail=email2, main_author=author2)
 
         ap1 = ArticlePair(article1, article2)
         ap2 = ArticlePair(article1, article3)
@@ -35,8 +29,8 @@ class TestArticlePair(unittest.TestCase):
         self.assertEqual(0, ap2.get_email_score())
 
         # Testing affiliation score
-        self.assertEqual(0, ap1.get_affiliation_score())
-        self.assertEqual(52, ap2.get_affiliation_score())
+        self.assertEqual(0, ap1.get_firstname_score())
+        self.assertEqual(5, ap2.get_firstname_score())
 
     def test_date_score(self):
         """Tests that the articles date score matches the distances of the dates (absolute value) in days"""
@@ -55,38 +49,22 @@ class TestArticlePair(unittest.TestCase):
         self.assertEqual(1, real_pair1.get_date_score())
         self.assertEqual(1, real_pair2.get_date_score())
 
-    def test_country_score(self):
+    def test_location_score(self):
         """Tests that the score is 1 for articles of the same country, 0 otherwise"""
 
         c1 = 'France'
         c2 = '  france '
         c3 = 'Greece'
 
-        a1 = Article(country=c1)
-        a2 = Article(country=c2)
-        a3 = Article(country=c3)
+        a1 = Article(loc_list=[c1])
+        a2 = Article(loc_list=[c2])
+        a3 = Article(loc_list=[c3])
 
         ap1 = ArticlePair(a1, a2)
         ap2 = ArticlePair(a1, a3)
 
-        self.assertEqual(1, ap1.get_county_score())     # Countries are equal
-        self.assertEqual(0, ap2.get_county_score())     # Countries are different
-
-    def test_city_score(self):
-        """Tests that the score is 1 for articles of the same city, 0 otherwise"""
-        c1 = 'Montreal'
-        c2 = ' montreal  '
-        c3 = 'Mont Real'
-
-        a1 = Article(city=c1)
-        a2 = Article(city=c2)
-        a3 = Article(city=c3)
-
-        ap1 = ArticlePair(a1, a2)
-        ap2 = ArticlePair(a1, a3)
-
-        self.assertEqual(1, ap1.get_city_score())      # Cities are equal
-        self.assertEqual(0, ap2.get_city_score())      # Cities are different
+        self.assertEqual(1, ap1.get_location_score())     # Countries are equal
+        self.assertEqual(0, ap2.get_location_score())     # Countries are different
 
     def test_authors_score(self):
         """Tests that the authors scores are correctly retrieved, checking that lower/upper-case letters are ignored."""
@@ -94,9 +72,9 @@ class TestArticlePair(unittest.TestCase):
         author2 = Author("Resting", "Rest", "R.R.")
         author3 = Author("John", "Doe", "J.D.")
 
-        article1 = Article(authors=[author1, author2, author3])
-        article2 = Article(authors=[author1, author2, author3])
-        article3 = Article(authors=[author1, author2])
+        article1 = Article(main_author=author1, authors=[author1, author2, author3])
+        article2 = Article(main_author=author1, authors=[author1, author2, author3])
+        article3 = Article(main_author=author1, authors=[author1, author2])
 
         self.assertEqual(2, ArticlePair(article1, article2).get_coauthors_score())
         self.assertEqual(1, ArticlePair(article1, article3).get_coauthors_score())

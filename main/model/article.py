@@ -117,7 +117,7 @@ class Article:
         self.entities = entities
 
     def has_all_data(self):
-        return len(self.authors) > 0 and self.authors is not None and\
+        return self.authors is not None and len(self.authors) > 0 and \
                self.main_author is not None and \
                self.e_mail is not "" and self.e_mail is not None and \
                self.date is not None and \

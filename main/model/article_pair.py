@@ -141,7 +141,7 @@ class ArticlePair:
         score = 0
         for info1 in location1:
             for info2 in location2:
-                if info1 == info2:
+                if info1.lower().strip() == info2.lower().strip():
                     score = score + 1
         return score/((len(location1)+len(location2))/2)
 
