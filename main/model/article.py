@@ -117,12 +117,11 @@ class Article:
         self.entities = entities
 
     def has_all_data(self):
-        return len(self.authors) > 0 and \
+        return len(self.authors) > 0 and self.authors is not None and\
                self.main_author is not None and \
                self.e_mail is not "" and self.e_mail is not None and \
                self.date is not None and \
-               self.country is not "" and self.country is not None and \
-               self.city is not "" and self.city is not None and \
                self.language is not None and \
-               self.affiliation.get_infos() is not "" and self.affiliation.get_infos() is not None and \
+               self.loc_list is not None and \
+               self.org_list is not None and \
                self.ambiguity is not -1

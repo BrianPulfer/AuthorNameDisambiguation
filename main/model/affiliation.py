@@ -40,12 +40,6 @@ class Affiliation:
         HEALTH = 19
         DISEASE = 20
 
-    def __init__(self, infos):
-        """Constructs the object"""
-        self._infos = infos
-        self._type = self._find_type(infos)
-        self._descriptor = self._find_descriptor(infos)
-
     # Type & Descriptor finder methods
     @staticmethod
     def find_type(text: str):
@@ -72,22 +66,3 @@ class Affiliation:
             if d.name in temp:
                 return d
         return None
-
-    # Getters & Setters
-    def get_infos(self):
-        return self._infos
-
-    def set_infos(self, infos):
-        self._infos = infos
-
-    def get_type(self):
-        return self._type
-
-    def set_type(self, type):
-        self._type = type
-
-    def get_descriptor(self):
-        return self._descriptor
-
-    def set_descriptor(self, descriptor):
-        self._descriptor = descriptor

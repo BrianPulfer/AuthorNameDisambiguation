@@ -4,9 +4,9 @@ from bs4 import BeautifulSoup
 
 from main.model.article import Article
 
-from main.retrievers.jnius.jdst import jdst
-from main.retrievers import affiliation, authors, date, mail,\
-    mesh, location, from_file, language
+
+from main.retrievers import  authors, date, mail,\
+    mesh, from_file, language
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'
 PATH_TO_ARTICLES_ENTITIES = definitions.ROOT_DIR + '/dataset/articles_entities/'
