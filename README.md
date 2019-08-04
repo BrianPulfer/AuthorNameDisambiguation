@@ -15,7 +15,7 @@ https://lexsrv2.nlm.nih.gov/LexSysGroup/Projects/tc/2011/release/tc2011.tgz
 
 ### Step 2:
 Unzip the tgz file. This should generate a 'tc2011' folder. Move the tc2011/data folder to the repository under '/main/'.
-To make the relative test work, copy the folder also under 'test/retrievers_test/' .
+To make the relative test work, copy the folder also under 'test/retrievers_test/jnius/' .
 
 ### Step 3:
 Open the project in an IDE of your preferece (PyCharm suggested) and create a new virtual evironment using a python3 interpreter.
