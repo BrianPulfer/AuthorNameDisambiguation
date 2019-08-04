@@ -53,7 +53,7 @@ def find_location(article_content: bs4.BeautifulSoup):
     return None
 
 
-def find_organisation(article_content: bs4.BeautifulSoup):
+def find_organization(article_content: bs4.BeautifulSoup):
     """Given the xml article, returns a list of elements that concern the organization"""
 
     if article_content.Affiliation is not None:
@@ -63,7 +63,3 @@ def find_organisation(article_content: bs4.BeautifulSoup):
             if 'ORGANIZATION' in entities.keys():
                 return entities['ORGANIZATION']
     return None
-
-
-print(identify_ner("University of California is located in California, United States"))
-print(identify_ner("Alice went to the Museum of Natural History."))
