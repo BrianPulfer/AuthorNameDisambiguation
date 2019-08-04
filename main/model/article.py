@@ -128,11 +128,8 @@ class Article:
                self.main_author is not None and \
                self.e_mail is not "" and self.e_mail is not None and \
                self.date is not None and \
-               len(self.mesh_terms) > 0 and \
                self.country is not "" and self.country is not None and \
                self.city is not "" and self.city is not None and \
+               self.language is not None and \
                self.affiliation.get_infos() is not "" and self.affiliation.get_infos() is not None and \
-               self.entities is not None and \
-               self.jds is not None and \
-               self.sts is not None and \
                self.ambiguity is not -1

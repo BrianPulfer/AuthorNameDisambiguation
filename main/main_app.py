@@ -199,12 +199,13 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     testing_set = get_set(testing_set_path)
 
     x_train = list()
-    y_train = np.array(training_set[:, 8])
+    training_labels = np.array(training_set[:, 8])
 
     x_test = list()
-    y_test = np.array(testing_set[:, 8])
+    testing_labels = np.array(testing_set[:, 8])
 
     # Changing labels from 'YES'/'NO' to 1/0
+    """
     for i in range(len(y_train)):
         if 'NO' in y_train[i]:
             y_train[i] = 0
@@ -219,6 +220,9 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
     y_train = y_train.astype('int')
     y_test = y_test.astype('int')
+    """
+
+    y_train, y_test = list(), list()
 
     # Filling training set data
     for i in range(len(training_set)):
@@ -227,7 +231,12 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         # Loading first article and setting infos
         article1 = article_loader.load_article(pmid_left)
-        article1.set_main_author(Author(training_set[i][1], training_set[i][3], training_set[i][2]))
+
+        author1 = Author(lastname=str(training_set[i][1]),
+                         forename=str(training_set[i][3]),
+                         initials=str(training_set[i][2]))
+
+        article1.set_main_author(author1)
         article1.set_ambiguity(
             ambiguity_score.get_ambiguity_score(namespace_lastname=training_set[i][1],
                                                 namespace_initial=training_set[i][2],
@@ -237,7 +246,12 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         # Loading second article and setting infos
         article2 = article_loader.load_article(pmid_right)
-        article2.set_main_author(Author(training_set[i][5], training_set[i][7], training_set[i][6]))
+
+        author2 = Author(lastname=str(training_set[i][5]),
+                         forename=str(training_set[i][7]),
+                         initials=str(training_set[i][6]))
+
+        article2.set_main_author(author2)
         article2.set_ambiguity(
             ambiguity_score.get_ambiguity_score(namespace_lastname=training_set[i][5],
                                                 namespace_initial=training_set[i][6],
@@ -250,6 +264,10 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         # Putting the pair's vector in the training set
         x_train.append(article_pair.scores())
+        if 'NO' in training_labels[i]:
+            y_train.append(0)
+        else:
+            y_train.append(1)
 
     # Filling testing set data
     for i in range(len(testing_set)):
@@ -258,7 +276,12 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         # Loading first article and setting infos
         article1 = article_loader.load_article(pmid_left)
-        article1.set_main_author(Author(testing_set[i][1], testing_set[i][3], testing_set[i][2]))
+
+        author1 = Author(lastname=str(testing_set[i][1]),
+                         forename=str(testing_set[i][3]),
+                         initials=str(testing_set[i][2]))
+
+        article1.set_main_author(author1)
         article1.set_ambiguity(
             ambiguity_score.get_ambiguity_score(testing_set[i][1],
                                                 testing_set[i][2],
@@ -267,7 +290,12 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         # Loading second article and setting infos
         article2 = article_loader.load_article(pmid_right)
-        article2.set_main_author(Author(testing_set[i][5], testing_set[i][7], testing_set[i][6]))
+
+        author2 = Author(lastname=str(testing_set[i][5]),
+                         forename=str(testing_set[i][7]),
+                         initials=str(testing_set[i][6]))
+
+        article2.set_main_author(author2)
         article2.set_ambiguity(
             ambiguity_score.get_ambiguity_score(testing_set[i][5],
                                                 testing_set[i][6],
@@ -279,6 +307,13 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
         # Putting the pair's vector in the testing set
         x_test.append(article_pair.scores())
+        if 'NO' in testing_labels[i]:
+            y_test.append(0)
+        else:
+            y_test.append(1)
+
+    y_train = np.array(y_train).astype('int')
+    y_test = np.array(y_test).astype('int')
 
     # Filling empty datas (-1) with average values
     x_train_filled = fill_empty_with_average(x_train)
@@ -291,7 +326,7 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     x_test_norm = normalize_set(x_test_filled, binaries_features).astype('float64')
 
     # Testing the classifiers (OPTIONAL)
-    # test_classifiers(x_train_norm, y_train, x_test_norm, y_test)
+    test_classifiers(x_train_norm, y_train, x_test_norm, y_test)
 
     # K-Cross validating the best classifier
     best_classifier = RandomForest(50)

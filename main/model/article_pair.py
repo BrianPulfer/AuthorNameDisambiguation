@@ -19,21 +19,25 @@ class ArticlePair:
     def binary_scores():
         """Static method which returns a list of true's and false's.
         The list indicates if the scores in a particular column are binary or not."""
-        return [False, True, False, False, False, True, True, True, False, False, True, False]
+        return [False, True, False, False, False, True, True, True, False, False, True, False,
+                False, False, False]
 
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
                 self.get_mesh_score(), self.get_jdst_score(), self.get_city_score(), self.get_county_score(),
                 self.get_language_score(), self.get_date_score(), self.get_affiliation_score(), self.get_email_score(),
-                self.get_org_type_descr_score()]
+                self.get_org_type_descr_score(),
+                self.get_entities_score(), self.get_ambiguity_score(), self.get_lnlength_score()]
 
     def get_firstname_score(self):
         """Checks if the articles main authors first names matches"""
-        if len(self.article1.authors) == 0 or \
-           len(self.article2.authors) == 0:
-            return -1
-        return Levenshtein.distance(self.article1.authors[0].forename, self.article2.authors[0].forename)
+        if self.article1.get_main_author() is not None and self.article2.get_main_author() is not None:
+            if self.article1.get_main_author().get_forename() is not None and \
+                    self.article2.get_main_author().get_forename() is not None:
+                return Levenshtein.distance(self.article1.get_main_author().get_forename(),
+                                            self.article2.get_main_author().get_forename())
+        return -1
 
     def get_initials_score(self):
         """Returns 1 if the articles share the same main author's initials, 0 otherwise"""

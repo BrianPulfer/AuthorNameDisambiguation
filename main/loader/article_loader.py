@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 from main.model.article import Article
 
-from main.retrievers.jnius_jdst import jdst
+from main.retrievers.jnius.jdst import jdst
 from main.retrievers import affiliation, authors, date, mail,\
     mesh, location, entities, language
 
