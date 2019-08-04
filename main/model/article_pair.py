@@ -2,6 +2,7 @@ import copy
 import Levenshtein
 import math
 
+from main.model.affiliation import Affiliation
 from main.model.article import Article
 
 
@@ -25,8 +26,8 @@ class ArticlePair:
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
-                self.get_mesh_score(), self.get_jdst_score(), self.get_city_score(), self.get_county_score(),
-                self.get_language_score(), self.get_date_score(), self.get_affiliation_score(), self.get_email_score(),
+                self.get_mesh_score(), self.get_jdst_score(), self.get_location_score(),
+                self.get_language_score(), self.get_date_score(), self.get_organization_score(), self.get_email_score(),
                 self.get_org_type_descr_score(),
                 self.get_entities_score(), self.get_ambiguity_score(), self.get_lnlength_score()]
 
@@ -129,29 +130,20 @@ class ArticlePair:
 
         return retval
 
-    def get_city_score(self):
-        """Compares the two articles cities and returns 1 if they are equal, 0 otherwise."""
-        city1 = self.article1.get_city()
-        city2 = self.article2.get_city()
+    def get_location_score(self):
+        """Returns the number of infos in common """
+        location1 = self.article1.get_loc()
+        location2 = self.article2.get_loc()
 
-        if city1 is None or city2 is None:
+        if location1 is None or location2 is None:
             return -1
 
-        if city1.lower().strip() == city2.lower().strip():
-            return 1
-        return 0
-
-    def get_county_score(self):
-        """Compares the two articles countries and returns 1 if they are equal, 0 otherwise."""
-        country1 = self.article1.get_country()
-        country2 = self.article2.get_country()
-
-        if country1 is None or country2 is None:
-            return -1
-
-        if country1.lower().strip() == country2.lower().strip():
-            return 1
-        return 0
+        score = 0
+        for info1 in location1:
+            for info2 in location2:
+                if info1 == info2:
+                    score = score + 1
+        return score/((len(location1)+len(location2))/2)
 
     def get_language_score(self):
         """Returns 1 if the articles share the same language, 0 otherwise"""
@@ -181,14 +173,19 @@ class ArticlePair:
             return -1*years
         return years
 
-    def get_affiliation_score(self):
-        """Returns the Levenshtein distance between the two articles affiliation informations"""
-        infos1 = self.article1.get_affiliation().get_infos()
-        infos2 = self.article2.get_affiliation().get_infos()
+    def get_organization_score(self):
+        organization1 = self.article1.get_org()
+        organization2 = self.article2.get_org()
 
-        if infos1 is None or infos2 is None:
+        if organization1 is None or organization2 is None:
             return -1
-        return Levenshtein.distance(infos1.lower(), infos2.lower())
+
+        score = 0
+        for info1 in organization1:
+            for info2 in organization2:
+                if info1 == info2:
+                    score = score + 1
+        return score/((len(organization1)+len(organization2))/2)
 
     def get_email_score(self):
         """Returns the Levenshtein distance between the articles e-mail addresses"""
@@ -203,13 +200,17 @@ class ArticlePair:
 
     def get_org_type_descr_score(self):
         """Returns the cosine between the articles vectors [org_desc, org_type]"""
-        t1, d1 = self.article1.get_affiliation().get_type(), self.article1.get_affiliation().get_descriptor()
-        t2, d2 = self.article2.get_affiliation().get_type(), self.article2.get_affiliation().get_descriptor()
+        if self.article1.get_org() is not None and self.article2.get_org() is not None:
+            org_string1 = ' '.join(self.article1.get_org())
+            org_string2 = ' '.join(self.article2.get_org())
 
-        if t1 and t2 and d1 and d2:
-            num = (d1.value * d2.value) + (t1.value * t2.value)
-            denum = math.sqrt((d1.value**2 + t1.value**2) + (d2.value**2 + t2.value**2))
-            return num/denum
+            t1, d1 = Affiliation.find_type(org_string1), Affiliation.find_descriptor(org_string1)
+            t2, d2 = Affiliation.find_type(org_string2), Affiliation.find_descriptor(org_string2)
+
+            if t1 and t2 and d1 and d2:
+                num = (d1.value * d2.value) + (t1.value * t2.value)
+                denum = math.sqrt((d1.value**2 + t1.value**2) + (d2.value**2 + t2.value**2))
+                return num/denum
         return -1
 
     """                                 UNUSED METHODS IN BASELINE VERSION                                           """

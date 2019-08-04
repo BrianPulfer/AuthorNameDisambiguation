@@ -8,9 +8,9 @@ class Article:
     """Class that represents an article.
     Ideally contains all the data needed to be compared to another article."""
 
-    def __init__(self, PMID: int = None, main_author: Author = None, language: str = None, authors: list = list(),
-                 e_mail: str = None, date: datetime = None, affiliation: Affiliation = None, country: str = None,
-                 city: str = None, mesh_terms: list = list(), entities: list = None, jds: list = None, sts: list = None,
+    def __init__(self, PMID: int = None, main_author: Author = None, language: str = None, authors: list = None,
+                 e_mail: str = None, date: datetime = None, loc_list: list = None, org_list: list = None,
+                 mesh_terms: list = None, entities: list = None, jds: list = None, sts: list = None,
                  ambiguity=-1, raw_text: str = None):
         self.PMID = PMID
         self.ambiguity = ambiguity
@@ -19,9 +19,8 @@ class Article:
         self.language = language
         self.e_mail = e_mail
         self.date = date
-        self.affiliation = affiliation
-        self.country = country
-        self.city = city
+        self.loc_list = loc_list
+        self.org_list = org_list
         self.mesh_terms = mesh_terms
         self.entities = entities
         self.jds = jds
@@ -99,23 +98,17 @@ class Article:
     def set_raw_text(self, raw_text):
         self.raw_text = raw_text
 
-    def get_country(self):
-        return self.country
+    def get_org(self):
+        return self.org_list
 
-    def set_country(self, county):
-        self.country = county
+    def set_org(self, org_list: list):
+        self.org_list = org_list
 
-    def get_city(self):
-        return self.city
+    def get_loc(self):
+        return self.loc_list
 
-    def set_city(self, city):
-        self.city = city
-
-    def get_affiliation(self):
-        return self.affiliation
-
-    def set_affiliation(self, affiliation):
-        self.affiliation = affiliation
+    def set_loc(self, loc_list: list):
+        self.loc_list = loc_list
 
     def get_entities(self):
         return self.entities

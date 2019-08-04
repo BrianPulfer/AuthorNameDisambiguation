@@ -47,26 +47,28 @@ class Affiliation:
         self._descriptor = self._find_descriptor(infos)
 
     # Type & Descriptor finder methods
-    def _find_type(self, text: str):
+    @staticmethod
+    def find_type(text: str):
         """Returns the Affiliation Type by searching in the given string"""
         if text is None:
             return None
 
         temp = text.upper()
 
-        for t in self.TYPE:
+        for t in Affiliation.TYPE:
             if t.name in temp:
                 return t
         return None
 
-    def _find_descriptor(self, text):
+    @staticmethod
+    def find_descriptor(text):
         """Returns the Affiliation Descriptor by searching in the given string"""
         if text is None:
             return None
 
         temp = text.upper()
 
-        for d in self.DESCRIPTOR:
+        for d in Affiliation.DESCRIPTOR:
             if d.name in temp:
                 return d
         return None
