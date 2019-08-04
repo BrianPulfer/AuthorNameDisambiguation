@@ -15,12 +15,14 @@ AnswerAnnotation = autoclass('edu.stanford.nlp.ling.CoreAnnotations$AnswerAnnota
 # Defining the path for the file to be loaded (classifier)
 LOAD_PATH = definitions.ROOT_DIR + '/main/retrievers/jnius/ner/english.muc.7class.distsim.crf.ser.gz'
 
+# Loading the classifier
+classifier = CRFClassifier.getClassifierNoExceptions(LOAD_PATH)
+
 
 def identify_ner(text):
     """Given a string text, returns a dictonary containing information under keys such as:
     PERSON, LOCATION, ORGANIZATION"""
 
-    classifier = CRFClassifier.getClassifierNoExceptions(LOAD_PATH)
     entities = classifier.classify(text)
 
     retval = dict()
@@ -46,7 +48,7 @@ def find_location(article_content: bs4.BeautifulSoup):
 
     if article_content.Affiliation is not None:
         if article_content.Affiliation.string is not None:
-            entities = identify_ner(article_content.Affiliation.string)
+            entities = identify_ner(str(article_content.Affiliation.string))
 
             if 'LOCATION' in entities.keys():
                 return entities['LOCATION']
@@ -58,7 +60,7 @@ def find_organization(article_content: bs4.BeautifulSoup):
 
     if article_content.Affiliation is not None:
         if article_content.Affiliation.string is not None:
-            entities = identify_ner(article_content.Affiliation.string)
+            entities = identify_ner(str(article_content.Affiliation.string))
 
             if 'ORGANIZATION' in entities.keys():
                 return entities['ORGANIZATION']
