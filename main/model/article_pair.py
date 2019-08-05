@@ -213,6 +213,21 @@ class ArticlePair:
                 return num/denum
         return -1
 
+    # Getters
+    def get_article_1(self):
+        return self.article1
+
+    def get_article_2(self):
+        return self.article2
+
+    def get_label(self):
+        return self.label
+
+    def has_all_data(self):
+        if self.article1.has_all_data() and self.article2.has_all_data():
+            return True
+        return False
+
     """                                 UNUSED METHODS IN BASELINE VERSION                                           """
     def get_entities_score(self):
         """Returns the number of matching entities between the articles"""
@@ -234,18 +249,3 @@ class ArticlePair:
         if self.article1.authors and self.article2.authors:
             return (len(self.article1.authors[0].lastname) + len(self.article2.authors[0].lastname)) / 2
         return -1
-
-    # Getters
-    def get_article_1(self):
-        return self.article1
-
-    def get_article_2(self):
-        return self.article2
-
-    def get_label(self):
-        return self.label
-
-    def has_all_data(self):
-        if self.article1.has_all_data() and self.article2.has_all_data():
-            return True
-        return False
