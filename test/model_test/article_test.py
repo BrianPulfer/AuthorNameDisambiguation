@@ -25,6 +25,7 @@ class TestArticle(unittest.TestCase):
         article.set_language('eng')
         article.set_loc(['Berlin', 'Germany'])
         article.set_org(['University', 'of', 'Berlin'])
+        article.set_vector([3, 5, 2])
 
         self.assertTrue(article.has_all_data())
 

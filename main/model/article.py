@@ -11,7 +11,7 @@ class Article:
     def __init__(self, PMID: int = None, main_author: Author = None, language: str = None, authors: list = None,
                  e_mail: str = None, date: datetime = None, loc_list: list = None, org_list: list = None,
                  mesh_terms: list = None, entities: list = None, jds: list = None, sts: list = None,
-                 ambiguity=-1, raw_text: str = None):
+                 ambiguity=-1, vector: list = None, raw_text: str = None):
         self.PMID = PMID
         self.ambiguity = ambiguity
         self.main_author = main_author
@@ -25,6 +25,7 @@ class Article:
         self.entities = entities
         self.jds = jds
         self.sts = sts
+        self.vector = vector
         self.raw_text = raw_text
 
 
@@ -115,6 +116,12 @@ class Article:
 
     def set_entities(self, entities):
         self.entities = entities
+
+    def get_vector(self):
+        return self.vector
+
+    def set_vector(self, vector):
+        self.vector = vector
 
     def has_all_data(self):
         return self.authors is not None and len(self.authors) > 0 and \

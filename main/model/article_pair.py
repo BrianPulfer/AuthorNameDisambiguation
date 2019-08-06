@@ -1,9 +1,13 @@
 import copy
+import sys
+
 import Levenshtein
 import math
 
 from main.model.affiliation import Affiliation
 from main.model.article import Article
+
+from main.retrievers.doc2vec import doc2vec
 
 
 class ArticlePair:
@@ -20,7 +24,8 @@ class ArticlePair:
     def binary_scores():
         """Static method which returns a list of true's and false's.
         The list indicates if the scores in a particular column are binary or not."""
-        return [False, True, False, False, False, True, True, True, False, False, True, False, False, False, False]
+        return [False, True, False, False, False, True, True, True, False, False, True, False, False, False, False
+                , False]
 
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
@@ -28,7 +33,8 @@ class ArticlePair:
                 self.get_mesh_score(), self.get_jdst_score(), self.get_location_score(),
                 self.get_language_score(), self.get_date_score(), self.get_organization_score(), self.get_email_score(),
                 self.get_org_type_descr_score(),
-                self.get_entities_score(), self.get_ambiguity_score(), self.get_lnlength_score()]
+                self.get_entities_score(), self.get_ambiguity_score(), self.get_lnlength_score()
+                , self.get_vector_score()]
 
     def get_firstname_score(self):
         """Checks if the articles main authors first names matches"""
@@ -231,6 +237,19 @@ class ArticlePair:
 
         if self.article1.authors and self.article2.authors:
             return (len(self.article1.authors[0].lastname) + len(self.article2.authors[0].lastname)) / 2
+        return -1
+
+    def get_vector_score(self):
+        """Returns the euclidean distance between the two articles vectors"""
+        v1 = self.article1.get_vector()
+        v2 = self.article2.get_vector()
+
+        diff = float(0)
+
+        if v1 is not None and v2 is not None:
+            for i in range(len(v1)):
+                diff = diff + ((v1[i]-v2[i])**2)
+            return math.sqrt(float(diff))
         return -1
 
     # Getters

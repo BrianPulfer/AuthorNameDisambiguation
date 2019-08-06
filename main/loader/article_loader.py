@@ -7,6 +7,7 @@ from main.model.article import Article
 
 from main.retrievers import  authors, date, mail,\
     mesh, from_file, language
+from main.retrievers.doc2vec import doc2vec
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'
 PATH_TO_ARTICLES_ENTITIES = definitions.ROOT_DIR + '/dataset/articles_entities/'
@@ -35,5 +36,8 @@ def load_article(pmid):
     loc, org = from_file.load_locs_orgs(pmid)
     jds, sts = from_file.load_jdst(pmid)
 
+    # Retrieving doc2vec vector
+    vector = doc2vec.get_vector(pmid)
+
     return Article(PMID=pmid, authors=auts, language=lan, e_mail=e_mail, date=dat, loc_list=loc, org_list=org,
-                   mesh_terms=meshes, entities=ents, sts=sts, jds=jds)
+                   mesh_terms=meshes, entities=ents, sts=sts, jds=jds, vector=vector)
