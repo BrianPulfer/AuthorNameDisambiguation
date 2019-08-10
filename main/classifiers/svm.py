@@ -18,3 +18,7 @@ class SVM:
         """Returns the classifier's predictions"""
 
         return self._clf.predict(x_test)
+
+    def feature_importances(self):
+        """Returns the feature importances"""
+        return self.feature_importances()
