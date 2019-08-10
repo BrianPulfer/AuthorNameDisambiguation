@@ -10,7 +10,7 @@ class Article:
 
     def __init__(self, PMID: int = None, main_author: Author = None, language: str = None, authors: list = None,
                  e_mail: str = None, date: datetime = None, loc_list: list = None, org_list: list = None,
-                 mesh_terms: list = None, entities: list = None, jds: list = None, sts: list = None,
+                 mesh_terms: list = None, entities: list = None,
                  ambiguity=-1, raw_text: str = None):
         self.PMID = PMID
         self.ambiguity = ambiguity
@@ -23,10 +23,7 @@ class Article:
         self.org_list = org_list
         self.mesh_terms = mesh_terms
         self.entities = entities
-        self.jds = jds
-        self.sts = sts
         self.raw_text = raw_text
-
 
     # Getters and Setters
     def get_PMID(self):
@@ -79,18 +76,6 @@ class Article:
 
     def set_mesh_terms(self, mesh_terms):
         self.mesh_terms = mesh_terms
-
-    def get_jds(self):
-        return self.jds
-
-    def set_jds(self, jds: list):
-        self.jds = jds
-
-    def get_sts(self):
-        return self.sts
-
-    def set_sts(self, sts: list):
-        self.sts = sts
 
     def get_raw_text(self):
         return self.raw_text

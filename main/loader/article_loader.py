@@ -31,9 +31,7 @@ def load_article(pmid):
     meshes = mesh.find_mesh_terms(soup)
 
     # Retrieving infos written in files
-    ents = from_file.load_entities(pmid)
     loc, org = from_file.load_locs_orgs(pmid)
-    jds, sts = from_file.load_jdst(pmid)
 
     return Article(PMID=pmid, authors=auts, language=lan, e_mail=e_mail, date=dat, loc_list=loc, org_list=org,
-                   mesh_terms=meshes, entities=ents, sts=sts, jds=jds)
+                   mesh_terms=meshes)

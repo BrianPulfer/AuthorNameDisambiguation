@@ -20,12 +20,12 @@ class ArticlePair:
     def binary_scores():
         """Static method which returns a list of true's and false's.
         The list indicates if the scores in a particular column are binary or not."""
-        return [False, True, False, False, False, True, True, True, False, False, True, False]
+        return [False, True, False, False, False, True, False, False, False, True, False]
 
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
-                self.get_mesh_score(), self.get_jdst_score(), self.get_location_score(),
+                self.get_mesh_score(), self.get_location_score(),
                 self.get_language_score(), self.get_date_score(), self.get_organization_score(), self.get_email_score(),
                 self.get_org_type_descr_score()]
 
@@ -103,30 +103,6 @@ class ArticlePair:
         ms_set = set(all_ms)
 
         return len(all_ms) - len(ms_set)
-
-    def get_jdst_score(self):
-        """Counts the number of Journal Descriptors and Semantic Types shared by the articles"""
-        jds1, sts1 = self.article1.get_jds(), self.article1.get_sts()
-        jds2, sts2 = self.article2.get_jds(), self.article2.get_sts()
-
-        if jds1 is None or sts1 is None or jds2 is None or sts2 is None:
-            return -1
-
-        retval = 0
-
-        # Counting shared Journal Descriptors
-        for jd1 in jds1:
-            for jd2 in jds2:
-                if jd1 == jd2:
-                    retval = retval + 1
-
-        # Counting shared Semantic Types
-        for st1 in sts1:
-            for st2 in sts2:
-                if st1 == st2:
-                    retval = retval + 1
-
-        return retval
 
     def get_location_score(self):
         """Returns the number of infos in common """
