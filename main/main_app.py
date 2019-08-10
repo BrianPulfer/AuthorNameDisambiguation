@@ -140,7 +140,7 @@ def test_classifiers(x_train_norm, y_train, x_test_norm, y_test):
     run_classifier(classifier, x_train_norm, y_train, x_test_norm, y_test)
 
 
-def cross_validate(classifier, data, target, k):
+def cross_validate(data, target, k):
     """Performs a k-fold cross validation using the given classifier, data and target"""
 
     # Shuffling dataset
@@ -181,10 +181,20 @@ def cross_validate(classifier, data, target, k):
         x_train, y_train = training[:, :len(training[i]) - 2], training[:, len(training[i]) - 1]
         x_test, y_test = testing[:, :len(testing[i]) - 2], testing[:, len(testing[i]) - 1]
 
+        classifier = RandomForest(50)
         classifier.fit(x_train, y_train)
         scores.append(compute_accuracy(classifier.predict(x_test), y_test))
 
     return np.array(scores)
+
+
+def print_feature_importances(classifier):
+    features_importances = classifier.feature_importances_()
+    features_names = ArticlePair.feature_names()
+
+    print("\nFeature Importances:")
+    for i in range(len(features_names)):
+        print(features_names[i]+str(features_importances[i]*100)+"%")
 
 
 def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path="./dataset/400_pairs_test.csv"):
@@ -203,24 +213,6 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
 
     x_test = list()
     testing_labels = np.array(testing_set[:, 8])
-
-    # Changing labels from 'YES'/'NO' to 1/0
-    """
-    for i in range(len(y_train)):
-        if 'NO' in y_train[i]:
-            y_train[i] = 0
-        else:
-            y_train[i] = 1
-
-    for i in range(len(y_test)):
-        if 'NO' in y_test[i]:
-            y_test[i] = 0
-        else:
-            y_test[i] = 1
-
-    y_train = y_train.astype('int')
-    y_test = y_test.astype('int')
-    """
 
     y_train, y_test = list(), list()
 
@@ -325,19 +317,29 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     x_train_norm = normalize_set(x_train_filled, binaries_features).astype('float64')
     x_test_norm = normalize_set(x_test_filled, binaries_features).astype('float64')
 
-    # Testing the classifiers (OPTIONAL)
+    # Testing many classifiers (OPTIONAL)
     test_classifiers(x_train_norm, y_train, x_test_norm, y_test)
 
-    # K-Cross validating the best classifier
-    best_classifier = RandomForest(50)
+    # K-Cross validating the best classifier (Random Forest)
     k = 10
     data = np.concatenate((x_train_norm, x_test_norm), axis=0)
     target = np.concatenate((y_train, y_test), axis=0)
-    scores = cross_validate(best_classifier, data, target, k)
-
+    scores = cross_validate(data, target, k)
     accuracy = scores.mean()
-    print("\n"+best_classifier.__class__.__name__+" accuracy with "+str(k)+"-fold cross validation: "
+
+    print("\nRandom Forest accuracy with "+str(k)+"-fold cross validation: "
           + str(int(accuracy*100))+"%")
+
+    # Running the main (best) classifier
+    best_classifier = RandomForest(50)
+
+    best_classifier.fit(x_train_norm, y_train)
+    predictions = best_classifier.predict(x_test_norm)
+
+    print("\nBest classifier accuracy: "+str(compute_accuracy(predictions,y_test)*100)+"%")
+
+    # Printing each feature importance for the classifier
+    print_feature_importances(best_classifier)
 
 
 if __name__ == '__main__':
