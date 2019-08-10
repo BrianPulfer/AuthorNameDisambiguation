@@ -14,6 +14,5 @@ def find_email(article_content):
 
         if result[-1] == '.':
             result = result[:len(result) - 1]
-
         return result
     return None

@@ -5,8 +5,7 @@ from bs4 import BeautifulSoup
 from main.model.article import Article
 
 
-from main.retrievers import  authors, date, mail,\
-    mesh, from_file, language
+from main.retrievers import authors, date, mail, mesh, from_file, language
 from main.retrievers.doc2vec import doc2vec
 
 PATH_TO_ARTICLES = definitions.ROOT_DIR + '/dataset/articles/'

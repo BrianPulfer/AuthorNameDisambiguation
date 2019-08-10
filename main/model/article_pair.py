@@ -1,13 +1,10 @@
 import copy
-import sys
 
 import Levenshtein
 import math
 
 from main.model.affiliation import Affiliation
 from main.model.article import Article
-
-from main.retrievers.doc2vec import doc2vec
 
 
 class ArticlePair:
@@ -24,17 +21,22 @@ class ArticlePair:
     def binary_scores():
         """Static method which returns a list of true's and false's.
         The list indicates if the scores in a particular column are binary or not."""
-        return [False, True, False, False, False, True, True, True, False, False, True, False, False, False, False
-                , False]
+        return [False, True, False, False, False, False, True, False, False, True, False, False, False, False, False]
+
+    @staticmethod
+    def feature_names():
+        """Returns a list containing the names of the features"""
+        return ['First name: ', 'Initials: ', 'Co-authors: ', 'Mesh Terms: ', 'JDs STs: ', 'Location: ',
+                'Language:', 'Date: ', 'Organization: ', 'E-Mail: ', 'Organization Type: ', 'OGER Entities: ',
+                'Ambiguity score: ', 'Lastname length: ', 'Doc2Vec vector: ']
 
     def scores(self):
         """Returns all the similarity scores between the pair of articles"""
         return [self.get_firstname_score(), self.get_initials_score(), self.get_coauthors_score(),
                 self.get_mesh_score(), self.get_jdst_score(), self.get_location_score(),
                 self.get_language_score(), self.get_date_score(), self.get_organization_score(), self.get_email_score(),
-                self.get_org_type_descr_score(),
-                self.get_entities_score(), self.get_ambiguity_score(), self.get_lnlength_score()
-                , self.get_vector_score()]
+                self.get_org_type_descr_score(), self.get_entities_score(), self.get_ambiguity_score(),
+                self.get_lnlength_score(), self.get_vector_score()]
 
     def get_firstname_score(self):
         """Checks if the articles main authors first names matches"""
