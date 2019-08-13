@@ -161,7 +161,7 @@ class ArticlePair:
 
         if language1 is not None and language2 is not None:
             language1 = self.article1.get_language().lower().strip()
-            language2 = self.article1.get_language().lower().strip()
+            language2 = self.article2.get_language().lower().strip()
 
             if language1 == language2:
                 return 1
