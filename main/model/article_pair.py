@@ -214,10 +214,16 @@ class ArticlePair:
             t1, d1 = Affiliation.find_type(org_string1), Affiliation.find_descriptor(org_string1)
             t2, d2 = Affiliation.find_type(org_string2), Affiliation.find_descriptor(org_string2)
 
-            if t1 and t2 and d1 and d2:
-                num = (d1.value * d2.value) + (t1.value * t2.value)
-                denum = math.sqrt((d1.value**2 + t1.value**2) + (d2.value**2 + t2.value**2))
-                return num/denum
+            score = 0
+
+            if t1 and t2:
+                if t1 == t2:
+                    score = score + 1
+
+            if d1 and d2:
+                if d1 == d2:
+                    score = score + 1
+            return score
         return -1
 
     def get_entities_score(self):
