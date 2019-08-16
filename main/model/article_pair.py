@@ -181,6 +181,7 @@ class ArticlePair:
         return years
 
     def get_organization_score(self):
+        """Returns the number of words in common between the articles organizations (affiliations)"""
         organization1 = self.article1.get_org()
         organization2 = self.article2.get_org()
 

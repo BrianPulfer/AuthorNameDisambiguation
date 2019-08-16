@@ -38,4 +38,5 @@ def get_ambiguity_score(namespace_lastname: str, namespace_initial: str,  datase
 
 
 def are_strings(*args):
+    """Tells wheter all the argument passed are of type string"""
     return all(map(lambda _: type(_) is str, args))

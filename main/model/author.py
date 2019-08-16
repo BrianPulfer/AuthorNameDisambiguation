@@ -2,6 +2,7 @@ class Author:
     """Class which represents an Author. Contains all the needed author's infos"""
 
     def __init__(self, lastname: str, forename: str, initials: str):
+        """Creates the Author object with the given lastname, firstname and initials"""
         self.lastname = lastname
         self.forename = forename
         self.initials = initials
