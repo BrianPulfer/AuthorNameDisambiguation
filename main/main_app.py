@@ -197,7 +197,7 @@ def print_feature_importances(classifier):
         print(features_names[i]+str(features_importances[i]*100)+"%")
 
 
-def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path="./dataset/400_pairs_test.csv"):
+def main(training_set_path="./../dataset/1500_pairs_train.csv", testing_set_path="./../dataset/400_pairs_test.csv"):
     """Main method - Trains and tests various classifiers_test"""
     # Positive instances in the training set: 970. Negative instances in the training set: 503
     # Positive instances in the testing set: 217. Negative instances in the testing set: 182
@@ -336,7 +336,7 @@ def main(training_set_path="./dataset/1500_pairs_train.csv", testing_set_path=".
     best_classifier.fit(x_train_norm, y_train)
     predictions = best_classifier.predict(x_test_norm)
 
-    print("\nBest classifier accuracy: "+str(compute_accuracy(predictions,y_test)*100)+"%")
+    print("\nBest classifier accuracy: "+str(compute_accuracy(predictions, y_test)*100)+"%")
 
     # Printing each feature importance for the classifier
     print_feature_importances(best_classifier)
