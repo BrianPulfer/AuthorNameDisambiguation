@@ -1,6 +1,6 @@
 import unittest
 
-from main.main_app import compute_accuracy, get_set, normalize_set, fill_empty_with_average
+from main.main_app import compute_accuracy, get_set, normalize_set, fill_empty_with_average, fill_empy_with_random
 from decimal import Decimal
 import pandas as pd
 import numpy as np
@@ -88,6 +88,25 @@ class MainTest(unittest.TestCase):
         for row in range(len(expected)):
             for col in range(len(expected[row])):
                 self.assertEqual(expected[row, col], new_matrix[row, col])
+
+    def test_fill_empty_with_random(self):
+        """Tests that -1 values in a matrix are converted in a random value between the column's min and max value"""
+        matrix = np.array([[0, 100, 15],
+                           [-100, 100, 45],
+                           [-1, -1, -1]])
+
+        result = fill_empy_with_random(matrix)
+
+        # Checking first column
+        self.assertTrue(result[2][0] < 0)
+        self.assertTrue(result[2][0] >= -100)
+
+        # Checking second column
+        self.assertEqual(100, result[2][1])
+
+        # Checking third column
+        self.assertTrue(result[2][2] < 45)
+        self.assertTrue(result[2][2] >= 15)
 
 
 if __name__ == '__main__':

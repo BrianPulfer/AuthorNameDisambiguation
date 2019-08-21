@@ -259,7 +259,7 @@ class ArticlePair:
             for i in range(len(v1)):
                 dot_product = dot_product + (v1[i] * v2[i])
                 v1_norm = v1_norm + v1[i]**2
-                v2_norm = v2_norm + v2[i]** 2
+                v2_norm = v2_norm + v2[i]**2
 
             v1_norm, v2_norm = math.sqrt(v1_norm), math.sqrt(v2_norm)
             return dot_product / (v1_norm * v2_norm)

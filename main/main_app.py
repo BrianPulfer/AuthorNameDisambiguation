@@ -1,4 +1,6 @@
 # Python imports
+import random
+
 import numpy as np
 import pandas as pd
 from decimal import Decimal
@@ -75,6 +77,37 @@ def fill_empty_with_average(set):
         for j in range(len(matrix[i])):
             if matrix[i][j] == -1:
                 matrix[i][j] = averages[j]
+
+    return matrix
+
+
+def fill_empy_with_random(set):
+    """Given a set, replaces all the -1 values with a random value between the respective column min and max"""
+    matrix = np.array(set)
+    mins_maxs = list()
+
+    # Gettin each row's max and min value
+    for col in range(len(matrix[0])):
+        min_col_val = 2**30
+        max_col_val = -1 * 2**30
+
+        for row in range(len(matrix)):
+            cell_value = matrix[row][col]
+
+            if not cell_value == -1:
+                if cell_value > max_col_val:
+                    max_col_val = cell_value
+                if cell_value < min_col_val:
+                    min_col_val = cell_value
+        mins_maxs.append([min_col_val, max_col_val])
+
+    # Applying the random values in the min-max ranges
+    for row in range(len(matrix)):
+        for col in range(len(matrix[row])):
+            min_col_val, max_col_val = mins_maxs[col][0], mins_maxs[col][1]
+
+            if matrix[row][col] == -1:
+                matrix[row][col] = random.uniform(min_col_val, max_col_val)
 
     return matrix
 
@@ -308,8 +341,8 @@ def main(training_set_path="./../dataset/1500_pairs_train.csv", testing_set_path
     y_test = np.array(y_test).astype('int')
 
     # Filling empty datas (-1) with average values
-    x_train_filled = fill_empty_with_average(x_train)
-    x_test_filled = fill_empty_with_average(x_test)
+    x_train_filled = fill_empy_with_random(x_train)   # ALTERNATIVE: fill_empty_with_average(x_train)
+    x_test_filled = fill_empy_with_random(x_test)     # ALTERNATIVE: fill_empty_with_average(x_test)
 
     # Normalizing data
     binaries_features = ArticlePair.binary_scores()
