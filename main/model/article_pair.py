@@ -249,16 +249,20 @@ class ArticlePair:
         return -1
 
     def get_vector_score(self):
-        """Returns the euclidean distance between the two articles vectors"""
+        """Returns the cosine similarity between the two articles vectors"""
         v1 = self.article1.get_vector()
         v2 = self.article2.get_vector()
 
-        diff = float(0)
+        dot_product, v1_norm, v2_norm = 0, 0, 0
 
         if v1 is not None and v2 is not None:
             for i in range(len(v1)):
-                diff = diff + ((v1[i]-v2[i])**2)
-            return math.sqrt(float(diff))
+                dot_product = dot_product + (v1[i] * v2[i])
+                v1_norm = v1_norm + v1[i]**2
+                v2_norm = v2_norm + v2[i]** 2
+
+            v1_norm, v2_norm = math.sqrt(v1_norm), math.sqrt(v2_norm)
+            return dot_product / (v1_norm * v2_norm)
         return -1
 
     # Getters

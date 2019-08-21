@@ -153,7 +153,7 @@ class TestArticlePair(unittest.TestCase):
         self.assertEqual(4.5, ap3.get_lnlength_score())
 
     def test_vector_score(self):
-        """Tests that the euclidean distance between vectors is correctly calculated"""
+        """Tests that the cosine similarity between vectors is correctly calculated"""
 
         x1, y1, z1 = 3, 5, 2
         x2, y2, z2 = 9, 2, 3
@@ -166,7 +166,8 @@ class TestArticlePair(unittest.TestCase):
 
         pair = ArticlePair(article1, article2)
 
-        expected = math.sqrt((x1-x2)**2 + (y1-y2)**2 + (z1-z2)**2)
+        expected = ((x1 * x2) + (y1 * y2) + (z1 * z2)) \
+                   / (math.sqrt(x1**2 + y1**2 + z1**2) * math.sqrt(x2**2 + y2**2 + z2**2))
         score = pair.get_vector_score()
 
         self.assertEqual(expected, score)
