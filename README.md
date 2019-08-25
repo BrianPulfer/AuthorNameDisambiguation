@@ -6,7 +6,7 @@ This project has the purpose of training a classifier which will be able to tell
 Various classifier are trained with different algorithms, such as Random Forest and K-NN. Also a Neural Network is implemented.
 
 ## Environment requirements
-Python3, JDK 8 or greater, 20GB of free space on disk
+Python3, 20GB of free space on disk
 
 ## Set-up
 ### Step 1:
@@ -20,6 +20,13 @@ To make the relative test work, copy the folder also under 'test/retrievers_test
 ### Step 3:
 Open the project in an IDE of your preferece (PyCharm suggested) and create a new virtual evironment using a python3 interpreter.
 Install all the requirements specified in the 'requirements.txt' file.
+
+### Step 4:
+Install pyjnius according to your operating system. Instructions can be found at https://pyjnius.readthedocs.io/en/stable/index.html
+
+### Step 5:
+If you are using MacOS, you might want to install certificates in order for the OGER source files to work. To do so: 
+Macintosh HD > Applications > Python3.6 folder (or whatever version of python you're using) > double click on "Install Certificates.command" file.
 
 ## Dataset
 These are the files that make up the AND corpus: 
