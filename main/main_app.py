@@ -81,7 +81,7 @@ def fill_empty_with_average(set):
     return matrix
 
 
-def fill_empy_with_random(set):
+def fill_empty_with_random(set):
     """Given a set, replaces all the -1 values with a random value between the respective column min and max"""
     matrix = np.array(set)
     mins_maxs = list()
@@ -341,8 +341,8 @@ def main(training_set_path="./../dataset/1500_pairs_train.csv", testing_set_path
     y_test = np.array(y_test).astype('int')
 
     # Filling empty datas (-1) with average values
-    x_train_filled = fill_empy_with_random(x_train)   # ALTERNATIVE: fill_empty_with_average(x_train)
-    x_test_filled = fill_empy_with_random(x_test)     # ALTERNATIVE: fill_empty_with_average(x_test)
+    x_train_filled = fill_empty_with_average(x_train)  # ALTERNATIVE: fill_empty_with_random(x_train)
+    x_test_filled = fill_empty_with_average(x_test)     # ALTERNATIVE: fill_empty_with_random(x_test)
 
     # Normalizing data
     binaries_features = ArticlePair.binary_scores()

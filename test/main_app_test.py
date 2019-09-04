@@ -1,6 +1,6 @@
 import unittest
 
-from main.main_app import compute_accuracy, get_set, normalize_set, fill_empty_with_average, fill_empy_with_random
+from main.main_app import compute_accuracy, get_set, normalize_set, fill_empty_with_average, fill_empty_with_random
 from decimal import Decimal
 import pandas as pd
 import numpy as np
@@ -95,7 +95,7 @@ class MainTest(unittest.TestCase):
                            [-100, 100, 45],
                            [-1, -1, -1]])
 
-        result = fill_empy_with_random(matrix)
+        result = fill_empty_with_random(matrix)
 
         # Checking first column
         self.assertTrue(result[2][0] < 0)
